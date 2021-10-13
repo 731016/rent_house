@@ -4,7 +4,9 @@ $(function() {
         $('#area svg:last').show();
         $('#subway svg:first').show();
         $('#subway svg:last').hide();
+        $('#div_subway').stop();
         $('#div_subway').slideUp(500, function() {
+            $('#div_area').stop();
             $('#div_area').slideDown(500);
         });
     })
@@ -14,7 +16,9 @@ $(function() {
         $('#subway svg:last').show();
         $('#area svg:first').show();
         $('#area svg:last').hide();
+        $('#div_area').stop();
         $('#div_area').slideUp(500, function() {
+            $('#div_subway').stop();
             $('#div_subway').slideDown(500);
         });
 
