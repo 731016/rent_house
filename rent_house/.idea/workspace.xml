@@ -6,14 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bdf107f-5ab7-43bb-86dd-e52a5a90dbd9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/Filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/Filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/web/RegisterSvl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/web/RegisterSvl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/css/regist.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/css/regist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/js/register.js" afterDir="false" />
-    </list>
+    <list default="true" id="1bdf107f-5ab7-43bb-86dd-e52a5a90dbd9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634111228592</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="优化了login输入框的提示">
+      <created>1634117756694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634117756694</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -187,17 +187,18 @@
     <MESSAGE value="更新了workspace.xml文件" />
     <MESSAGE value="更新了本地bootstrap框架，将前端网页的bootstrap引用改为本地" />
     <MESSAGE value="更新了用户信息表，现在默认有个root管理员" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了用户信息表，现在默认有个root管理员" />
+    <MESSAGE value="优化了login输入框的提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化了login输入框的提示" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634117576690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634102939758" />
-    <state x="530" y="103" key="CommitChangelistDialog2" timestamp="1634111224477">
+    <state x="530" y="103" key="CommitChangelistDialog2" timestamp="1634117753181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="530" y="103" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634111224477" />
+    <state x="530" y="103" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634117753181" />
     <state width="1293" height="253" key="GridCell.Tab.0.bottom" timestamp="1634113863191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
