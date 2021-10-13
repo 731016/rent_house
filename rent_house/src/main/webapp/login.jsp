@@ -11,10 +11,10 @@
   <script src="resource/js/login.js"></script>
   <script>
     $(function () {
-      $("form").submit(function () {
+      $("#btn").click(function () {
         let $txt = $("#txt").val();
         let $psw = $("#psw").val();
-        let aj = '{"account":'+$txt+',"password":'+$psw+'}'
+        let aj = {"account":$txt,"password":$psw}
         $.ajax({
           type:"post",
           data:aj,
@@ -22,7 +22,7 @@
           url:"/login",
           success:function (data) {
             if (data.flag){
-              return true;
+              history.back();
             }else {
               $("#validation").html("<span>账号或密码错误</span>").css("color","red")
               return false;
@@ -37,7 +37,7 @@
   </script>
 </head>
 <body>
-<form method="post" action="">
+<form>
   <span id="our">Lie flat租房</span>
   <div id="big">
     <div id="login">
@@ -60,7 +60,7 @@
         <input type="checkbox"/>记住密码
       </div>
       <div id="sub">
-        <input type="submit" value="登录" id="btn" />
+        <input type="button" value="登录" id="btn" />
       </div>
       <a href="register.jsp">注册</a>
     </div>

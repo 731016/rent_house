@@ -22,6 +22,15 @@ public class LoginSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String account = request.getParameter("account");
         String password = request.getParameter("password");
+        //判断账号或密码是否为空
+        if (account==null||account.isBlank()||password==null||password.isBlank()){
+            ReturnResult result = new ReturnResult(null,null,false);
+            String s = JSON.toJSONString(result);
+            response.getWriter().print(s);
+            return;
+        }
+
+        //查询是否存在此用户
         UserInfoService user = UserInfoService.getInstance();
         boolean login = user.login(account, password);
         HttpSession session = request.getSession();
@@ -32,7 +41,6 @@ public class LoginSvl extends HttpServlet {
         if (login){
             UserInfo userInfo = user.getUserInfoByAccount(account);
             session.setAttribute("user",userInfo);
-            response.getWriter().print("<script>history.go(-2)</script>");
         }
 
 
