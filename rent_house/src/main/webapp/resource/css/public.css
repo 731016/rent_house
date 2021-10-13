@@ -50,5 +50,5 @@ header ul li {
 }
 
 header li:hover a {
-    color: #FF961E;
+    color: #FF961E; !important;
 }
