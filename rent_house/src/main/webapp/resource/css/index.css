@@ -59,6 +59,7 @@ section {
     border: 0;
     outline: none;
     padding-left: 20px;
+    margin-top: -8px;
 }
 
 .search_main {
@@ -74,7 +75,8 @@ section {
     text-align: center;
     line-height: 42px;
     color: #fff;
-    margin-left: -4px;
+    margin-left: -5px;
+    margin-top: -7px;
 }
 
 .container {
@@ -133,4 +135,31 @@ section {
 }
 .current{
     color: #FF961E !important;
+}
+/*字体图标 START*/
+body {
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+}
+.mls {
+    margin-left: .25em;
+}
+
+.fs1 {
+    font-size: 32px;
+}
+.triangle{
+    display: block;
+    color: #fff;
+    font-size: 12px;
+}
+/*字体图标 END*/
+.triangle{
+    position: relative;
+    left: 19px;
+    /*search_all 19,
+    search_entireRent 72,
+    search_share 123*/
 }

@@ -18,6 +18,7 @@
     <%--网站说明 END --%>
     <link rel="stylesheet" href="/resource/css/index.css">
     <link rel="stylesheet" href="/resource/css/public.css">
+    <link rel="stylesheet" href="/resource/css/style.css">
     <script src="/resource/js/jquery-3.6.0.min.js"></script>
     <script src="/resource/js/index.js"></script>
 </head>
@@ -56,6 +57,7 @@
             </ul>
         </div>
         <br>
+        <span class="triangle icon-arrow-up"></span>
         <div class="search_main">
             <input type="text" class="search_input" id="search_input" placeholder="请输入小区..." data-val=""/>
             <a href="javascript:;" class="search_btn" id="search_btn" alt="开始找房">开始找房</a>

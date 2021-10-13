@@ -1,12 +1,10 @@
 window.addEventListener('load', function () {
-    var test;
     $(function () {
         $.ajax({
             type: 'post',
             dataType: 'json',
             url: '/login',
             success: function (data) {
-                test=data;
                 let object = data.object;
                 if (object != undefined) {
                     $('#show_login').html("<a href='javascript:;' class='nav_header'>" + object.account + "</a>");
@@ -32,6 +30,18 @@ window.addEventListener('load', function () {
             $('#search_input').prop('placeholder', search_data);
             $('#search_input').attr('data-val', search_data_val);
         });
+        $('#search_all').click(function () {
+            $('.triangle').animate({left:'19px'},300);
+            // $('.triangle').css('left','19px');
+        });
+        $('#search_entireRent').click(function () {
+            // $('.triangle').css('left','72px');
+            $('.triangle').animate({left:'72px'},300);
+        });
+        $('#search_share').click(function () {
+            // $('.triangle').css('left','123px');
+            $('.triangle').animate({left:'123px'},300);
+        });
         $('#search_btn').on({
             click: function () {
                 let val = $('#search_input').attr('data-val');
@@ -52,7 +62,7 @@ window.addEventListener('load', function () {
         // 出租
         $('.con_father_zf').on('click',function () {
             location.href='housedetails.jsp';
-        })
+        });
     });
 
     function scroll() {
