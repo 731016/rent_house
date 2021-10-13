@@ -32,7 +32,7 @@
             <li class="reg_log" id="show_register">
                 <a href="register.jsp" class="nav_header">注册</a>
             </li>
-            <li class="reg_log" style="color: #fff;">|</li>
+            <li class="reg_log nav_header vertical_line" style="color: #fff;">|</li>
             <li class="reg_log" id="show_login">
                 <a href="login.jsp" class="nav_header">登录</a>
             </li>
