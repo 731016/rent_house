@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>登录页面</title>
+  <%--网页logo START --%>
+  <link rel="icon" href="resource/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon"/>
+  <%--网页logo END --%>
   <link rel="stylesheet" href="./resource/css/login.css">
   <script src="resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="resource/js/login.js"></script>
@@ -11,6 +15,7 @@
   <span id="our">Lie flat租房</span>
   <div id="big">
     <div id="login">
+      <a href="index.jsp" id="backhome">< 返回首页</a>
       <div id="title" style="text-align: center;">
         <h1>登录</h1>
       </div>
@@ -26,12 +31,11 @@
       </div>
       <div id="aa">
         <input type="checkbox"/>记住密码
-        <span id="first">首次登陆自动注册</span>
       </div>
       <div id="sub">
         <input type="submit" value="登录" id="btn" />
       </div>
-      <!-- <a href="#">注册</a> -->
+      <a href="register.jsp">注册</a>
     </div>
   </div>
 </form>

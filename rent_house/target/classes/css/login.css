@@ -3,13 +3,13 @@ body{
     margin-right: 0px;
 }
 #big{
-    height: 550px;
+    height: 750px;
     width: 100%;
     margin-top: 90px;
     background-color: #555555;
     background-image: url("/resource/images/login_bg.jpg");
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:100% 100%;
 }
 #login{
     height: 500px;
@@ -17,7 +17,7 @@ body{
     border: 1px solid white;
     margin: 0px auto;
     position: relative;
-    top: 25px;
+    top: 80px;
     background-color: white;
     border-radius: 15px;
     /* font-family: 楷体; */
@@ -87,4 +87,11 @@ a{
     top: 310px;
     padding-left: 80px;
     font-size: 15px;
+}
+#backhome{
+    text-decoration: none;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: black;
 }

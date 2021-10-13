@@ -10,6 +10,12 @@
     <link rel="icon" href="resource/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon"/>
     <%--网页logo END --%>
+    <%--关键字 Keywords是页面关键词，是搜索引擎关注点之一。Keywords应该限制在6～8个关键词左右 START--%>
+    <meta name ="Keywords"content="Lie flat,租房,出租,出租房交易平台,房屋出租信息"/>
+    <%--关键字  END--%>
+    <%--网站说明 字符数含空格在内不要超过 120 个汉字 START --%>
+    <meta name ="description" content="Lie flat租房信息网提供房屋合租信息及月租价格,房屋整租信息及价格"/>
+    <%--网站说明 END --%>
     <link rel="stylesheet" href="/resource/css/index.css">
     <link rel="stylesheet" href="/resource/css/public.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -17,18 +23,23 @@
 </head>
 
 <body>
+<%--头部 START--%>
 <header>
     <ul>
         <li><a href="#" class="nav current">首页</a></li>
         <li><a href="javascript:;" class="nav">租房</a></li>
         <li><a href="javascript:;" class="nav">出租</a></li>
         <li class="reg_log"><a href="register.jsp" class="nav">注册</a></li>
+        <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
         <li class="reg_log" style="display: none"><a href="javascript:;" class="nav">admin</a></li>
         <li class="reg_log" style="color: #fff;">|</li>
         <li class="reg_log"><a href="login.jsp" class="nav">登录</a></li>
+        <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
         <li class="reg_log" style="display: none"><a href="javascript:;" class="nav">退出</a></li>
     </ul>
 </header>
+<%--头部 END--%>
+<%--主体 START--%>
 <section>
     <img src="/resource/images/index_bg.jpg" class="main_img" alt="">
     <div class="search">
@@ -68,6 +79,7 @@
         </dl>
     </div>
 </section>
+<%--主体 END--%>
 </body>
 
 </html>

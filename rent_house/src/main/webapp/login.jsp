@@ -21,12 +21,12 @@
       </div>
       <div class="input">
         账号：
-        <input id="txt" /><br />
+        <input id="txt" name="account" /><br />
         <span id="sptxt" class="sp"></span>
       </div>
       <div class="input">
         密码：
-        <input type="password" id="psw" /><br>
+        <input type="password" id="psw" name="password" /><br>
         <span id="sppass" class="sp"></span>
       </div>
       <div id="aa">

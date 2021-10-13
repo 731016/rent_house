@@ -1,26 +1,25 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2021/10/12
-  Time: 11:40
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
   <title>注册页面</title>
+  <%--网页logo START --%>
+  <link rel="icon" href="resource/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon"/>
+  <%--网页logo END --%>
   <link rel="stylesheet" href="./resource/css/regist.css">
-  <script src="jquery/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./resource/js/register.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/resource/js/register.js"></script>
 </head>
 <body>
-<form>
+<form method="post" action="#">
 <span id="our">Lie flat租房</span>
 <div id="big">
   <div id="login">
     <div id="title" style="text-align: center;">
 
-      <a href="#">< 返回登录</a>
+      <a href="index.jsp" id="index_a">< 返回首页</a>
       <h1>注册</h1>
     </div>
     <table>
@@ -88,8 +87,13 @@
         </td>
       </tr>
       <tr>
+        <td colspan="2" style="text-align: right;">
+          <a href="login.jsp" id="log_a">已有账号立即登录</a>
+        </td>
+      </tr>
+      <tr id="reg_tr">
         <td colspan="2" style="text-align: center;">
-          <input type="submit" value="注册" id="btn" />
+          <input type="submit" value="注册" id="btn_reg" class="btn btn-primary" />
         </td>
       </tr>
     </table>
