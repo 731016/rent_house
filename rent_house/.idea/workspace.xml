@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bdf107f-5ab7-43bb-86dd-e52a5a90dbd9" name="Default Changelist" comment="" />
+    <list default="true" id="a35c0d41-c02a-4c03-bb09-2bc25f289b95" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,8 +189,7 @@
     <MESSAGE value="更新了workspace.xml文件" />
     <MESSAGE value="更新了本地bootstrap框架，将前端网页的bootstrap引用改为本地" />
     <MESSAGE value="更新了用户信息表，现在默认有个root管理员" />
-    <MESSAGE value="优化了login输入框的提示" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化了login输入框的提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新了用户信息表，现在默认有个root管理员" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634117576690">
@@ -255,10 +256,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1634116378390" />
-    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634117617912">
+    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634122317741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634117617912" />
+    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634122317741" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1634110049496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
