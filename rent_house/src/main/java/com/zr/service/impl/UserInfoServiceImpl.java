@@ -19,11 +19,6 @@ public class UserInfoServiceImpl implements UserInfoService {
     private UserInfoServiceImpl() {
         userInfoDao = UserInfoDao.getInstance(); // dao实例，多态
     }
-    private static UserInfoServiceImpl userInfoService = FactoryUtils.createInstance(UserInfoServiceImpl.class.getName()); //service实例
-    // 返回服务层实例
-    public static UserInfoServiceImpl getInstance(){
-        return userInfoService;
-    }
 
     @Override
     public boolean login(String account, String password) {

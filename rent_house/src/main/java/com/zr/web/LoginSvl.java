@@ -1,6 +1,9 @@
 package com.zr.web;
 
+import com.zr.pojo.UserInfo;
+import com.zr.service.UserInfoService;
 import com.zr.utils.JDBCUtils;
+import com.zr.utils.Utils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +17,7 @@ public class LoginSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String account = request.getParameter("account");
         String password = request.getParameter("password");
+        UserInfoService user = UserInfoService.getInstance();
 
     }
 
