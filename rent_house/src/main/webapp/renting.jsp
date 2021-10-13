@@ -15,7 +15,7 @@
 </head>
 <body>
 <%--头部 START--%>
-<header>
+<header id="header">
   <ul>
     <li><a href="index.jsp" class="nav_header">首页</a></li>
     <li><a href="#" class="nav_header current">租房</a></li>

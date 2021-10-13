@@ -30,10 +30,10 @@ window.addEventListener('load', function() {
         let scrollTop=$(window).scrollTop();
         if (scrollTop>0){
             $('.nav_header').css('color','#000');
-            $('header').css('background-color','rgba(255, 255, 255, 1.0)');
+            $('header').css('background-color','rgba(255, 255, 255, 1.0)').css('box-shadow', '2px 2px 8px silver');
         }else {
             $('.nav_header').css('color','#fff');
-            $('header').css('background-color','rgba(0, 0, 0, 0.2)');
+            $('header').css('background-color','rgba(0, 0, 0, 0.2)').css('box-shadow', '0 0');
         }
     }
 
