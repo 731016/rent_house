@@ -11,7 +11,7 @@
  Target Server Version : 50540
  File Encoding         : 65001
 
- Date: 12/10/2021 15:13:17
+ Date: 13/10/2021 14:37:40
 */
 
 SET NAMES utf8mb4;
@@ -120,5 +120,10 @@ CREATE TABLE `userinfo`  (
   `state` int(11) DEFAULT NULL,
   PRIMARY KEY (`account`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of userinfo
+-- ----------------------------
+INSERT INTO `userinfo` VALUES ('root', 'root', '管理员', '管理员', '***', '***', '***', 2);
 
 SET FOREIGN_KEY_CHECKS = 1;
