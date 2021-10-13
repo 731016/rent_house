@@ -49,9 +49,9 @@ window.addEventListener('load', function () {
         $('.con_father_yz').on('click',function () {
             location.href='renting.jsp';
         });
-        // TODO 出租
+        // 出租
         $('.con_father_zf').on('click',function () {
-            location.href='';
+            location.href='housedetails.jsp';
         })
     });
 

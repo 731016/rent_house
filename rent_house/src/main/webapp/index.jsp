@@ -28,7 +28,7 @@
         <ul>
             <li><a href="#" class="nav_header current">首页</a></li>
             <li><a href="renting.jsp" class="nav_header">租房</a></li>
-            <li><a href="javascript:;" class="nav_header">出租</a></li>
+            <li><a href="housedetails.jsp" class="nav_header">出租</a></li>
             <li class="reg_log" id="show_register">
                 <a href="register.jsp" class="nav_header">注册</a>
             </li>
@@ -63,6 +63,7 @@
     </div>
     <div class="container">
         <dl>
+            <%--js 跳转 START--%>
             <dd class="con_father_yz">
                 <img src="/resource/images/index_yz.jpg" alt="">
                 <div class="con_yz">
@@ -77,6 +78,7 @@
                     <span>房屋出租</span>
                 </div>
             </dd>
+                <%--js 跳转 END--%>
         </dl>
     </div>
 </section>
