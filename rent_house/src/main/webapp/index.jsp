@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Lie flat</title>
     <%--网页logo START --%>
-    <link rel="icon" href="resource/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/resource/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>
     <%--网页logo END --%>
     <%--关键字 Keywords是页面关键词，是搜索引擎关注点之一。Keywords应该限制在6～8个关键词左右 START--%>
     <meta name ="Keywords"content="Lie flat,租房,出租,出租房交易平台,房屋出租信息"/>
@@ -18,7 +18,7 @@
     <%--网站说明 END --%>
     <link rel="stylesheet" href="/resource/css/index.css">
     <link rel="stylesheet" href="/resource/css/public.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/resource/js/jquery-3.6.0.min.js"></script>
     <script src="/resource/js/index.js"></script>
 </head>
 

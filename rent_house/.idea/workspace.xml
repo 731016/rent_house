@@ -6,11 +6,44 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a35c0d41-c02a-4c03-bb09-2bc25f289b95" name="Default Changelist" comment="" />
+    <list default="true" id="a35c0d41-c02a-4c03-bb09-2bc25f289b95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/bootstrap-4.6.0-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -44,6 +77,13 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="261" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="262" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="261" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\webapp\resource" />
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\webapp\resource\css" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.53" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.53" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -151,24 +191,36 @@
       <option name="project" value="LOCAL" />
       <updated>1634105145374</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="更新了workspace.xml文件">
+      <created>1634105382814</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634105382814</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="loginSvl的实现" />
     <MESSAGE value="添加ReturnResult类" />
     <MESSAGE value="修复了登录空指针的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了登录空指针的bug" />
+    <MESSAGE value="更新了workspace.xml文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新了workspace.xml文件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634102939758">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634102939758" />
-    <state x="530" y="103" key="CommitChangelistDialog2" timestamp="1634105143172">
+    <state x="533" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1634106310689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="530" y="103" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634105143172" />
+    <state x="533" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634106310689" />
+    <state x="530" y="103" key="CommitChangelistDialog2" timestamp="1634105382124">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="530" y="103" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634105382124" />
     <state width="1293" height="253" key="GridCell.Tab.0.bottom" timestamp="1634104221445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -217,9 +269,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="253" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634104221445" />
-    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634097404415">
+    <state x="398" y="213" width="1008" height="534" key="VCS.ChangesBrowserDialog" timestamp="1634105442632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634097404415" />
+    <state x="398" y="213" width="1008" height="534" key="VCS.ChangesBrowserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634105442632" />
+    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634105444233">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634105444233" />
   </component>
 </project>

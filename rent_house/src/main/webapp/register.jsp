@@ -3,13 +3,13 @@
 <head>
   <title>注册页面</title>
   <%--网页logo START --%>
-  <link rel="icon" href="resource/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="/resource/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>
   <%--网页logo END --%>
   <link rel="stylesheet" href="./resource/css/regist.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
   <script src="/resource/js/register.js"></script>
 </head>
 <body>

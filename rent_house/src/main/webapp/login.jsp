@@ -3,12 +3,12 @@
 <head>
   <title>登录页面</title>
   <%--网页logo START --%>
-  <link rel="icon" href="resource/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="/resource/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>
   <%--网页logo END --%>
-  <link rel="stylesheet" href="./resource/css/login.css">
-  <script src="resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="resource/js/login.js"></script>
+  <link rel="stylesheet" href="/resource/css/login.css">
+  <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/resource/js/login.js"></script>
   <script>
     $(function () {
       $("#btn").click(function () {
