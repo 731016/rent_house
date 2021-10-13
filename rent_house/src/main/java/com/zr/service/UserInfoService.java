@@ -21,4 +21,5 @@ public interface UserInfoService {
     UserInfo getUserInfoByAccount(String account);
     UserInfo getUserInfoByUserName(String userName);
     List<UserInfo> getUserInfoLikeUserName(String userName);
+    boolean UserNotExistsByAccount(String account);
 }

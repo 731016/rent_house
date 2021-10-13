@@ -64,4 +64,9 @@ public class UserInfoServiceImpl implements UserInfoService {
     public List<UserInfo> getUserInfoLikeUserName(String userName) {
         return userInfoDao.getUserInfoLikeUserName(userName);
     }
+
+    @Override
+    public boolean UserNotExistsByAccount(String account) {
+        return userInfoDao.getUserInfoByAccount(account) ==null;
+    }
 }
