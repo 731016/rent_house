@@ -1,3 +1,12 @@
+# Default ignored files
+elf/
+/workspace.xml
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+tpRequests/
+
 *.class
 
 # Mobile Tools for Java (J2ME)
@@ -10,9 +19,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-
-# 忽略.idea
-/.idea/
 
 # 忽略 target目录
 /target/
