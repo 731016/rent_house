@@ -24,7 +24,6 @@
 
 <body>
 <%--头部 START--%>
-<div>
     <header>
         <ul>
             <li><a href="#" class="nav_header current">首页</a></li>
@@ -39,7 +38,6 @@
             <li class="reg_log" style="display: none"><a href="javascript:;" class="nav_header">退出</a></li>
         </ul>
     </header>
-</div>
 
 <%--头部 END--%>
 <%--主体 START--%>
