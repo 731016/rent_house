@@ -20,6 +20,21 @@ window.addEventListener('load', function() {
                 }
             }
         });
+        $(window).on('scroll',function () {
+            scroll();
+        })
 
     });
+
+    function scroll() {
+        let scrollTop=$(window).scrollTop();
+        if (scrollTop>0){
+            $('.nav_header').css('color','#000');
+            $('header').css('background-color','rgba(255, 255, 255, 1.0)');
+        }else {
+            $('.nav_header').css('color','#fff');
+            $('header').css('background-color','rgba(0, 0, 0, 0.2)');
+        }
+    }
+
 });
