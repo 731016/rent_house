@@ -12,7 +12,7 @@
 hs_err_pid*
 
 # 忽略.idea
-.idea/
+/.idea/
 
 # 忽略 target目录
-target/
+/target/
