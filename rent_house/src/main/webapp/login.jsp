@@ -9,32 +9,7 @@
   <link rel="stylesheet" href="/resource/css/login.css">
   <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/resource/js/login.js"></script>
-  <script>
-    $(function () {
-      $("#btn").click(function () {
-        let $txt = $("#txt").val();
-        let $psw = $("#psw").val();
-        let aj = {"account":$txt,"password":$psw}
-        $.ajax({
-          type:"post",
-          data:aj,
-          dataType:"json",
-          url:"/login",
-          success:function (data) {
-            if (data.flag){
-              history.back();
-            }else {
-              $("#validation").html("<span>账号或密码错误</span>").css("color","red")
-              return false;
-            }
-          },
-          error:function (e) {
-            $("body").html(e.responseText)
-          }
-        })
-      })
-    })
-  </script>
+
 </head>
 <body>
 <form>
@@ -45,7 +20,7 @@
       <div id="title" style="text-align: center;">
         <h1>登录</h1>
       </div>
-      <div id="validation"></div>
+      <div id="validation" style="text-align: center"></div>
       <div class="input">
         账号：
         <input id="txt" name="account" /><br />

@@ -34,7 +34,17 @@ public class LoginSvl extends HttpServlet {
         UserInfoService user = UserInfoService.getInstance();
         boolean login = user.login(account, password);
         HttpSession session = request.getSession();
-        ReturnResult result = new ReturnResult(null,null,login);
+        ReturnResult result ;
+
+        //查询是否为管理员权限
+        if (user.getUserInfoByAccount(account).getState().equals(2)){
+            result = new ReturnResult("root",null,false);
+        }else if (user.getUserInfoByAccount(account).getState().equals(0)){
+            result = new ReturnResult("disable",null,false);
+        }else {
+            result = new ReturnResult(null,null,login);
+        }
+
         String s = JSON.toJSONString(result);
 //        String s = "{\"log\":"+login+"}";
         response.getWriter().print(s);

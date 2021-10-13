@@ -6,10 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a35c0d41-c02a-4c03-bb09-2bc25f289b95" name="Default Changelist" comment="">
+    <list default="true" id="1bdf107f-5ab7-43bb-86dd-e52a5a90dbd9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zr/web/RegisterJudgeSvl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zr/web/RegisterSvl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/service/UserInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/service/impl/UserInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/web/LoginSvl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/web/LoginSvl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/js/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +61,7 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="262" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="261" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -162,134 +168,78 @@
       <option name="project" value="LOCAL" />
       <updated>1634097592275</updated>
     </task>
-    <task id="LOCAL-00004" summary="修复了登录空指针的bug">
-      <created>1634105145374</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1634105145374</updated>
-    </task>
-    <task id="LOCAL-00005" summary="更新了workspace.xml文件">
-      <created>1634105382814</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1634105382814</updated>
-    </task>
-    <task id="LOCAL-00006" summary="更新了本地bootstrap框架，将前端网页的bootstrap引用改为本地">
-      <created>1634106733797</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1634106733797</updated>
-    </task>
-    <task id="LOCAL-00007" summary="更新了用户信息表，现在默认有个root管理员">
-      <created>1634107220880</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1634107220880</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="loginSvl的实现" />
     <MESSAGE value="添加ReturnResult类" />
-    <MESSAGE value="修复了登录空指针的bug" />
-    <MESSAGE value="更新了workspace.xml文件" />
-    <MESSAGE value="更新了本地bootstrap框架，将前端网页的bootstrap引用改为本地" />
-    <MESSAGE value="更新了用户信息表，现在默认有个root管理员" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了用户信息表，现在默认有个root管理员" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加ReturnResult类" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634102939758">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634102939758" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1634109141749">
+    <state x="530" y="103" key="CommitChangelistDialog2" timestamp="1634097590723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1634109141749" />
-    <state x="533" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1634106310689">
+    <state x="530" y="103" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634097590723" />
+    <state width="1293" height="253" key="GridCell.Tab.0.bottom" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="533" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634106310689" />
-    <state x="530" y="103" key="CommitChangelistDialog2" timestamp="1634107219878">
+    <state width="1293" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.0.center" timestamp="1634109852540">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="530" y="103" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634107219878" />
-    <state width="1292" height="412" key="GridCell.Tab.0.bottom" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852540" />
+    <state width="1293" height="253" key="GridCell.Tab.0.left" timestamp="1634109852540">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.0.center" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852540" />
+    <state width="1293" height="253" key="GridCell.Tab.0.right" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.0.left" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.1.bottom" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.0.right" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.1.center" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.1.bottom" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.1.left" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.1.center" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.1.right" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.1.left" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.2.bottom" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.1.right" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.2.center" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.2.bottom" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.2.left" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.2.center" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state width="1293" height="253" key="GridCell.Tab.2.right" timestamp="1634109852541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.2.left" timestamp="1634107288546">
+    <state width="1293" height="253" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634109852541" />
+    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634111065368">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.2.right" timestamp="1634107288546">
+    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634111065368" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1634110049496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="412" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634107288546" />
-    <state width="1292" height="412" key="GridCell.Tab.3.bottom" timestamp="1634106965260">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1292" height="412" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634106965260" />
-    <state width="1292" height="412" key="GridCell.Tab.3.center" timestamp="1634106965260">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1292" height="412" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634106965260" />
-    <state width="1292" height="412" key="GridCell.Tab.3.left" timestamp="1634106965260">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1292" height="412" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634106965260" />
-    <state width="1292" height="412" key="GridCell.Tab.3.right" timestamp="1634106965260">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1292" height="412" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634106965260" />
-    <state x="398" y="213" width="1008" height="534" key="VCS.ChangesBrowserDialog" timestamp="1634105442632">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="398" y="213" width="1008" height="534" key="VCS.ChangesBrowserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634105442632" />
-    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634107023505">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634107023505" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1634110049496" />
   </component>
 </project>

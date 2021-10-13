@@ -13,7 +13,7 @@
   <script src="/resource/js/register.js"></script>
 </head>
 <body>
-<form method="post" action="#">
+<form method="post" action="/register">
 <span id="our">Lie flat租房</span>
 <div id="big">
   <div id="login">
@@ -28,7 +28,7 @@
           账号：
         </td>
         <td class="input">
-          <input id="txt" class="inp" /><br />
+          <input id="txt" class="inp" name="account" /><br />
           <span id="sptxt" class="sp"></span>
         </td>
       </tr>
@@ -37,7 +37,7 @@
           密码：
         </td>
         <td class="input">
-          <input type="password" id="psw" class="inp" /><br>
+          <input type="password" id="psw" class="inp" name="password" /><br>
           <span id="sppass" class="sp"></span>
         </td>
       </tr>
@@ -55,7 +55,7 @@
           姓名：
         </td>
         <td class="input">
-          <input id="name"  class="inp"/><br />
+          <input id="name"  class="inp" name="name"/><br />
           <span id="spname" class="sp"></span>
         </td>
       </tr>
@@ -64,7 +64,7 @@
           昵称：
         </td>
         <td class="input">
-          <input id="account" class="inp" /><br />
+          <input id="account" class="inp" name="nickname" /><br />
           <span id="spaccount" class="sp"></span>
         </td>
       </tr>
@@ -73,7 +73,7 @@
           邮箱：
         </td>
         <td class="input">
-          <input id="qq" class="inp" /><br />
+          <input type="email" id="qq" class="inp" name="email" /><br />
           <span id="spQQ" class="sp"></span>
         </td>
       </tr>
@@ -82,7 +82,7 @@
           手机号：
         </td>
         <td class="input">
-          <input id="phone" class="inp" /><br />
+          <input id="phone" class="inp" name="phone" /><br />
           <span id="spphone" class="sp"></span>
         </td>
       </tr>
