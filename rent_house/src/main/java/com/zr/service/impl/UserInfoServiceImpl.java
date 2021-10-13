@@ -16,7 +16,7 @@ import java.util.List;
 public class UserInfoServiceImpl implements UserInfoService {
     // 工厂模式 + 单例模式(饿汉)
     private static UserInfoDao userInfoDao; //dao接口
-    private UserInfoServiceImpl() {
+    public UserInfoServiceImpl() {
         userInfoDao = UserInfoDao.getInstance(); // dao实例，多态
     }
 
