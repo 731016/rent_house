@@ -1,0 +1,90 @@
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#big{
+    height: 550px;
+    width: 100%;
+    margin-top: 90px;
+    background-color: #555555;
+    background-image: url("/resource/images/login_bg.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#login{
+    height: 500px;
+    width: 500px;
+    border: 1px solid white;
+    margin: 0px auto;
+    position: relative;
+    top: 25px;
+    background-color: white;
+    border-radius: 15px;
+    /* font-family: 楷体; */
+}
+#title{
+    height: 120px;
+    font-size: 30px;
+    padding-top: 5px;
+    font-family: 华文新魏;
+}
+#txt,#psw{
+    width: 260px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.input{
+    font-size: 25px;
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 35px;
+    height: 45px;
+    /* border: 1px solid black; */
+}
+input{
+    font-size: 20px;
+    border: 1px solid black;
+}
+#btn{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    position: relative;
+    left: 235px;
+    top: 10px;
+}
+#our{
+    position: absolute;
+    top: 25px;
+    left: 500px;
+    font-size: 50px;
+    font-family: 华文新魏;
+    color: crimson;
+}
+.sp{
+    font-size: 10px;
+    position: absolute;
+    left: 160px;
+}
+#sub{
+    font-size: 25px;
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 55px;
+    height: 45px;
+}
+#first{
+    position: relative;
+    left: 135px;
+}
+#aa{
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 310px;
+    padding-left: 80px;
+    font-size: 15px;
+}

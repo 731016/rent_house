@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="rent_house:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e82990dd-e0e5-4f97-9806-dfde6b3a2ef2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache-maven-3.6.3\lib" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1zM3cLbWsr3v7QwVmuaExmk0oWa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4352837" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zr.dao.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\webapp" />
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\resources" />
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\java" />
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\java\com\zr\utils" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zr.pojo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\Cooperation projects\rent_house\src\main\resources\sql" />
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\webapp" />
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\resources" />
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\webapp\resource" />
+      <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\resources\properties" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.53" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.53" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="rent_house:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_rent_house_8" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51699" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="rent_house:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration useDefault="false">C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+    <option name="runUnderTerminal" value="true" />
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
+          <option name="myCopyRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
+          <option name="myCopyRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e82990dd-e0e5-4f97-9806-dfde6b3a2ef2" name="Default Changelist" comment="" />
+      <created>1633944207377</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633944207377</updated>
+      <workItem from="1633944210363" duration="8622000" />
+      <workItem from="1634008739241" duration="10502000" />
+      <workItem from="1634025576214" duration="176000" />
+    </task>
+    <task id="LOCAL-00001" summary="初始的项目，&#10;添加jar包时，把地址放在pom文件中，文件中已存在导入的内容，具体的格式参看mvn中的mvn地址">
+      <created>1633944949111</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633944949111</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修复了数据库连接错误">
+      <created>1633948969673</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633948969673</updated>
+    </task>
+    <task id="LOCAL-00003" summary="添加了dao目录和service目录">
+      <created>1633949096447</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633949096447</updated>
+    </task>
+    <task id="LOCAL-00004" summary="对pom文件中的jar包引入加入了说明">
+      <created>1633949402405</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1633949402405</updated>
+    </task>
+    <task id="LOCAL-00005" summary="加入了阿里的Json转换工具类，使用为JSON.方法">
+      <created>1633949774073</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633949774073</updated>
+    </task>
+    <task id="LOCAL-00006" summary="添加用户类">
+      <created>1633952217227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1633952217227</updated>
+    </task>
+    <task id="LOCAL-00007" summary="添加房屋类">
+      <created>1633952378296</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1633952378296</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修复了乱码问题，网页统一为jsp，jsp内不要写java代码，使用ajax请求数据">
+      <created>1634022434923</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634022434923</updated>
+    </task>
+    <task id="LOCAL-00009" summary="添加了对UserInfoDao和TowardDao的快捷实例化">
+      <created>1634023124325</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1634023124325</updated>
+    </task>
+    <task id="LOCAL-00010" summary="添加sql文件的脚本">
+      <created>1634024559266</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1634024559266</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始的项目，&#10;添加jar包时，把地址放在pom文件中，文件中已存在导入的内容，具体的格式参看mvn中的mvn地址" />
+    <MESSAGE value="修复了数据库连接错误" />
+    <MESSAGE value="添加了dao目录和service目录" />
+    <MESSAGE value="对pom文件中的jar包引入加入了说明" />
+    <MESSAGE value="加入了阿里的Json转换工具类，使用为JSON.方法" />
+    <MESSAGE value="修复了无法启动tomcat的问题" />
+    <MESSAGE value="添加用户类" />
+    <MESSAGE value="添加房屋类" />
+    <MESSAGE value="修复了乱码问题，网页统一为jsp，jsp内不要写java代码，使用ajax请求数据" />
+    <MESSAGE value="添加了对UserInfoDao和TowardDao的快捷实例化" />
+    <MESSAGE value="登录注册页面的添加" />
+    <MESSAGE value="添加sql文件的脚本" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加sql文件的脚本" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="735" y="407" key="#TomEE_Server" timestamp="1633950847109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="407" key="#TomEE_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1633950847109" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634017579291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634017579291" />
+    <state x="1245" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1633952489276">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1245" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1633952489276" />
+    <state x="1170" y="295" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1633951857916">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1170" y="295" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1633951857916" />
+    <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1633948860895">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1633948860895" />
+    <state x="736" y="210" key="CommitChangelistDialog2" timestamp="1634023489418" />
+    <state x="736" y="207" key="CommitChangelistDialog2" timestamp="1634024555005">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="736" y="210" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634023489418" />
+    <state x="736" y="207" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634024555005" />
+    <state width="398" height="466" key="DebuggerActiveHint" timestamp="1633946914019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="398" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1633946914019" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1634017831853">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1634017831853" />
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.1.bottom" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.1.center" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.1.left" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.1.right" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.2.bottom" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.2.center" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.2.left" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.2.right" timestamp="1634023617655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634023617655" />
+    <state width="1292" height="277" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634022380369" />
+    <state x="712" y="240" key="IDE.errors.dialog" timestamp="1634023554033">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="712" y="240" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634023554033" />
+    <state x="712" y="169" key="SettingsEditor" timestamp="1634010318014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="712" y="169" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1634010318014" />
+    <state x="503" y="253" key="VCS.ChangesBrowserDialog" timestamp="1634023027334">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="503" y="253" key="VCS.ChangesBrowserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634023027334" />
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634023703689" />
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634024464801" />
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634025114142">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634023703689" />
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634024464801" />
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634025114142" />
+    <state x="440" y="275" key="new project wizard" timestamp="1634017836028">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="275" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1634017836028" />
+    <state x="756" y="418" key="svn.passwordDialog" timestamp="1633944770085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="418" key="svn.passwordDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1633944770085" />
+    <state x="741" y="202" key="svn.repositoryBrowser" timestamp="1633944758493">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="741" y="202" key="svn.repositoryBrowser/0.0.1920.1040@0.0.1920.1040" timestamp="1633944758493" />
+    <state x="785" y="407" key="svn.sslDialog" timestamp="1633944762749">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="785" y="407" key="svn.sslDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1633944762749" />
+    <state x="765" y="422" key="svn.upgradeDialog" timestamp="1634010444100">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="422" key="svn.upgradeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634010444100" />
+    <state x="1205" y="392" key="svn4idea.checkout.options" timestamp="1634010442716">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1205" y="392" key="svn4idea.checkout.options/0.0.1920.1040@0.0.1920.1040" timestamp="1634010442716" />
+  </component>
+</project>

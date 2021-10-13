@@ -1,0 +1,131 @@
+.search_nav ul li {
+    float: left;
+    padding: 0 10px 0 10px;
+}
+
+section {
+    position: relative;
+}
+
+.search {
+    width: 1000px;
+    top: 30%;
+    left: 30%;
+    position: absolute;
+}
+
+@media all and (max-width:750px) {
+    .search {
+        left: 0;
+    }
+}
+
+.search_title h1 {
+    font-family: 'Consolas';
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.search_title p {
+    margin-top: 20px;
+    font-family: 'Consolas';
+    color: #fff;
+}
+
+.search_nav {
+    margin-top: 100px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search_nav li:hover {
+    cursor: pointer;
+    color: #ff961e;
+}
+
+.search_input,
+.search_btn {
+    border-radius: 5px;
+}
+
+.search_input {
+    width: 50%;
+    height: 42px;
+    border: 0;
+    outline: none;
+    padding-left: 20px;
+}
+
+.search_main {
+    margin-top: 10px;
+}
+
+.search_btn {
+    display: inline-block;
+    width: 20%;
+    height: 42px;
+    background-color: #ff961e;
+    vertical-align: top;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+}
+
+.container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.container dd {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.container {
+    margin-left: 30%;
+}
+
+.container img {
+    width: 270px;
+    height: 200px;
+}
+
+.container dd {
+    float: left;
+    margin-right: 150px;
+}
+
+.con_yz,
+.con_zf {
+    width: 230px;
+    height: 72px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.con_father_yz,
+.con_father_zf {
+    position: relative;
+}
+
+.con_father_yz:hover,
+.con_father_zf:hover {
+    cursor: pointer;
+}
+
+.con_yz,
+.con_zf {
+    position: absolute;
+    left: 20px;
+    top: 160px;
+}
+
+.con_yz span,
+.con_zf span {
+    padding-top: 5px;
+    color: #999;
+}
+.current{
+    color: #FF961E !important;
+}
