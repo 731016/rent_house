@@ -12,7 +12,8 @@ public class UserInfoDaoImpl implements UserInfoDao {
     @Override
     public boolean login(String account, String password) {
         String sql = "select * from userInfo where account = ? and `password` = ?";
-        return JDBCUtils.query(sql, UserInfo.class, account, password) != null;
+        String pwd = Utils.msgEncrypt(password);
+        return JDBCUtils.query(sql, UserInfo.class, account, pwd) != null;
     }
 
     @Override
