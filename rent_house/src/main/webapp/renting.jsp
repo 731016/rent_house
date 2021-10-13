@@ -7,22 +7,40 @@
   <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon"/>
 <%--网页logo END --%>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/resource/css/public.css">
   <link rel="stylesheet" href="./resource/css/renting.css">
   <script src="./resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./resource/js/renting.js"></script>
 </head>
 <body>
+<%--头部 START--%>
+<header>
+  <ul>
+    <li><a href="index.jsp" class="nav_header">首页</a></li>
+    <li><a href="#" class="nav_header current">租房</a></li>
+    <li><a href="javascript:;" class="nav_header">出租</a></li>
+    <li class="reg_log"><a href="register.jsp" class="nav_header">注册</a></li>
+    <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
+    <li class="reg_log" style="display: none"><a href="javascript:;" class="nav_header">admin</a></li>
+    <li class="reg_log" style="color: #fff;">|</li>
+    <li class="reg_log"><a href="login.jsp" class="nav_header">登录</a></li>
+    <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
+    <li class="reg_log" style="display: none"><a href="javascript:;" class="nav_header">退出</a></li>
+  </ul>
+</header>
+<%--头部 END--%>
+
 <div id="page_body">
   <div class="div_bodyHeight">
     <div class="input-group mb-3" id="div_select">
-      <input type="text" class="form-control" placeholder="Recipient's username" id="input_select">
+      <input type="text" class="form-control" placeholder="请输入小区..." id="input_select">
       <div class="input-group-append">
         <button class="btn btn-warning" type="button" id="button-addon2">开始找房</button>
       </div>
     </div>
   </div>
-  <div>
+  <div id="div_renting">
     <ul>
       <li>
         <strong class="strong_title">找房方式</strong>

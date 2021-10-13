@@ -24,20 +24,23 @@
 
 <body>
 <%--头部 START--%>
-<header>
-    <ul>
-        <li><a href="#" class="nav current">首页</a></li>
-        <li><a href="javascript:;" class="nav">租房</a></li>
-        <li><a href="javascript:;" class="nav">出租</a></li>
-        <li class="reg_log"><a href="register.jsp" class="nav">注册</a></li>
-        <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
-        <li class="reg_log" style="display: none"><a href="javascript:;" class="nav">admin</a></li>
-        <li class="reg_log" style="color: #fff;">|</li>
-        <li class="reg_log"><a href="login.jsp" class="nav">登录</a></li>
-        <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
-        <li class="reg_log" style="display: none"><a href="javascript:;" class="nav">退出</a></li>
-    </ul>
-</header>
+<div>
+    <header>
+        <ul>
+            <li><a href="#" class="nav_header current">首页</a></li>
+            <li><a href="renting.jsp" class="nav_header">租房</a></li>
+            <li><a href="javascript:;" class="nav_header">出租</a></li>
+            <li class="reg_log"><a href="register.jsp" class="nav_header">注册</a></li>
+            <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
+            <li class="reg_log" style="display: none"><a href="javascript:;" class="nav_header">admin</a></li>
+            <li class="reg_log" style="color: #fff;">|</li>
+            <li class="reg_log"><a href="login.jsp" class="nav_header">登录</a></li>
+            <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
+            <li class="reg_log" style="display: none"><a href="javascript:;" class="nav_header">退出</a></li>
+        </ul>
+    </header>
+</div>
+
 <%--头部 END--%>
 <%--主体 START--%>
 <section>
