@@ -39,11 +39,15 @@ $(function() {
     })
 
     $('#sort_default').click(function() {
+        $('#div_sort div button').removeClass('sort_current');
+        $('#sort_default').addClass('sort_current');
         $('#sort_price svg').hide();
         $('#sort_area svg').hide();
     })
 
     $('#sort_price').click(function() {
+        $('#div_sort div button').removeClass('sort_current');
+        $('#sort_price').addClass('sort_current');
         $('#sort_area svg').hide();
         if ($('#sort_price svg:first').css('display') == 'none' && $('#sort_price svg:last').css('display') == 'none') {
             $('#sort_price svg:first').show();
@@ -53,6 +57,8 @@ $(function() {
     })
 
     $('#sort_area').click(function() {
+        $('#div_sort div button').removeClass('sort_current');
+        $('#sort_area').addClass('sort_current');
         $('#sort_price svg').hide();
         if ($('#sort_area svg:first').css('display') == 'none' && $('#sort_area svg:last').css('display') == 'none') {
             $('#sort_area svg:first').show();
