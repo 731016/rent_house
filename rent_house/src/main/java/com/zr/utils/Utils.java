@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Date;
@@ -24,7 +25,7 @@ public class Utils {
             byte[] digest=null;
             MessageDigest md5 = MessageDigest.getInstance("md5");
             digest = md5.digest(msg.getBytes("utf-8"));
-            result = String.valueOf(digest);
+            result = new BigInteger(1,digest).toString(16);
         } catch (Exception e) {
             e.printStackTrace();
         }
