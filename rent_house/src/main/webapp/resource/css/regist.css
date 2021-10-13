@@ -83,8 +83,9 @@ table{
 #log_a{
     text-decoration: none;
     color: #0D6EFD;
+
     size: 10px;
-    margin: 5px;
+    margin: 15px;
 
 }
 #log_a:hover{

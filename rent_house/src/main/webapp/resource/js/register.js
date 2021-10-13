@@ -1,5 +1,5 @@
-let accReg = new RegExp(/^[a-zA-Z0-9]{4,10$/);
-let pwdReg = new RegExp(/^[a-zA-Z][5,15]$/);
+let accReg = new RegExp(/^[a-zA-Z0-9]{4,16}$/);
+let pwdReg = new RegExp(/^[a-zA-Z][a-zA-Z0-9]{5,15}$/);
 let acc = false;    //账号
 let pwd = false;    //密码
 let pwd2 = false;   //二次密码
@@ -14,7 +14,7 @@ window.addEventListener('load',function () {
             let txt=$(this).val().trim();
             if(txt.length!==0){
                 if(!accReg.test(txt)){
-                    $('#sptxt').text('账号长度必须大于4小于10').css('color','red');
+                    $('#sptxt').text('账号长度必须大于4小于16').css('color','red');
                     // $(this).css('color','red');
                     $(this).css('border-color','red');
                     acc=false;
@@ -32,7 +32,7 @@ window.addEventListener('load',function () {
                                 $(this).css('border-color','green');
                                 acc=true;
                             }else {
-                                $('#sptxt').text('用户已被注册').css('color','green');
+                                $('#sptxt').text('用户已被注册').css('color','red');
                                 // $(this).css('color','green');
                                 $(this).css('border-color','red');
                                 acc=false;
@@ -55,7 +55,7 @@ window.addEventListener('load',function () {
             let psw=$(this).val().trim();
             if(psw.length!==0){
                 if(!pwdReg.test(psw)){
-                    $('#sppass').text('密码长度必须大于4小于10').css('color','red');
+                    $('#sppass').text('密码长度必须大于6小于16').css('color','red');
                     $(this).css('border-color','red');
                     pwd = false;
                 }else{
@@ -96,6 +96,7 @@ window.addEventListener('load',function () {
                 $('#spname').text('姓名不能为空').css('color','red');
                 na = false;
             }else {
+                $('#spname').text(null);
                 na = true;
             }
         });
@@ -105,6 +106,7 @@ window.addEventListener('load',function () {
                 $('#spaccount').text('昵称不能为空').css('color','red');
                 nick = false;
             }else {
+                $('#spaccount').text(null);
                 nick = true;
             }
         });
@@ -114,6 +116,7 @@ window.addEventListener('load',function () {
                 $('#spQQ').text('邮箱不能为空').css('color','red');
                 email = false;
             }else {
+                $('#spQQ').text(null)
                 email = true;
             }
         });
@@ -123,18 +126,18 @@ window.addEventListener('load',function () {
                 $('#spphone').text('手机号不能为空').css('color','red');
                 phone = false;
             }else {
+                $('#spphone').text(null);
                 phone = true;
             }
         });
-
-        $("from").submit(function () {
+        $("form").submit(function () {
             let stateList = [acc,pwd,pwd2,na,nick,email,phone];
             let flag = true;
-            $.each(stateList,function () {
-                if ($(this)===false){
+           for (let i=0;i<stateList.length;i++){
+                if (!stateList[i]){
                     flag=false;
                 }
-            })
+            }
             return flag;
         })
 

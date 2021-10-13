@@ -21,6 +21,7 @@ public class RegisterSvl extends HttpServlet {
       String phone = request.getParameter("phone");
       UserInfo userInfo = new UserInfo(account,password,name,nickname,email,phone,"default.jpg",null);
       UserInfoService.getInstance().addUserInfo(userInfo);
+      response.sendRedirect("index.jsp");
    }
 
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
