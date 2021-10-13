@@ -102,29 +102,6 @@ public class JDBCUtils {
             return null;
         }
     }
-    public static <T> List<T> queryList2(String sql,Class<T> type,Object...args){
-        try{
-            ps = getPreparedStatement(sql,args);
-            ResultSet rs = ps.executeQuery();
-            return PojoUtils.resultSetToPojoList(rs,type);
-        }catch (Exception e){
-            return null;
-        }finally {
-            closeConnection();
-        }
-    }
-    public static <T> T query2(String sql,Class<T> type, Object...args){
-        try{
-            ps = getPreparedStatement(sql,args);
-            ResultSet rs = ps.executeQuery();
-            return PojoUtils.resultSetToPojo(rs,type);
-        }catch (Exception e){
-            return null;
-        }
-        finally {
-            closeConnection();
-        }
-    }
     public static ResultSet query(String sql,Object...args){
         try{
             ps = getPreparedStatement(sql,args);
