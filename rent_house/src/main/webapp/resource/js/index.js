@@ -1,6 +1,25 @@
 window.addEventListener('load', function () {
-
+    var test;
     $(function () {
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: '/login',
+            success: function (data) {
+                test=data;
+                let object = data.object;
+                if (object != undefined) {
+                    $('#show_login').html("<a href='javascript:;' class='nav_header'>" + object.account + "</a>");
+                    $('#show_register').html("<a href='javascript:;' class='nav_header'>退出</a>");
+                } else {
+                    $('#show_login').html("<a href='login.jsp' class='nav_header'>登录</a>")
+                    $('#show_register').html("<a href='register.jsp' class='nav_header'>注册</a>")
+                }
+            },
+            error: function (res) {
+                $('body').innerText(res.responseText);
+            }
+        });
         $('.search_nav ul').on('click', 'li', function () {
             $(this).siblings().css('color', '').removeClass('current');
             $(this).css('color', '#FF961E');
@@ -23,26 +42,8 @@ window.addEventListener('load', function () {
         });
         $(window).on('scroll', function () {
             scroll();
-        })
-        $.ajax({
-            type: 'post',
-            dataType: 'json',
-            url: '/login',
-            success: function (data) {
-                let $account = $('#show_account');
-                let object = data.object;
-                if (object != null) {
-                    $('#show_login').html("<a href='javascript:;'>" + object.account + "</a>");
-                    $('#show_register').html("<a href='javascript:;'>退出</a>");
-                } else {
-                    $('#show_login').html("<a href='login.jsp' class='nav_header'>登录</a>")
-                    $('#show_register').html("<a href='register.jsp' class='nav_header'>注册</a>")
-                }
-            },
-            error: function (res) {
-                $('body').innerText(res.responseText);
-            }
         });
+
         // 租房
         $('.con_father_yz').on('click',function () {
             location.href='renting.jsp';

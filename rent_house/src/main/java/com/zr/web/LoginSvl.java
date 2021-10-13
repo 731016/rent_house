@@ -25,6 +25,9 @@ public class LoginSvl extends HttpServlet {
         //判断账号或密码是否为空
         if (account==null||account.isBlank()||password==null||password.isBlank()){
             ReturnResult result = new ReturnResult(null,null,false);
+            if(request.getSession().getAttribute("UserInfo")!=null){
+                result.setObject(request.getSession().getAttribute("UserInfo"));
+            }
             String s = JSON.toJSONString(result);
             response.getWriter().print(s);
             return;
@@ -45,13 +48,15 @@ public class LoginSvl extends HttpServlet {
             result = new ReturnResult(null,null,login);
         }
 
+
+        if (login){
+            UserInfo userInfo = user.getUserInfoByAccount(account);
+            session.setAttribute("UserInfo",userInfo);
+            result.setObject(userInfo);
+        }
         String s = JSON.toJSONString(result);
 //        String s = "{\"log\":"+login+"}";
         response.getWriter().print(s);
-        if (login){
-            UserInfo userInfo = user.getUserInfoByAccount(account);
-            session.setAttribute("user",userInfo);
-        }
 
 
     }
