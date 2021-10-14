@@ -23,4 +23,5 @@ public class Housing {
    private String facilities; //配套设施
    private Integer state; //状态（0：取消发布，1：发布）
    private Integer aid; //区域
+   private String address; //地址
 }
