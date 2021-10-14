@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="upload_bill">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/upload_bill.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
