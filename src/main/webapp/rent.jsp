@@ -9,9 +9,12 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/resource/css/rent.css"/>
     <link rel="stylesheet" href="/resource/css/public.css">
     <link rel="stylesheet" href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/resource/css/rent.css"/>
+
+    <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/resource/js/public_login.js"></script>
 </head>
 <body id="b1">
 <header id="header">
@@ -19,13 +22,13 @@
         <li><a href="index.jsp" class="nav_header">首页</a></li>
         <li><a href="#" class="nav_header current">租房</a></li>
         <li><a href="javascript:;" class="nav_header">出租</a></li>
-        <li class="reg_log"><a href="register.jsp" class="nav_header">注册</a></li>
-        <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
-        <li class="reg_log" style="display: none"><a href="javascript:;" class="nav_header">admin</a></li>
-        <li class="reg_log" style="color: #fff;">|</li>
-        <li class="reg_log"><a href="login.jsp" class="nav_header">登录</a></li>
-        <%--         TODO: 默认display 检查session，cookie是否存储用户信息 --%>
-        <li class="reg_log" style="display: none"><a href="javascript:;" class="nav_header">退出</a></li>
+        <li class="reg_log" id="show_register">
+            <a href="register.jsp" class="nav_header">注册</a>
+        </li>
+        <li class="reg_log nav_header vertical_line" style="color: #fff;">|</li>
+        <li class="reg_log" id="show_login">
+            <a href="login.jsp" class="nav_header">登录</a>
+        </li>
     </ul>
 </header>
 <div id="big">
