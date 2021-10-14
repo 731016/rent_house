@@ -10,6 +10,7 @@
 <head>
   <title>房屋详情</title>
   <link rel="stylesheet" type="text/css" href="/resource/css/housedetails.css"/>
+  <script src="/resource/js/jquery-3.6.0.min.js"></script>
   <script src="/resource/js/housedetails.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
@@ -20,7 +21,7 @@
       <a href="index.jsp" id="home">首页</a>
       <a href="renting.jsp">租房</a>
       <a href="login.jsp" id="login">登录</a>&nbsp;|&nbsp;
-      <a href="register.jsp">注册</a>
+      <a href="register.jsp" id="register">注册</a>
     </div>
   </div>
 </div>

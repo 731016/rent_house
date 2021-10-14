@@ -10,20 +10,24 @@ body{
 	box-shadow: gainsboro 0px 3px 10px 3px;
 }
 #top2{
+	position: relative;
 	width: 1040px;
 	height: 58px;
 	margin: 0 auto;
 }
 #titlename{
+	display: block;
+	width: 20%;
 	font-size: 30px;
 	font-family: 华文新魏;
-	position: relative;
+	position: absolute;
 	top: 16px;
 	color: red;
 }
 #topright{
-	width: 890px;
-	float: right;
+	position: absolute;
+	width: 90%;
+	/*float: right;*/
 	height: 57px;
 	line-height: 57px;
 }
