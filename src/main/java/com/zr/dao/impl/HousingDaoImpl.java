@@ -13,7 +13,7 @@ public class HousingDaoImpl implements HousingDao {
 
     @Override
     public int addHouse(Housing housing) {
-        String sql = "insert into housing values(default,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into housing values(default,?,?,?,?,?,?,?,?,?,?,?,?)";
         Object[] params = {
                 housing.getTitle(),
                 housing.getRent(),
@@ -25,7 +25,8 @@ public class HousingDaoImpl implements HousingDao {
                 housing.getTypeId(),
                 housing.getFacilities(),
                 housing.getState(),
-                housing.getAid()
+                housing.getAid(),
+                housing.getAddress()
         };
         return JDBCUtils.update(sql, params);
     }

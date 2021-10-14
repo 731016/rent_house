@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b82ee4-fec6-4eea-9930-32206bd857b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/pojo/Housing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/pojo/Housing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/dao/impl/HousingDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/dao/impl/HousingDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +178,7 @@
       <workItem from="1634175059610" duration="3594000" />
       <workItem from="1634178985729" duration="25000" />
       <workItem from="1634179036514" duration="15000" />
-      <workItem from="1634179077183" duration="8268000" />
+      <workItem from="1634179077183" duration="8315000" />
     </task>
     <task id="LOCAL-00001">
       <created>1634175128561</created>
@@ -272,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634194860316</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014">
+      <created>1634195495472</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1634195495472</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +289,7 @@
     <MESSAGE value="pojo包中添加了Area类&#10;dao层实现Area类的相应的方法&#10;housing类添加了与Area连接的字段&#10;Landlord.java添加了字段，绑定用户为房东" />
     <MESSAGE value="修改了Utils类中上传文件的返回值&#10;现在的返回值为文件名，该方法需要捕获或上抛" />
     <MESSAGE value="Utils.java添加了删除文件的方法&#10;返回结果为 ReturnResult类的实例：&#10;1. flag：执行结果&#10;2. msg：失败的原因" />
-    <option name="LAST_COMMIT_MESSAGE" value="Utils.java添加了删除文件的方法&#10;返回结果为 ReturnResult类的实例：&#10;1. flag：执行结果&#10;2. msg：失败的原因" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="423" key="#Custom_Plugin_Repositories" timestamp="1634125117799">
@@ -315,10 +321,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="711" y="336" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1634125345945" />
-    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634194859514">
+    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634195494659">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634194859514" />
+    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634195494659" />
     <state x="718" y="365" key="FileChooserDialogImpl" timestamp="1634179597423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
