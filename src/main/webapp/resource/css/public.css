@@ -26,6 +26,7 @@ header {
 header ul {
     line-height: 70px;
     width: 50%;
+    min-width: 800px;
     height: 60px;
     margin: 0 auto;
 }
