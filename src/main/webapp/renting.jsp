@@ -4,7 +4,8 @@
   <title>租房页面</title>
   <%--网页logo START --%>
   <link rel="icon" href="/resource/favicon.ico" type="image/x-icon"/>
-  <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/r
+  esource/favicon.ico" type="image/x-icon"/>
   <%--网页logo END --%>
   <link rel="stylesheet" href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/resource/css/public.css">
@@ -87,7 +88,7 @@
         <strong class="strong_title" style="vertical-align: top;">区域</strong>
         <div class="div_border div_inBlock">
           <div class="btn-group mr-2" id="area">
-            <button type="button" class="btn btn-secondary" name="area">不限</button>
+            <button type="button" class="btn btn-secondary selected" name="area" value="0">不限</button>
           </div>
         </div>
       </li>
@@ -95,7 +96,7 @@
         <strong class="strong_title" style="vertical-align: top;">类型</strong>
         <div class="div_border div_inBlock">
           <div class="btn-group mr-2" id="housingType">
-            <button type="button" class="btn btn-secondary" name="type">不限</button>
+            <button type="button" class="btn btn-secondary selected" name="type" value="0">不限</button>
 
           </div>
         </div>
@@ -104,7 +105,7 @@
         <strong class="strong_title" style="vertical-align: top;">租金</strong>
         <div class="div_inBlock div_border">
           <div class="btn-group mr-2 div_price">
-            <button type="button" class="btn btn-secondary" name="rent">不限</button>
+            <button type="button" class="btn btn-secondary selected" name="rent">不限</button>
             <button type="button" class="btn btn-secondary" name="rent">1000以下</button>
             <button type="button" class="btn btn-secondary" name="rent">1000-2000</button>
             <button type="button" class="btn btn-secondary" name="rent">2000-3000</button>
@@ -114,9 +115,9 @@
           </div>
           <div>
             <div class="btn-group mr-2">
-              <input type="number" class="btn btn-light input_price">
+              <input type="number" class="btn btn-light input_price" id="rentMin">
               <button type="button" class="btn btn-secondary" disabled>-</button>
-              <input type="number" class="btn btn-light input_price">
+              <input type="number" class="btn btn-light input_price" id="rentMax">
               <button type="button" class="btn btn-secondary" disabled>元</button>
             </div>
             <button type="button" class="btn btn-outline-secondary" name="rent">确定</button>
@@ -128,13 +129,12 @@
           <strong class="strong_title" style="vertical-align: top;">户型</strong>
           <div class="div_border div_inBlock">
             <div class="btn-group mr-2">
-              <button type="button" class="btn btn-secondary" name="housingType">不限</button>
+              <button type="button" class="btn btn-secondary selected" name="housingType">不限</button>
               <button type="button" class="btn btn-secondary" name="housingType">一室</button>
               <button type="button" class="btn btn-secondary" name="housingType">两室</button>
               <button type="button" class="btn btn-secondary" name="housingType">三室</button>
-              <button type="button" class="btn btn-secondary" name="housingType">三室</button>
               <button type="button" class="btn btn-secondary" name="housingType">四室</button>
-              <button type="button" class="btn btn-secondary" name="housingType">五室及以上</button>
+              <button type="button" class="btn btn-secondary" name="housingType">五室</button>
             </div>
           </div>
         </li>
@@ -142,7 +142,7 @@
           <strong class="strong_title" style="vertical-align: top;">朝向</strong>
           <div class="div_border div_inBlock">
             <div class="btn-group mr-2" id="toward">
-              <button type="button" class="btn btn-secondary" name="toward">不限</button>
+              <button type="button" class="btn btn-secondary selected" name="toward" value="0">不限</button>
 
             </div>
           </div>

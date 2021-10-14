@@ -101,7 +101,7 @@ $(function () {
         url:"/type",
         success:function (data) {
             $.each(data,function () {
-                $("#housingType").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"type\">"+this.typeName+"</button>"))
+                $("#housingType").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"type\" value='"+this.typeId+"'>"+this.typeName+"</button>"))
             })
         },
         error:function (e) {
@@ -117,7 +117,7 @@ $(function () {
         url:"/toward",
         success:function (data) {
             $.each(data,function () {
-                $("#toward").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"toward\">"+this.towardName+"</button>"))
+                $("#toward").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"toward\" value='"+this.towardId+"'>"+this.towardName+"</button>"))
             })
         },
         error:function (e) {
@@ -133,7 +133,7 @@ $(function () {
         url:"/area",
         success:function (data) {
             $.each(data,function () {
-                $("#area").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"area\">"+this.aName+"</button>"))
+                $("#area").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"area\" value='"+this.aid+"'>"+this.aName+"</button>"))
             })
         },
         error:function (e) {
@@ -141,18 +141,76 @@ $(function () {
         }
     })
 
+    //区域点击事件
+    $("input[name='area']").click(function () {
+        let $input = $("input[name='area']");
+        $.each($input,function () {
+            $(this).removeClass("selected")
+        })
+        $(this).addClass("selected")
+        // addList();
+    })
+
+    //类型点击事件
+    $("input[name='type']").click(function () {
+        let $input = $("input[name='type']");
+        $.each($input,function () {
+            $(this).removeClass("selected")
+        })
+        $(this).addClass("selected")
+        // addList();
+    })
+
+    //租金点击事件
+    $("input[name='rent']").click(function () {
+        let $input = $("input[name='rent']");
+        $.each($input,function () {
+            $(this).removeClass("selected")
+        })
+        $(this).addClass("selected")
+        // addList();
+    })
+
+    //户型点击事件
+    $("input[name='housingType']").click(function () {
+        let $input = $("input[name='housingType']");
+        $.each($input,function () {
+            $(this).removeClass("selected")
+        })
+        $(this).addClass("selected")
+        // addList();
+    })
+
+    //朝向点击事件
+    $("input[name='toward']").click(function () {
+        let $input = $("input[name='toward']");
+        $.each($input,function () {
+            $(this).removeClass("selected")
+        })
+        $(this).addClass("selected")
+        // addList();
+    })
     // addList();
 })
 
 //租房列表添加方法
 function addList() {
     //需要获取数据传入后台作为筛选条件
-    $("[]")
-    //
+    let $area = $(".selected [name='area']").val(); //获取区域的value
+    let $type = $(".selected [name='type']").val(); //获取类型的value
+    let $rent = $(".selected [name='rent']").text(); //获取租金的value
+    let $housingType = $(".selected [name='housingType']").text(); //获取户型的value
+    let $toward = $(".selected [name='toward']").val(); //获取朝向的value
+    if ($rent==="确定"){
+        let min = $("#rentMin").val();
+        let max = $("#rentMax").val();
+        $rent = min+"-"+max;
+    }
+    let ajax = {"area":$area,"type":$type,"rent":$rent,"housingType":$housingType,"toward":$toward};
     $("#div_house").children().remove();
     $.ajax({
         type:"post",
-        data:"",
+        data:ajax,
         dataType:"json",
         cache:false,
         url:"/rentingList",
