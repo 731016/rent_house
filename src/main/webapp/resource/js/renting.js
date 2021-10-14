@@ -93,4 +93,86 @@ $(function () {
     $('#div_img').click(function () {
         location.href = "/housedetails";
     });
+
+    $.ajax({
+        type:"post",
+        dataType:"json",
+        async:false,
+        cache:false,
+        url:"/type",
+        success:function (data) {
+            $.each(data,function () {
+                $("#housingType").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"type\">"+this.typeName+"</button>"))
+            })
+        },
+        error:function (e) {
+            $("body").html(e.responseText)
+        }
+    })
+
+    $.ajax({
+        type:"post",
+        dataType:"json",
+        async:false,
+        cache:false,
+        url:"/toward",
+        success:function (data) {
+            $.each(data,function () {
+                $("#toward").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"toward\">"+this.towardName+"</button>"))
+            })
+        },
+        error:function (e) {
+            $("body").html(e.responseText)
+        }
+    })
+
+    $.ajax({
+        type:"post",
+        dataType:"json",
+        async:false,
+        cache:false,
+        url:"/area",
+        success:function (data) {
+            $.each(data,function () {
+                $("#area").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"area\">"+this.aName+"</button>"))
+            })
+        },
+        error:function (e) {
+            $("body").html(e.responseText)
+        }
+    })
+
+    // addList();
 })
+
+//租房列表添加方法
+function addList() {
+    //需要获取数据传入后台作为筛选条件
+    $("[]")
+    //
+    $("#div_house").children().remove();
+    $.ajax({
+        type:"post",
+        data:"",
+        dataType:"json",
+        cache:false,
+        url:"/rentingList",
+        success:function (data) {
+            $.each(data,function () {
+                let $div = $("<div id=\"house_id\" class=\"div_inBlock house_id\"></div>");
+                $div.append("<div id=\"div_img\" class=\"div_img\"><a href=\"housedetails.jsp?id="+this.hId+"\"><img src=\"/upload/"+this.ImgList.split(",")[0]+"\" id=\"house_img\"></a></div>")
+                $div.append("<div id=\"house_info\" class=\"house_info\">\n" +
+                   "          <span class=\"badge badge-pill badge-success incon\">即住</span>\n" +
+                   "          <h5><a href=\"#\">"+this.title+"</a></h5>\n" +
+                   "          <div>面积："+this.area+"平米</div>\n" +
+                   "          <div class=\"location\">地址："+this.address+"</div>\n" +
+                   "          <div>￥"+this.rent+"/月</div>\n" +
+                   "        </div>")
+                $("#div_house").append($div)
+            })
+        },
+        error:function (e) {
+            $("body").html(e.responseText)
+        }
+    })
+}
