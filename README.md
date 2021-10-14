@@ -11,7 +11,7 @@
 https://docs.qq.com/sheet/DQk5qSmZFbWR3Y0NE?groupUin=4ffoQqsgdrk51OP5JTQ3ng%253D%253D&tab=0stqpd
 
 ## 用例图
-
+https://gitee.com/LovelyHzz/rent_house/blob/master/%E7%A7%9F%E6%88%BF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%94%A8%E4%BE%8B%E5%9B%BE.html
 
 ### 在线租房项目开发注意事项
 1. ajax后台返回时，同意使用pojo包中的ReturnResult类的实例作为返回对象，使用JSON类实现JSON与对象的互转：
