@@ -30,6 +30,9 @@
             <li><a href="#" class="nav_header current">首页</a></li>
             <li><a href="renting.jsp" class="nav_header">租房</a></li>
             <li><a href="rent.jsp" class="nav_header">出租</a></li>
+            <li class="reg_log">
+                <a href="fdregister.jsp" class="nav_header landlord">成为房东</a>
+            </li>
             <li class="reg_log" id="show_register">
                 <a href="register.jsp" class="nav_header">注册</a>
             </li>

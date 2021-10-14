@@ -25,14 +25,14 @@ header {
 
 header ul {
     line-height: 70px;
-    width: 700px;
+    width: 50%;
     height: 60px;
     margin: 0 auto;
 }
 
 header ul li {
     float: left;
-    width: 60px;
+    width: 9%;
     margin: 0 5% 0 5%;
 }
 
