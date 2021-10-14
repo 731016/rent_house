@@ -9,22 +9,23 @@ import java.security.MessageDigest;
 import java.util.List;
 
 public class UserInfoDaoImpl implements UserInfoDao {
+    private static final String SELECT_ALL = "select * from userInfo ";
+
     @Override
     public boolean login(String account, String password) {
-        String sql = "select * from userInfo where account = ? and `password` = ?";
+        String sql = SELECT_ALL + " where account = ? and `password` = ?";
         String pwd = Utils.msgEncrypt(password);
         return JDBCUtils.query(sql, UserInfo.class, account, pwd) != null;
     }
 
     @Override
     public List<UserInfo> getAllUserInfo() {
-        String sql = "select * from userInfo";
-        return JDBCUtils.queryList(sql, UserInfo.class);
+        return JDBCUtils.queryList(SELECT_ALL, UserInfo.class);
     }
 
     @Override
     public List<UserInfo> getUserInfoLikeAccount(String account) {
-        String sql = "select * from userInfo where instr(account,?)!=0";
+        String sql = SELECT_ALL + " where instr(account,?)!=0";
         return JDBCUtils.queryList(sql, UserInfo.class, account);
     }
 
@@ -62,24 +63,24 @@ public class UserInfoDaoImpl implements UserInfoDao {
     @Override
     public int deleteUserInfo(String account) {
         String sql = "delete from userInfo where account = ?";
-        return JDBCUtils.update(sql,account);
+        return JDBCUtils.update(sql, account);
     }
 
     @Override
     public UserInfo getUserInfoByAccount(String account) {
-        String sql = "select * from userInfo where account = ?";
-        return JDBCUtils.query(sql,UserInfo.class,account);
+        String sql = SELECT_ALL + " where account = ?";
+        return JDBCUtils.query(sql, UserInfo.class, account);
     }
 
     @Override
     public UserInfo getUserInfoByUserName(String userName) {
-        String sql = "select * from userInfo where userName = ?";
+        String sql = SELECT_ALL + " where userName = ?";
         return null;
     }
 
     @Override
     public List<UserInfo> getUserInfoLikeUserName(String userName) {
-        String sql = "select * from userInfo where instr(userName,?)!=0";
-        return JDBCUtils.queryList(sql,UserInfo.class,userName);
+        String sql = SELECT_ALL + " where instr(userName,?)!=0";
+        return JDBCUtils.queryList(sql, UserInfo.class, userName);
     }
 }

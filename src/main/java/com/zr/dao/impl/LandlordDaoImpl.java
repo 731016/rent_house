@@ -34,25 +34,27 @@ public class LandlordDaoImpl implements LandlordDao {
 
     @Override
     public int addLandlord(Landlord landlord) {
-        String sql = "insert into landlord values(default,?,?,?,?)";
+        String sql = "insert into landlord values(default,?,?,?,?,?)";
         Object[] params = {
                 landlord.getLName(),
                 landlord.getPhone(),
                 landlord.getAddress(),
-                landlord.getIdCard()
+                landlord.getIdCard(),
+                landlord.getAccount()
         };
         return JDBCUtils.update(sql, params);
     }
 
     @Override
     public int updateLandlord(Landlord landlord) {
-        String sql = "update landlord set lName = ?,phone=?,address=? ,idCard=? where lid = ?";
+        String sql = "update landlord set lName = ?,phone=?,address=? ,idCard=? where lid = ? or account = ?";
         Object[] params = {
                 landlord.getLName(),
                 landlord.getPhone(),
                 landlord.getAddress(),
                 landlord.getIdCard(),
-                landlord.getLId()
+                landlord.getLId(),
+                landlord.getAccount()
         };
         return JDBCUtils.update(sql,params);
     }

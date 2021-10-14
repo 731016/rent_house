@@ -16,4 +16,5 @@ public class Landlord {
    private String phone;   //手机号
    private String address; //住址
    private String idCard;  //身份证
+   private String account; //登录信息
 }

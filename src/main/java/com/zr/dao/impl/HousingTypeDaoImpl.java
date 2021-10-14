@@ -7,21 +7,21 @@ import com.zr.utils.JDBCUtils;
 import java.util.List;
 
 public class HousingTypeDaoImpl implements HousingTypeDao {
-    private static final String selectAll = "select * from housingType ";
+    private static final String SELECT_ALL = "select * from housingType ";
     @Override
     public List<HousingType> getAllHousingTypes() {
-        return JDBCUtils.queryList(selectAll,HousingType.class);
+        return JDBCUtils.queryList(SELECT_ALL,HousingType.class);
     }
 
     @Override
     public HousingType getHousingTypeById(Integer id) {
-        String sql = selectAll + "where typeId = ?";
+        String sql = SELECT_ALL + "where typeId = ?";
         return JDBCUtils.query(sql,HousingType.class,id);
     }
 
     @Override
     public List<HousingType> getHousingTypesLikeTypeName(String typeName) {
-        String sql = selectAll + "where instr(typeName,?)!=0";
+        String sql = SELECT_ALL + "where instr(typeName,?)!=0";
         return JDBCUtils.queryList(sql,HousingType.class,typeName);
     }
 

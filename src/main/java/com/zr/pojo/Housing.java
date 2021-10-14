@@ -22,4 +22,5 @@ public class Housing {
    private Integer typeId;    //类型编号
    private String facilities; //配套设施
    private Integer state; //状态（0：取消发布，1：发布）
+   private Integer aid; //区域
 }

@@ -7,14 +7,13 @@ import com.zr.utils.JDBCUtils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public class HousingDaoImpl implements HousingDao {
-    private static final String selectAll = "select * from housing ";
+    private static final String SELECT_ALL = "select * from housing ";
 
     @Override
     public int addHouse(Housing housing) {
-        String sql = "insert into housing values(default,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into housing values(default,?,?,?,?,?,?,?,?,?,?,?)";
         Object[] params = {
                 housing.getTitle(),
                 housing.getRent(),
@@ -25,66 +24,73 @@ public class HousingDaoImpl implements HousingDao {
                 housing.getLId(),
                 housing.getTypeId(),
                 housing.getFacilities(),
-                housing.getState()
+                housing.getState(),
+                housing.getAid()
         };
         return JDBCUtils.update(sql, params);
     }
 
     @Override
     public List<Housing> getAllHouses() {
-        return JDBCUtils.queryList(selectAll, Housing.class);
+        return JDBCUtils.queryList(SELECT_ALL, Housing.class);
     }
 
     @Override
     public List<Housing> getHousesLikeTitle(String title) {
-        String sql = selectAll + "where title = ?";
+        String sql = SELECT_ALL + "where title = ?";
         return JDBCUtils.queryList(sql, Housing.class, title);
     }
 
     @Override
     public List<Housing> getHousesByRentRange(double min, double max) {
-        String sql = selectAll + "where rent between ? and ?;";
+        String sql = SELECT_ALL + "where rent between ? and ?;";
         return JDBCUtils.queryList(sql, Housing.class, min, max);
     }
 
     @Override
     public List<Housing> getHousesByHouseType(String houseType) {
-        String sql = selectAll + "where houseType = ?";
+        String sql = SELECT_ALL + "where houseType = ?";
         return JDBCUtils.queryList(sql, Housing.class, houseType);
     }
 
     @Override
     public List<Housing> getHousesByAreaRange(double min, double max) {
-        String sql = selectAll + "where area between ? and ?";
+        String sql = SELECT_ALL + "where area between ? and ?";
         return JDBCUtils.queryList(sql, Housing.class, min, max);
     }
 
     @Override
     public List<Housing> getHousesByTowardId(Integer towardId) {
-        String sql = selectAll + "where towardId = ?";
+        String sql = SELECT_ALL + "where towardId = ?";
         return JDBCUtils.queryList(sql,Housing.class,towardId);
     }
 
     @Override
     public List<Housing> getHousesByTypeId(Integer typeId) {
-        String sql = selectAll + "where typeId = ?";
+        String sql = SELECT_ALL + "where typeId = ?";
         return JDBCUtils.queryList(sql,Housing.class,typeId);
     }
 
     @Override
     public List<Housing> getHousesByState(Integer state) {
-        String sql = selectAll + "where state = ?";
+        String sql = SELECT_ALL + "where state = ?";
         return JDBCUtils.queryList(sql,Housing.class,state);
     }
 
     @Override
     public List<Housing> getHousesByMultiParams(Map<String,Object> map) {
-        StringBuilder sb = new StringBuilder(selectAll + "where 1=1 ");
+        StringBuilder sb = new StringBuilder(SELECT_ALL + "where 1=1 ");
         List<Object> list = new ArrayList<>();
         for (Map.Entry<String, Object> entry : map.entrySet()) {
             sb.append(String.format(" %s = ? ",entry.getKey()));
             list.add(entry.getValue());
         }
         return JDBCUtils.queryList(sb.toString(),Housing.class,list.toArray());
+    }
+
+    @Override
+    public int deleteHouseById(Integer id) {
+        String sql = "delete from housing where hid = ?";
+        return JDBCUtils.update(sql,id);
     }
 }
