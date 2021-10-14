@@ -5,12 +5,13 @@ window.addEventListener('load', function () {
             dataType: 'json',
             cache:false,
             url: '/login',
+            cache: false,
             success: function (data) {
                 let object = data.object;
                 if (object != undefined) {
                     $('#show_login').html("<a href='javascript:;' class='nav_header'>" + object.account + "</a>");
                     $('#show_register').html("<a href='javascript:;' class='nav_header'>退出</a>");
-                    $('.vertical_line').css('visibility','hidden').css('margin-right','5%');
+                    $('.vertical_line').css('visibility', 'hidden').css('margin-right', '5%');
                 } else {
                     $('#show_login').html("<a href='login.jsp' class='nav_header'>登录</a>")
                     $('#show_register').html("<a href='register.jsp' class='nav_header'>注册</a>")
@@ -32,13 +33,13 @@ window.addEventListener('load', function () {
             $('#search_input').attr('data-val', search_data_val);
         });
         $('#search_all').click(function () {
-            $('.triangle').animate({left:'19px'},300);
+            $('.triangle').animate({left: '19px'}, 300);
         });
         $('#search_entireRent').click(function () {
-            $('.triangle').animate({left:'72px'},300);
+            $('.triangle').animate({left: '72px'}, 300);
         });
         $('#search_share').click(function () {
-            $('.triangle').animate({left:'123px'},300);
+            $('.triangle').animate({left: '123px'}, 300);
         });
         $('#search_btn').on({
             click: function () {
@@ -54,23 +55,23 @@ window.addEventListener('load', function () {
         });
 
         // 租房
-        $('.con_father_yz').on('click',function () {
-            location.href='renting.jsp';
+        $('.con_father_yz').on('click', function () {
+            location.href = 'renting.jsp';
         });
         // 出租
-        $('.con_father_zf').on('click',function () {
-            location.href='rent.jsp';
+        $('.con_father_zf').on('click', function () {
+            location.href = 'rent.jsp';
         });
     });
 
     function scroll() {
-        let scrollTop=$(window).scrollTop();
-        if (scrollTop>0){
-            $('.nav_header').css('color','#000');
-            $('header').css('background-color','rgba(255, 255, 255, 1.0)');
-        }else {
-            $('.nav_header').css('color','#fff');
-            $('header').css('background-color','rgba(0, 0, 0, 0.2)');
+        let scrollTop = $(window).scrollTop();
+        if (scrollTop > 0) {
+            $('.nav_header').css('color', '#000');
+            $('header').css('background-color', 'rgba(255, 255, 255, 1.0)');
+        } else {
+            $('.nav_header').css('color', '#fff');
+            $('header').css('background-color', 'rgba(0, 0, 0, 0.2)');
         }
     }
 
