@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/resource/css/style.css">
     <script src="/resource/js/jquery-3.6.0.min.js"></script>
     <script src="/resource/js/index.js"></script>
+
 </head>
 
 <body>

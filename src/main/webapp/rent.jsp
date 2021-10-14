@@ -11,6 +11,8 @@
     <title>Title</title>
 
     <link rel="stylesheet" type="text/css" href="/resource/css/cssfangdong.css"/>
+    <script src="/resource/js/jquery-3.6.0.min.js"></script>
+
 </head>
 <body background="/resource/images/R-C.jpg" style="color: white;">
 
@@ -21,7 +23,7 @@
             <a href="index.jsp" id="home">首页</a>
             <a href="#">租房</a>
             <a href="login.jsp" id="login">登录</a>&nbsp;|&nbsp;
-            <a href="#">注册</a>
+            <a href="register.jsp" id="register">注册</a>
         </div>
     </div>
 </div>

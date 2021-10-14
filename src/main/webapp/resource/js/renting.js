@@ -1,4 +1,28 @@
 $(function () {
+    $.ajax({
+        type: 'post',
+        dataType: 'json',
+        cache:false,
+        url: '/login',
+        cache: false,
+        success: function (data) {
+            let object = data.object;
+            if (object != undefined) {
+                console.log(1)
+                $('#show_login').html("<a href='javascript:;' class='nav_header'>" + object.account + "</a>");
+                $('#show_register').html("<a href='javascript:;' class='nav_header'>退出</a>");
+                $('.vertical_line').css('visibility', 'hidden').css('margin-right', '5%');
+            } else {
+                console.log(2)
+                $('#show_login').html("<a href='login.jsp' class='nav_header'>登录</a>")
+                $('#show_register').html("<a href='register.jsp' class='nav_header'>注册</a>")
+            }
+        },
+        error: function (res) {
+            $('body').innerText(res.responseText);
+        }
+    });
+
     $("#area").click(function () {
         $('#area svg:first').hide();
         $('#area svg:last').show();
@@ -66,7 +90,7 @@ $(function () {
             $('#sort_area svg').toggle();
         }
     });
-    $('#house_img').click(function () {
+    $('#div_img').click(function () {
         location.href = "/housedetails";
     });
 })
