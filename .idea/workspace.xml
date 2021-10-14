@@ -7,8 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b82ee4-fec6-4eea-9930-32206bd857b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manageusers.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/css/manageusers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resource/js/manageusers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,19 +53,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/js" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.zr.dao.impl" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\rent_house\src\main\webapp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\rent_house\src\main\webapp\resource\js" />
+      <recent name="C:\Users\Administrator\Desktop\rent_house\src\main\webapp\resource\bootstrap-4.6.0-dist\js" />
+      <recent name="C:\Users\Administrator\Desktop\rent_house\src\main\webapp\resource\css" />
       <recent name="D:\workspace\rent_house\src\main\webapp\resource\images" />
       <recent name="D:\workspace\rent_house\src\main\webapp\resource\css" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zr.dao.impl" />
     </key>
   </component>
   <component name="RunManager">
@@ -149,16 +156,16 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
-          <option name="myCopyRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
+          <option name="myVcsRoot" value="C:\Users\Administrator\Desktop\rent_house" />
+          <option name="myCopyRoot" value="C:\Users\Administrator\Desktop\rent_house" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
-          <option name="myCopyRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
+          <option name="myVcsRoot" value="C:\Users\Administrator\Desktop\rent_house" />
+          <option name="myCopyRoot" value="C:\Users\Administrator\Desktop\rent_house" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -180,6 +187,7 @@
       <workItem from="1634178985729" duration="25000" />
       <workItem from="1634179036514" duration="15000" />
       <workItem from="1634179077183" duration="11922000" />
+      <workItem from="1634200564301" duration="54000" />
     </task>
     <task id="LOCAL-00001">
       <created>1634175128561</created>

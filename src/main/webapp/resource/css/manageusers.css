@@ -1,0 +1,70 @@
+
+.td1{
+	background-color: gainsboro;
+}
+#dv{
+	width: 1300px;
+	margin: 0 auto;
+}
+
+#header{
+	background-color:rgba(255, 255, 255, 1.0);
+	box-shadow: 2px 2px 8px silver;
+}
+
+#header ul li a{
+	color: black;
+}
+table{
+	margin-top: 100px;
+	text-align: center;
+}
+
+#top{
+	border: 1px solid black;
+	width: 100%;
+	height: 70px;
+}
+
+#inp{
+	/* border: 1px solid black; */
+	width: 1300px;
+	height: 28px;
+	margin: 0 auto;
+	margin-top: 60px;
+	text-align: right;
+	padding-right: 10px;
+}
+#inp input{
+	border: none;
+	color: white;
+	width: 60px;
+	height: 25px;
+	cursor: pointer;
+}
+#yes{
+	background-color: #008000;
+}
+#no{
+	background-color: red
+}
+
+/* 添加页面 */
+/* 
+#dvadd{
+	width: 500px;
+	height: 600px;
+	background-color: yellow;
+	position: absolute;
+	left: 700px;
+	top: 150px;
+}
+#cha{
+	float: right;
+	font-size: 20px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+#title{
+	text-align: center;
+} */
