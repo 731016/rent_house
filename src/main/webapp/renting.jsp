@@ -210,7 +210,7 @@
         </div>
         <div id="house_info" class="house_info">
           <span class="badge badge-pill badge-success incon">即住</span>
-          <h5><a href="#">标题</a></h5>
+          <h5><a href="/housedetails">标题</a></h5>
           <div>面积丨楼层</div>
           <div class="location">地址</div>
           <div class="trait">

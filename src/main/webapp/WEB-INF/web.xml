@@ -11,6 +11,14 @@
     <filter-name>EncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  <filter>
+    <filter-name>HouseDetailsFilter</filter-name>
+    <filter-class>com.zr.Filter.HouseDetailsFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>HouseDetailsFilter</filter-name>
+    <url-pattern>/housedetails</url-pattern>
+  </filter-mapping>
   <welcome-file-list>
   <welcome-file>index.jsp</welcome-file>
 </welcome-file-list>
