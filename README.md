@@ -5,6 +5,62 @@
 ## 任务进度和每日任务：
 https://docs.qq.com/sheet/DQk5qSmZFbWR3Y0NE?groupUin=4ffoQqsgdrk51OP5JTQ3ng%253D%253D&tab=0stqpd
 
+## 常用的代码
+### JavaScript
+
+```javascript
+//中文的正则
+/^[\u4e00-\u9fa5]+$/;
+//本地图片转在线
+let objUrl = getObjectURL(this.files[0]);//this为图片控件
+function getObjectURL(file) {
+            let url = null;
+            if (window.createObjectURL != undefined) {
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) {
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) {
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
+```
+
+### Java
+
+```java
+/**
+     * 消息摘要方法，md5加密
+     *
+     * @param msg
+     * @return
+     */
+    public static String msgEncrypt(String msg) {
+        String result = "";
+        try {
+            byte[] digest = null;
+            MessageDigest md5 = MessageDigest.getInstance("md5");
+            digest = md5.digest(msg.getBytes("utf-8"));
+            result = new BigInteger(1, digest).toString(16);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    /**
+     * 产生不重复的文件名
+     *
+     * @param extension
+     * @return
+     */
+    public static String randomFileName(String extension) {
+        Random random = new Random();
+        int randomNum = random.nextInt(90000) + 10000;
+        return String.valueOf(new Date().getTime()) + randomNum + "." + extension;
+    }
+```
+
 ## 在线租房项目开发注意事项
 -----
 1. ajax后台返回时，同意使用pojo包中的ReturnResult类的实例作为返回对象，使用JSON类实现JSON与对象的互转：
