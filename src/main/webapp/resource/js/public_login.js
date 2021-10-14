@@ -2,7 +2,6 @@ $(function () {
     $.ajax({
         type: 'post',
         dataType: 'json',
-        cache:false,
         url: '/login',
         cache: false,
         success: function (data) {

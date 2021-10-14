@@ -4,7 +4,6 @@ $(function () {
         dataType: 'json',
         cache:false,
         url: '/login',
-        cache: false,
         success: function (data) {
             let object = data.object;
             if (object != undefined) {
