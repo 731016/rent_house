@@ -1,0 +1,123 @@
+body{
+	margin: 0px 0px;
+}
+
+.td0{
+	width: 40px;
+}
+
+#td1{
+	text-align: center;
+	font-size: 35px;
+	height: 100px;
+	font-family: 华文新魏;
+}
+
+.tr1{
+	text-align: center;
+	text-align: center;
+}
+
+#td3{
+	height: 30px;
+	width: 300px;
+}
+
+.td4{
+	height: 30px;
+	width: 60px;
+}
+
+#td5{
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.m{
+	width: 150px;
+	height: 50px;
+	text-align: right;
+	padding-right: 20px;
+	font-size: 20px;
+}
+#check input{
+	margin-left: 10px;
+	border: 1px solid black;
+}
+
+#t1{
+	 margin:auto;
+	 height: 90px;
+}
+	
+#t2{
+	width: 550px;
+	height: 600px;
+	border-collapse: collapse;
+	position: relative;
+	top: 20px;
+}
+
+#t2 td{
+	/*border: 1px solid black;*/
+}
+
+#p{
+	width: 100px;
+	text-align: right
+
+}
+#b{
+ color: red;
+ font-size: 50px;
+ font-family:华文新魏;
+ width:70%;
+ cursor: pointer;
+ font-size: 60px;
+
+ }
+
+ a{
+	 color: white;
+	 text-decoration: none;
+ }
+ input{
+	 background:rgba(0,0,0,0) ;
+	 border: solid 1px ;
+	 background-color: white;
+	 border-radius: 5px ;
+
+ }
+
+#big{
+    height: 900px;
+    width: 100%;
+    background-image: url(../images/login_bg.jpg);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+#d1{
+	margin: 0px auto;
+	position: relative;
+	top: 120px;
+	width: 550px;
+	height: 650px;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+
+#header{
+	background-color:rgba(255, 255, 255, 0.5);
+	box-shadow: 2px 2px 8px silver;
+}
+#header ul li a{
+	color: black;
+}
+#btn{
+	width: 130px;
+}
+
+#file{
+	border: 1px solid black;
+	cursor: pointer;
+}
