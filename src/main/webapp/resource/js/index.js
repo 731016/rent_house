@@ -3,6 +3,7 @@ window.addEventListener('load', function () {
         $.ajax({
             type: 'post',
             dataType: 'json',
+            cache:false,
             url: '/login',
             success: function (data) {
                 let object = data.object;

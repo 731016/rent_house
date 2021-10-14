@@ -11,6 +11,7 @@ window.addEventListener('load',function () {
                 type:"post",
                 data:aj,
                 dataType:"json",
+                cache:false,
                 url:"/login",
                 success:function (data) {
                     if (data.flag){
