@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
             cache: false,
             success: function (data) {
                 let object = data.object;
-                if (object != undefined) {
+                if (object !== undefined) {
                     $('#show_login').html("<a href='javascript:;' class='nav_header'>" + object.account + "</a>");
                     $('#show_register').html("<a href='javascript:;' class='nav_header'>退出</a>");
                     $('.vertical_line').css('visibility', 'hidden').css('margin-right', '5%');
