@@ -123,7 +123,7 @@
     <div class="dv1"></div>
     <div id="fangdong">
       <div id="fangdong2">
-        <h2 id="xinxi"">
+        <h2 id="xinxi">
         房东信息
         </h2>
         <div id="fangdongtitle">
