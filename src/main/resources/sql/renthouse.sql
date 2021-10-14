@@ -1,21 +1,48 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : zhang
+ Source Server         : mysql
  Source Server Type    : MySQL
- Source Server Version : 50540
+ Source Server Version : 50720
  Source Host           : localhost:3306
  Source Schema         : renthouse
 
  Target Server Type    : MySQL
- Target Server Version : 50540
+ Target Server Version : 50720
  File Encoding         : 65001
 
- Date: 13/10/2021 14:37:40
+ Date: 14/10/2021 17:06:53
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for area
+-- ----------------------------
+DROP TABLE IF EXISTS `area`;
+CREATE TABLE `area`  (
+  `aid` int(11) NOT NULL AUTO_INCREMENT,
+  `aname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  PRIMARY KEY (`aid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of area
+-- ----------------------------
+INSERT INTO `area` VALUES (1, '江岸区');
+INSERT INTO `area` VALUES (2, '江汉区');
+INSERT INTO `area` VALUES (3, ' 硚口区');
+INSERT INTO `area` VALUES (4, ' 汉阳区');
+INSERT INTO `area` VALUES (5, '武昌区');
+INSERT INTO `area` VALUES (6, ' 青山区');
+INSERT INTO `area` VALUES (7, '洪山区');
+INSERT INTO `area` VALUES (8, '蔡甸区');
+INSERT INTO `area` VALUES (9, '江夏区');
+INSERT INTO `area` VALUES (10, '黄陂区');
+INSERT INTO `area` VALUES (11, ' 新洲区');
+INSERT INTO `area` VALUES (12, '东西湖区');
+INSERT INTO `area` VALUES (13, ' 汉南区');
 
 -- ----------------------------
 -- Table structure for checkhouserecord
@@ -25,7 +52,7 @@ CREATE TABLE `checkhouserecord`  (
   `cId` int(11) NOT NULL AUTO_INCREMENT,
   `hId` int(11) NOT NULL,
   `account` int(11) DEFAULT NULL,
-  `checkDate` datetime NOT NULL,
+  `checkDate` datetime(0) NOT NULL,
   PRIMARY KEY (`cId`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
