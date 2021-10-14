@@ -14,7 +14,7 @@ section {
     position: absolute;
 }
 
-@media all and (max-width:750px) {
+@media all and (max-width: 750px) {
     .search {
         left: 0;
     }
@@ -44,10 +44,11 @@ section {
     color: #ff961e;
 }
 
-.search_input{
+.search_input {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
 .search_btn {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -133,9 +134,11 @@ section {
     padding-top: 5px;
     color: #999;
 }
-.current{
+
+.current {
     color: #FF961E !important;
 }
+
 /*字体图标 START*/
 body {
     font-family: sans-serif;
@@ -143,6 +146,7 @@ body {
     line-height: 1.5;
     color: #333;
 }
+
 .mls {
     margin-left: .25em;
 }
@@ -150,16 +154,13 @@ body {
 .fs1 {
     font-size: 32px;
 }
-.triangle{
+
+.triangle {
+    position: relative;
+    left: 19px;
     display: block;
     color: #fff;
     font-size: 12px;
+    margin-bottom: -9px;
 }
 /*字体图标 END*/
-.triangle{
-    position: relative;
-    left: 19px;
-    /*search_all 19,
-    search_entireRent 72,
-    search_share 123*/
-}
