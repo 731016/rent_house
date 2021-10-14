@@ -32,14 +32,11 @@ window.addEventListener('load', function () {
         });
         $('#search_all').click(function () {
             $('.triangle').animate({left:'19px'},300);
-            // $('.triangle').css('left','19px');
         });
         $('#search_entireRent').click(function () {
-            // $('.triangle').css('left','72px');
             $('.triangle').animate({left:'72px'},300);
         });
         $('#search_share').click(function () {
-            // $('.triangle').css('left','123px');
             $('.triangle').animate({left:'123px'},300);
         });
         $('#search_btn').on({
@@ -61,7 +58,7 @@ window.addEventListener('load', function () {
         });
         // 出租
         $('.con_father_zf').on('click',function () {
-            location.href='housedetails.jsp';
+            location.href='rent.jsp';
         });
     });
 
