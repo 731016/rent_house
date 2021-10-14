@@ -18,8 +18,8 @@
 <header id="header">
   <ul>
     <li><a href="index.jsp" class="nav_header">首页</a></li>
-    <li><a href="#" class="nav_header current">租房</a></li>
-    <li><a href="javascript:;" class="nav_header">出租</a></li>
+    <li><a href="renting.jsp" class="nav_header current">租房</a></li>
+    <li><a href="rent.jsp" class="nav_header">出租</a></li>
     <li class="reg_log" id="show_register"><a href="register.jsp" class="nav_header">注册</a></li>
     <li class="reg_log" style="color: #fff;">|</li>
     <li class="reg_log" id="show_login"><a href="login.jsp" class="nav_header">登录</a></li>
