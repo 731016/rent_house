@@ -9,8 +9,9 @@
 <html>
 <head>
     <title>Title</title>
-
-    <link rel="stylesheet" type="text/css" href="/resource/css/cssfangdong.css"/>
+    <link rel="stylesheet" type="text/css" href="/resource/css/rent.css"/>
+    <link rel="stylesheet" href="/resource/css/public.css">
+    <link rel="stylesheet" href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css">
 </head>
 <body id="b1">
 <header id="header">
@@ -27,23 +28,12 @@
         <li class="reg_log" style="display: none"><a href="javascript:;" class="nav_header">退出</a></li>
     </ul>
 </header>
-
-<div id="top">
-    <div id="top2">
-        <span id="titlename">Lie flat租房</span>
-        <div id="topright">
-            <a href="index.jsp" id="home">首页</a>
-            <a href="#">租房</a>
-            <a href="login.jsp" id="login">登录</a>&nbsp;|&nbsp;
-            <a href="#">注册</a>
-        </div>
-    </div>
-</div>
-
-<table id="t2">
-    <tr>
-        <td colspan="2" id="td1"><h1>房东房屋出租</h1></td>
-    </tr>
+<div id="big">
+    <div id="d1">
+        <table id="t2">
+            <tr>
+                <td colspan="2" id="td1"><h1>房东房屋出租</h1></td>
+            </tr>
 
                 <tr>
                     <td class="m">房屋标题 :</td>
