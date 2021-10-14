@@ -168,5 +168,5 @@ body {
     width: 113px !important;
 }
 .main_img{
-    width: 100%;
+    min-width: 100%;
 }
