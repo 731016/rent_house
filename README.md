@@ -5,6 +5,8 @@
 
 暂时存放项目代码
 
+# 提交项目禁止提交.idea和target目录
+
 ### 在线租房项目开发注意事项
 1. ajax后台返回时，同意使用pojo包中的ReturnResult类的实例作为返回对象，使用JSON类实现JSON与对象的互转：
 ```java
