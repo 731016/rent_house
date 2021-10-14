@@ -179,7 +179,7 @@
       <workItem from="1634175059610" duration="3594000" />
       <workItem from="1634178985729" duration="25000" />
       <workItem from="1634179036514" duration="15000" />
-      <workItem from="1634179077183" duration="6836000" />
+      <workItem from="1634179077183" duration="7493000" />
     </task>
     <task id="LOCAL-00001">
       <created>1634175128561</created>
@@ -258,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634193762157</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改了Utils类中上传文件的返回值&#10;现在的返回值为文件名，该方法需要捕获或上抛">
+      <created>1634194189530</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1634194189530</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +274,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="多条件查询dao层完成" />
     <MESSAGE value="pojo包中添加了Area类&#10;dao层实现Area类的相应的方法&#10;housing类添加了与Area连接的字段&#10;Landlord.java添加了字段，绑定用户为房东" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="修改了Utils类中上传文件的返回值&#10;现在的返回值为文件名，该方法需要捕获或上抛" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了Utils类中上传文件的返回值&#10;现在的返回值为文件名，该方法需要捕获或上抛" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="423" key="#Custom_Plugin_Repositories" timestamp="1634125117799">
@@ -299,10 +307,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="711" y="336" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1634125345945" />
-    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634193761315">
+    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634194188363">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634193761315" />
+    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634194188363" />
     <state x="718" y="365" key="FileChooserDialogImpl" timestamp="1634179597423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

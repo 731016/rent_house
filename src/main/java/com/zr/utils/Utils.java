@@ -2,15 +2,18 @@ package com.zr.utils;
 
 import com.jspsmart.upload.Request;
 import com.jspsmart.upload.SmartUpload;
+import com.zr.pojo.ReturnResult;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Date;
+import java.util.Map;
 import java.util.Random;
 
 public class Utils {
@@ -64,5 +67,29 @@ public class Utils {
         String fileName = randomFileName(extension);
         smartUpload.getFiles().getFile(0).saveAs(realPath + fileName);
         return fileName;
+    }
+
+    /**
+     * 删除指定路径的指定文件
+     * @param servlet
+     * @param path
+     * @param filename
+     * @return
+     */
+    public static ReturnResult deleteFileByFilename(HttpServlet servlet, String path, String filename) {
+        String realPath = servlet.getServletContext().getRealPath(path);
+        File file = new File(realPath + filename);
+        ReturnResult result = new ReturnResult(null, null, false);
+        if (file.exists()) {
+            if (!file.isDirectory()) {
+                result.setFlag(true);
+                file.delete();
+            }else{
+                result.setMsg("不是一个文件");
+            }
+        }else{
+            result.setMsg("该文件不存在");
+        }
+        return result;
     }
 }
