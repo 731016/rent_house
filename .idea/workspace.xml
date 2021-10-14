@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="71b82ee4-fec6-4eea-9930-32206bd857b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/dao/HousingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/dao/HousingDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/dao/impl/HousingDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/dao/impl/HousingDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -169,7 +167,10 @@
       <workItem from="1634124289906" duration="911000" />
       <workItem from="1634125256729" duration="290000" />
       <workItem from="1634125597223" duration="207000" />
-      <workItem from="1634175059610" duration="2508000" />
+      <workItem from="1634175059610" duration="3594000" />
+      <workItem from="1634178985729" duration="25000" />
+      <workItem from="1634179036514" duration="15000" />
+      <workItem from="1634179077183" duration="377000" />
     </task>
     <task id="LOCAL-00001">
       <created>1634175128561</created>
@@ -192,14 +193,22 @@
       <option name="project" value="LOCAL" />
       <updated>1634175565615</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="多条件查询dao层完成">
+      <created>1634177893989</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1634177893989</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="多条件查询dao层完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="多条件查询dao层完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="423" key="#Custom_Plugin_Repositories" timestamp="1634125117799">
@@ -227,14 +236,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="711" y="336" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1634125345945" />
-    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634175604906">
+    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634177892781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634175604906" />
-    <state x="718" y="365" key="FileChooserDialogImpl" timestamp="1634176487996">
+    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634177892781" />
+    <state x="718" y="365" key="FileChooserDialogImpl" timestamp="1634179049262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="718" y="365" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1634176487996" />
+    <state x="718" y="365" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1634179049262" />
     <state x="718" y="369" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1634125456993" />
     <state width="1292" height="264" key="GridCell.Tab.0.bottom" timestamp="1634125753130">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -284,10 +293,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1292" height="264" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1634125752907" />
-    <state x="461" y="155" key="SettingsEditor" timestamp="1634176220578">
+    <state x="461" y="155" key="SettingsEditor" timestamp="1634179052838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1634176220578" />
+    <state x="461" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1634179052838" />
     <state x="461" y="156" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1634125550099" />
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634178559148">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634178559148" />
   </component>
 </project>
