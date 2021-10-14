@@ -11,9 +11,9 @@ window.addEventListener('load',function(){
 				let object = data.object;
 				if (object !== undefined) {
 					// TODO :点击账户名进入账户信息页面
-					$('#topright #login').text(object.account).prop('href','"javascript;"');
+					$('#topright #login').text(object.account).prop('href','javascript;');
 					// TODO: exit账户，删除session
-					$('#topright #register').text('退出').prop('href','"javascript;"');
+					$('#topright #register').text('退出').prop('href','/exit');
 				} else {
 					$('#topright #login').text('登录').prop('href','login.jsp');
 					$('#topright #register').text('注册').prop('href','register.jsp');
