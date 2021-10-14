@@ -7,6 +7,7 @@ import com.zr.service.impl.HousingServiceImpl;
 import com.zr.utils.FactoryUtils;
 
 import java.util.List;
+import java.util.Map;
 
 public interface HousingService {
     static HousingService getInstance(){
@@ -21,5 +22,5 @@ public interface HousingService {
     List<Housing> getHousesByTowardId(Integer towardId);
     List<Housing> getHousesByTypeId(Integer typeId);
     List<Housing> getHousesByState(Integer state);
-
+    List<Housing> getHousesByMultiParams(Map<String,Object> map);
 }

@@ -5,6 +5,7 @@ import com.zr.pojo.Housing;
 import com.zr.service.HousingService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 涂鏊飞tu_aofei@163.com
@@ -61,5 +62,10 @@ public class HousingServiceImpl implements HousingService {
     @Override
     public List<Housing> getHousesByState(Integer state) {
         return housingDao.getHousesByState(state);
+    }
+
+    @Override
+    public List<Housing> getHousesByMultiParams(Map<String, Object> map) {
+        return housingDao.getHousesByMultiParams(map);
     }
 }
