@@ -6,6 +6,32 @@
 https://docs.qq.com/sheet/DQk5qSmZFbWR3Y0NE?groupUin=4ffoQqsgdrk51OP5JTQ3ng%253D%253D&tab=0stqpd
 
 ## 常用的代码
+### header头部登录模块和退出
+```html
+<link rel="stylesheet" href="/resource/css/public.css">
+<script src="/resource/js/jquery-3.6.0.min.js"></script>
+<script src="/resource/js/public_login.js"></script>
+<%--头部 START--%>
+    <header>
+        <ul>
+            <li><a href="#" class="nav_header current">首页</a></li>
+            <li><a href="renting.jsp" class="nav_header">租房</a></li>
+            <li><a href="rent.jsp" class="nav_header">出租</a></li>
+            <li class="reg_log">
+                <a href="fdregister.jsp" class="nav_header landlord">成为房东</a>
+            </li>
+            <li class="reg_log" id="show_register">
+                <a href="register.jsp" class="nav_header">注册</a>
+            </li>
+            <li class="reg_log nav_header vertical_line" style="color: #fff;">|</li>
+            <li class="reg_log" id="show_login">
+                <a href="login.jsp" class="nav_header">登录</a>
+            </li>
+        </ul>
+    </header>
+<%--头部 END--%>
+```
+
 ### JavaScript
 
 ```javascript
