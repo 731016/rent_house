@@ -5,6 +5,7 @@ import com.zr.pojo.Housing;
 import com.zr.utils.FactoryUtils;
 
 import java.util.List;
+import java.util.Map;
 
 public interface HousingDao {
     static HousingDao getInstance(){
@@ -19,4 +20,5 @@ public interface HousingDao {
     List<Housing> getHousesByTowardId(Integer towardId);
     List<Housing> getHousesByTypeId(Integer typeId);
     List<Housing> getHousesByState(Integer state);
+    List<Housing> getHousesByMultiParams(Map<String,Object> map);
 }

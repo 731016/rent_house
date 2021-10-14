@@ -4,7 +4,10 @@ import com.zr.dao.HousingDao;
 import com.zr.pojo.Housing;
 import com.zr.utils.JDBCUtils;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 public class HousingDaoImpl implements HousingDao {
     private static final String selectAll = "select * from housing ";
@@ -72,5 +75,16 @@ public class HousingDaoImpl implements HousingDao {
     public List<Housing> getHousesByState(Integer state) {
         String sql = selectAll + "where state = ?";
         return JDBCUtils.queryList(sql,Housing.class,state);
+    }
+
+    @Override
+    public List<Housing> getHousesByMultiParams(Map<String,Object> map) {
+        StringBuilder sb = new StringBuilder(selectAll + "where 1=1 ");
+        List<Object> list = new ArrayList<>();
+        for (Map.Entry<String, Object> entry : map.entrySet()) {
+            sb.append(String.format(" %s = ? ",entry.getKey()));
+            list.add(entry.getValue());
+        }
+        return JDBCUtils.queryList(sb.toString(),Housing.class,list.toArray());
     }
 }
