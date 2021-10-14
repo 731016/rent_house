@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 li {
@@ -50,4 +51,16 @@ header ul li {
 
 header li:hover a {
     color: #FF961E !important;
+}
+.bgcolor-samll-white{
+    background-color: rgba(255,255,255,0.2);
+}
+.bgcolor-full-white{
+    background-color: white;
+}
+.bgcolor-full-black{
+    background-color: black;
+}
+.bgcolor-samll-black{
+    background-color: rgba(0,0,0,0.2);
 }
