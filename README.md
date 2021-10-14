@@ -10,6 +10,9 @@
 ## 任务进度和每日任务：
 https://docs.qq.com/sheet/DQk5qSmZFbWR3Y0NE?groupUin=4ffoQqsgdrk51OP5JTQ3ng%253D%253D&tab=0stqpd
 
+## 用例图
+
+
 ### 在线租房项目开发注意事项
 1. ajax后台返回时，同意使用pojo包中的ReturnResult类的实例作为返回对象，使用JSON类实现JSON与对象的互转：
 ```java
