@@ -8,8 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="71b82ee4-fec6-4eea-9930-32206bd857b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/housedetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/housedetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/css/housedetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/css/housedetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/dao/impl/HousingDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/dao/impl/HousingDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/rent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rent.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634199576035</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019">
+      <created>1634212149460</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1634212149460</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +308,7 @@
     <MESSAGE value="pojo包中添加了Area类&#10;dao层实现Area类的相应的方法&#10;housing类添加了与Area连接的字段&#10;Landlord.java添加了字段，绑定用户为房东" />
     <MESSAGE value="修改了Utils类中上传文件的返回值&#10;现在的返回值为文件名，该方法需要捕获或上抛" />
     <MESSAGE value="房东房屋出租页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="房东房屋出租页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="423" key="#Custom_Plugin_Repositories" timestamp="1634125117799">
@@ -341,10 +348,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="711" y="336" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1634125345945" />
-    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634201744527">
+    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634212148378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634201744527" />
+    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634212148378" />
     <state x="718" y="365" key="FileChooserDialogImpl" timestamp="1634179597423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

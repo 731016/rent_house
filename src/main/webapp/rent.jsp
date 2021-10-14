@@ -47,29 +47,13 @@
                     <td class="m">户型 :</td>
                     <td colspan="3" >
                         <select >
-                            <option value="0"disabled selected hidden>1</option>
-                            <option value="1" >1</option>
-                            <option value="2" >2</option>
-                            <option value="3" >3</option>
-                            <option value="4" >4</option>
-                            <option value="5" >5</option>
-                        </select>室
-                        <select >
-                            <option value="0"disabled selected hidden>1</option>
-                            <option value="1" >1</option>
-                            <option value="2" >2</option>
-                            <option value="3" >3</option>
-                            <option value="4" >4</option>
-                            <option value="5" >5</option>
-                        </select>厅
-                        <select >
-                            <option value="0"disabled selected hidden>1</option>
-                            <option value="1" >1</option>
-                            <option value="2" >2</option>
-                            <option value="3" >3</option>
-                            <option value="4" >4</option>
-                            <option value="5" >5</option>
-                        </select>卫
+                            <option value="一室"disabled selected hidden>一室</option>
+                            <option value="一室" >一室</option>
+                            <option value="两室" >两室</option>
+                            <option value="三室" >三室</option>
+                            <option value="四室" >四室</option>
+                            <option value="五室" >五室</option>
+                        </select>
                     </td>
                 </tr>
 
