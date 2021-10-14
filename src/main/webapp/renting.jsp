@@ -106,12 +106,12 @@
         <div class="div_inBlock div_border">
           <div class="btn-group mr-2 div_price">
             <button type="button" class="btn btn-secondary selected" name="rent">不限</button>
-            <button type="button" class="btn btn-secondary" name="rent">1000以下</button>
+            <button type="button" class="btn btn-secondary" name="rent">0-1000</button>
             <button type="button" class="btn btn-secondary" name="rent">1000-2000</button>
             <button type="button" class="btn btn-secondary" name="rent">2000-3000</button>
             <button type="button" class="btn btn-secondary" name="rent">3000-4000</button>
             <button type="button" class="btn btn-secondary" name="rent">4000-5000</button>
-            <button type="button" class="btn btn-secondary" name="rent">5000以上</button>
+            <button type="button" class="btn btn-secondary" name="rent">5000+</button>
           </div>
           <div>
             <div class="btn-group mr-2">
