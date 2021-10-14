@@ -56,11 +56,11 @@
         </div>
       </div>
       <h2>租约信息</h2>
-      <div id="dv3">
+      <div class="dv3">
         <span class="sp2">可入住日期</span>
         <span style="margin-left: 30px;">随时入住</span>
       </div>
-      <div id="dv3">
+      <div class="dv3">
         <span class="sp2">签约时长</span>
         <span style="margin-left: 47px;">可长租1年</span>
       </div>
