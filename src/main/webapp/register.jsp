@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>注册页面</title>
+  <title>租客注册页面</title>
   <%--网页logo START --%>
   <link rel="icon" href="/resource/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>
