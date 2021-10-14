@@ -68,13 +68,11 @@ window.addEventListener('load', function () {
         let scrollTop = $(window).scrollTop();
         if (scrollTop > 0) {
             $('.nav_header').css('color', '#000');
-            $('header').removeClass("bgcolor-samll-black");
             $('header').addClass("bgcolor-full-white");
             // $('header').css('background-color', 'rgba(255, 255, 255, 1.0)');
         } else {
             $('.nav_header').css('color', '#fff');
             $('header').removeClass("bgcolor-full-white");
-            $('header').addClass("bgcolor-samll-white");
             // $('header').css('background-color', 'rgba(0, 0, 0, 0.2)');
         }
     }
