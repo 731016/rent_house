@@ -7,16 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b82ee4-fec6-4eea-9930-32206bd857b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/Filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/Filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fdregister.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fdregister.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/housedetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/housedetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manageusers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manageusers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/rent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/renting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/renting.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,16 +152,16 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\小组项目\First\rent_house" />
-          <option name="myCopyRoot" value="D:\workspace\小组项目\First\rent_house" />
+          <option name="myVcsRoot" value="D:\workspace\课程部分\JSP动态网页\hezuo\rent_house" />
+          <option name="myCopyRoot" value="D:\workspace\课程部分\JSP动态网页\hezuo\rent_house" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\小组项目\First\rent_house" />
-          <option name="myCopyRoot" value="D:\workspace\小组项目\First\rent_house" />
+          <option name="myVcsRoot" value="D:\workspace\课程部分\JSP动态网页\hezuo\rent_house" />
+          <option name="myCopyRoot" value="D:\workspace\课程部分\JSP动态网页\hezuo\rent_house" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -193,6 +184,7 @@
       <workItem from="1634179036514" duration="15000" />
       <workItem from="1634179077183" duration="7493000" />
       <workItem from="1634286371720" duration="367000" />
+      <workItem from="1634287238811" duration="142000" />
     </task>
     <task id="LOCAL-00001">
       <created>1634175128561</created>

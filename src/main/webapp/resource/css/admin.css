@@ -1,0 +1,43 @@
+.divtop {
+    width: 400px;
+    /* border: 1px solid; */
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: auto;
+    margin-top: 10%;
+    padding-top: 50px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#btn {
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 30px;
+    display: block;
+}
+
+td {
+    /* border: 1px solid black; */
+    padding: 20px 0;
+}
+
+.btnbottom {
+    margin-bottom: 50px;
+}
+
+body {
+    background-image: url("/resource/images/rootuser-bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+table {
+    margin: 0 auto;
+}
