@@ -17,7 +17,8 @@ public class RegisterJudgeSvl extends HttpServlet {
       String account = request.getParameter("account");
       UserInfoService user = UserInfoService.getInstance();
       boolean b = user.UserNotExistsByAccount(account);
-      ReturnResult result = new ReturnResult(null,null,b);
+      ReturnResult result = new ReturnResult();
+      result.setFlag(b);
       String s = JSON.toJSONString(result);
       response.getWriter().print(s);
    }

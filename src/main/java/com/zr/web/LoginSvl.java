@@ -24,7 +24,8 @@ public class LoginSvl extends HttpServlet {
         String password = request.getParameter("password");
         //判断账号或密码是否为空
         if (account==null||account.isBlank()||password==null||password.isBlank()){
-            ReturnResult result = new ReturnResult(null,null,false);
+            ReturnResult result = new ReturnResult();
+            result.setFlag(false);
             if(request.getSession().getAttribute("UserInfo")!=null){
                 result.setObject(request.getSession().getAttribute("UserInfo"));
             }
