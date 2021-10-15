@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>房东提交房源页面</title>
@@ -10,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="/resource/css/rent.css"/>
 
     <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/resource/js/coco-message.js"></script>
     <script src="/resource/js/public_login.js"></script>
+    <script src="/resource/js/rent.js"></script>
 </head>
 <body id="b1">
 <header id="header">
@@ -28,6 +29,7 @@
         </li>
     </ul>
 </header>
+<form action="/rent">
 <div id="big">
     <div id="d1">
         <table id="t2">
@@ -37,85 +39,121 @@
 
                 <tr>
                     <td class="m">房屋标题 :</td>
-                    <td><input type="text" id="td3" ></td>
+                    <td><input type="text" id="td3" name="housetitle"></td>
                 </tr>
 
                 <tr>
-                    <td class="m">户型 :</td>
-                    <td colspan="3" >
-                        <select >
-                            <option value="一室"disabled selected hidden>一室</option>
-                            <option value="一室" >一室</option>
-                            <option value="二室" >二室</option>
-                            <option value="三室" >三室</option>
-                            <option value="四室" >四室</option>
-                            <option value="五室" >五室</option>
+                    <td class="m">类型 :</td>
+                    <td>
+                        <select name="housetype" id="housetype">
+                            <c:forEach items="${type}" var="n">
+                                <option value="${n.getTypeId}">${n.getTypename}</option>
+                            </c:forEach>
                         </select>
                     </td>
                 </tr>
 
                 <tr>
-                    <td class="m">类型 :</td>
-                    <td></td>
+                    <td class="m">户型 :</td>
+                    <td colspan="3" >
+                        <select name="huxing" id="huxing">
+                            <c:forEach items="${aaa}" var="n">
+                                <option value="${n.get}">${n.get}</option>
+                            </c:forEach>
+                        </select>
+                    </td>
                 </tr>
 
                 <tr>
                     <td class="m">朝向 :</td>
-                    <td></td>
+                    <td>
+                        <select name="chaoxiang" id="chaoxiang">
+                            <c:forEach items="${type}" var="n">
+                                <option value="${n.getTowardid}">${n.getTowardName}</option>
+                            </c:forEach>
+                        </select>
+                    </td>
                 </tr>
 
                 <tr>
                     <td class="m">区域 :</td>
-                    <td></td>
+                    <td>
+                        <select name="quyu" id="quyu">
+                            <c:forEach items="${quyu}" var="n">
+                                <option value="${n.getAid}">${n.getAname}</option>
+                            </c:forEach>
+                        </select>
+                    </td>
                 </tr>
-
                 <tr>
                     <td class="m">面积 :</td>
-                    <td><input type="text" class="td4" oninput = "value=value.replace(/[^\d]/g,'')">平米</td>
+                    <td>
+                        <input type="text" id="mianji" name="mianji" class="td4" oninput = "value=value.replace(/[^\d]/g,'')">
+                        平米
+                    </td>
                 </tr>
 
                 <tr>
                     <td class="m">租金 :</td>
-                    <td><input type="text" class="td4" oninput = "value=value.replace(/[^\d]/g,'')">元/月</td>
+                    <td>
+                        <input type="text" id="price" name="price" class="td4" oninput = "value=value.replace(/[^\d]/g,'')">
+                        元/月
+                    </td>
                 </tr>
 
                 <tr>
                     <td class="m" style="height: 89px">设施:</td>
                     <td id="check">
-                        <input type="checkbox" value="3">浴霸
-                        <input type="checkbox" value="4">书架
-                        <input type="checkbox" value="1">油烟机
-                        <input type="checkbox" value="2">热水器
-                        <input type="checkbox" value="10">桌子
+                        <input type="checkbox" name="sheshi" value="3">浴霸
+                        <input type="checkbox" name="sheshi" value="4">书架
+                        <input type="checkbox" name="sheshi" value="1">油烟机
+                        <input type="checkbox" name="sheshi" value="2">热水器
+                        <input type="checkbox" name="sheshi" value="10">桌子
                         <br>
-                        <input type="checkbox" value="8">衣柜
-                        <input type="checkbox" value="9">沙发
-                        <input type="checkbox" value="6">微波炉
-                        <input type="checkbox" value="14">中央空调
-                        <input type="checkbox" value="5">床
+                        <input type="checkbox" name="sheshi" value="8">衣柜
+                        <input type="checkbox" name="sheshi" value="9">沙发
+                        <input type="checkbox" name="sheshi" value="6">微波炉
+                        <input type="checkbox" name="sheshi" value="14">中央空调
+                        <input type="checkbox" name="sheshi" value="5">床
                         <br>
-                        <input type="checkbox" value="11">床垫
-                        <input type="checkbox" value="13">椅子
-                        <input type="checkbox" value="12">智能锁
-                        <input type="checkbox" value="7">洗衣机
+                        <input type="checkbox" name="sheshi" value="11">床垫
+                        <input type="checkbox" name="sheshi" value="13">椅子
+                        <input type="checkbox" name="sheshi" value="12">智能锁
+                        <input type="checkbox" name="sheshi" value="7">洗衣机
                     </td>
                 </tr>
-
                 <tr>
-                    <td class="m" style="height: 89px">房屋介绍 :</td>
-                    <td><textarea  cols="20" id="td5"></textarea></td>
+                    <td class="m">
+                        详细地址:
+                    </td>
+                    <td>
+                        <input name="address" id="address">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="m" style="height: 89px">房屋信息 :</td>
+                    <td>
+                        <textarea  cols="41" name="xinxi" id="td5"></textarea>
+                    </td>
                 </tr>
 
                 <tr>
                     <td class="m">房屋图片上传:</td>
                     <td>
-                        <input multiple="multiple" type="file" id="file">
+                        <input multiple="multiple" name="houseimg" type="file" id="file">
                     </td>
                 </tr>
                 <tr>
                     <td class="m">户型图片上传:</td>
                     <td>
-                        <input multiple="multiple" type="file" id="file2">
+                        <label for="file2">
+                            <img id="hximg">
+                            <div id="dvimg">
+                                +
+                            </div>
+                        </label>
+                        <input type="file" name="huxingimg" id="file2" hidden="hidden">
+
                     </td>
                 </tr>
 
@@ -127,5 +165,6 @@
             </table>
         </div>
     </div>
-    </body>
+</form>
+</body>
 </html>

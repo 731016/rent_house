@@ -17,9 +17,9 @@ body{
 	text-align: center;
 }
 
-#td3{
-	height: 30px;
-	width: 300px;
+#td3,#address{
+	width: 321px;
+	height: 35px;
 }
 
 .td4{
@@ -30,11 +30,13 @@ body{
 #td5{
 	border-radius: 5px;
 	border: 1px solid black;
+	height: 85px;
+	background: rgba(225,225,225,0.5);
 }
 
 .m{
 	width: 150px;
-	height: 80px;
+	height: 60px;
 	text-align: right;
 	padding-right: 20px;
 	font-size: 20px;
@@ -82,15 +84,15 @@ body{
 	 text-decoration: none;
  }
  input{
-	 background:rgba(0,0,0,0) ;
-	 border: solid 1px ;
-	 background-color: white;
-	 border-radius: 5px ;
-
+	 background: rgba(225,225,225,0.7);
+	 border: solid 1px black;
+	 /*border-radius: 5px ;*/
  }
-
+select{
+	background: rgba(225,225,225,0.5);
+}
 #big{
-    height: 960px;
+    height: 1222px;
     width: 100%;
     background-image: url(../images/login_bg.jpg);
     background-repeat:no-repeat;
@@ -100,8 +102,8 @@ body{
 	margin: 0px auto;
 	position: relative;
 	top: 102px;
-	width: 700px;
-	height: 820px;
+	width: 750px;
+	height: 1067px;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;
 
@@ -115,13 +117,38 @@ body{
 	color: black;
 }
 #btn{
-	width: 130px;
+	width: 150px;
+	height: 49px;
+	margin-top: 29px;
 }
 
-#file{
+#file,#file2{
+	border: none;
+	cursor: pointer;
+	width: 205px;
+	background: rgba(0,0,0,0);
+}
+
+#hximg{
 	border: 1px solid black;
+	width: 160px;
+	height: 90px;
+	position: absolute;
+	top: 830px;
 	cursor: pointer;
 }
-td{
-	border: 1px solid red;
+
+#dvimg{
+	background: rgba(255,255,255,0.5);
+	border: 1px solid black;
+	width: 160px;
+	height: 90px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 87px;
+	cursor: pointer;
+	margin-top: 12px;
+}
+.sheshi{
+	background-color: blue;
 }
