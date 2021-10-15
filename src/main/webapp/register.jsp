@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>租客注册页面</title>
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
   <%--网页logo START --%>
   <link rel="icon" href="/resource/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>

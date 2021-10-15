@@ -9,6 +9,9 @@
 <html>
 <head>
     <title>房东提交房源页面</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <link rel="stylesheet" href="/resource/css/public.css">
     <link rel="stylesheet" href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/resource/css/rent.css"/>

@@ -9,6 +9,9 @@
 <html>
 <head>
   <title>房屋详情</title>
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
   <link rel="stylesheet" type="text/css" href="/resource/css/housedetails.css"/>
   <script src="/resource/js/jquery-3.6.0.min.js"></script>
   <script src="/resource/js/housedetails.js" type="text/javascript" charset="utf-8"></script>
