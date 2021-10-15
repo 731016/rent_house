@@ -1,5 +1,6 @@
 package com.zr.web;
 
+import com.alibaba.fastjson.JSON;
 import com.zr.pojo.ReturnResult;
 import com.zr.pojo.UserInfo;
 import com.zr.service.UserInfoService;
@@ -24,8 +25,7 @@ public class RegisterSvl extends HttpServlet {
         int addFlag = UserInfoService.getInstance().addUserInfo(userInfo);
         ReturnResult returnResult = new ReturnResult();
         if (addFlag > 0) {
-            request.getSession().setAttribute("regFlag", account);
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 

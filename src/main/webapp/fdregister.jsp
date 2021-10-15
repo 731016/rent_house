@@ -16,7 +16,7 @@
   <script src="/resource/js/fdregister.js"></script>
 </head>
 <body>
-<form method="post" action="/register">
+<form method="post" action="/fdregister">
   <span id="our">Lie flat租房</span>
   <div id="big">
     <div id="login">

@@ -27,6 +27,11 @@ window.addEventListener('load',function () {
                         errorDiv.innerText = "账号或密码错误！";
                         cocoMessage.error(errorDiv);
                     }
+                    if(data.state == 201){
+                        var regDiv = document.createElement("div");
+                        regDiv.innerText = "注册成功！";
+                        cocoMessage.success(regDiv);
+                    }
                 },
                 error:function (e) {
                     $("body").html(e.responseText)
