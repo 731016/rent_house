@@ -84,10 +84,15 @@ public class HousingDaoImpl implements HousingDao {
         List<Object> list = new ArrayList<>();
         for (Map.Entry<String, Object> entry : map.entrySet()) {
             if(entry.getKey().equals("rent")){
-                sb.append(String.format(" and (%s between ? and ?) ",entry.getKey()));
                 String[] strings = entry.getValue().toString().split("-");
-                list.add(strings[0]);
-                list.add(strings[1]);
+                if(strings.length==1){
+                    sb.append(String.format(" and %s > ? ",entry.getKey()));
+                    list.add(entry.getValue());
+                }else {
+                    sb.append(String.format(" and (%s between ? and ?) ",entry.getKey()));
+                    list.add(strings[0]);
+                    list.add(strings[1]);
+                }
             }else {
                 sb.append(String.format(" and %s = ? ", entry.getKey()));
                 list.add(entry.getValue());
