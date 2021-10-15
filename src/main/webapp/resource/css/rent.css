@@ -131,10 +131,10 @@ select{
 
 #hximg{
 	border: 1px solid black;
-	width: 160px;
-	height: 90px;
+	width: 158px;
+	height: 88px;
 	position: absolute;
-	top: 830px;
+	margin-left: -68px;
 	cursor: pointer;
 }
 

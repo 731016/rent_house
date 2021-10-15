@@ -169,8 +169,8 @@
                     <td class="m">户型图片上传:</td>
                     <td>
                         <label for="file2">
-                            <img id="hximg">
                             <div id="dvimg">
+                                <img id="hximg">
                                 +
                             </div>
                         </label>
