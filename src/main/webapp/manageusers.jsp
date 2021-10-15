@@ -16,7 +16,9 @@
   <link rel="stylesheet" href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/resource/css/public.css">
   <script src="/resource/js/jquery-3.6.0.min.js"></script>
+  <script src="/resource/js/public_login.js"></script>
   <script src="/resource/js/manageusers.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/resource/js/coco-message.js"></script>
   <script src="/resource/js/public_login.js"></script>
 </head>
 <body>

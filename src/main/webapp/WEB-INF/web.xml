@@ -19,8 +19,9 @@
     <filter-name>HouseDetailsFilter</filter-name>
     <url-pattern>/housedetails</url-pattern>
   </filter-mapping>
+
   <welcome-file-list>
-  <welcome-file>rent.jsp</welcome-file>
+  <welcome-file>index.jsp</welcome-file>
 </welcome-file-list>
 </web-app>
         

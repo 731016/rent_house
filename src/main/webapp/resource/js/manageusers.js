@@ -1,4 +1,7 @@
 window.addEventListener('load',function(){
+	cocoMessage.config({
+		duration: 2000,
+	});
 	let no=document.getElementsByClassName("no");
 	let state=document.getElementsByClassName("state");
 	//根据状态显示启用禁用

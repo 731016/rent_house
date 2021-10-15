@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/resource/css/renting.css">
   <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/resource/js/coco-message.js"></script>
   <script src="/resource/js/renting.js"></script>
 </head>
 <body>

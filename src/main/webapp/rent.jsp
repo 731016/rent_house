@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2021/10/13
-  Time: 19:28
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/resource/css/rent.css"/>
 
     <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/resource/js/coco-message.js"></script>
     <script src="/resource/js/public_login.js"></script>
 </head>
 <body id="b1">

@@ -168,14 +168,18 @@ function add() {
       success:function (data) {
          if (data.flag){
             //注册成功弹出
-
+            let registerDiv = document.createElement("div");
+            registerDiv.innerText = "注册成功！";
+            cocoMessage.success(registerDiv);
             //
             setTimeout(()=>{
                location.href = "/login.jsp"
             },2000)
          }else {
             //失败弹出
-
+            let registerDiv = document.createElement("div");
+            registerDiv.innerText = "注册失败！";
+            cocoMessage.error(registerDiv);
          }
       },
       error:function (e) {

@@ -1,4 +1,7 @@
 $(function () {
+    cocoMessage.config({
+        duration: 2000,
+    });
     $.ajax({
         type: 'post',
         dataType: 'json',
@@ -7,12 +10,20 @@ $(function () {
         success: function (data) {
             let object = data.object;
             if (object != undefined) {
-                console.log(1)
                 $('#show_login').html("<a href='javascript:;' class='nav_header'>" + object.account + "</a>");
                 $('#show_register').html("<a href='/exit' class='nav_header'>退出</a>");
                 $('.vertical_line').css('visibility', 'hidden').css('margin-right', '5%');
+                if (data.state == 200){
+                    var successDiv = document.createElement("div");
+                    successDiv.innerText = "登录成功！";
+                    cocoMessage.success(successDiv);
+                }else if(data.state == 404){
+                    var failDiv = document.createElement("div");
+                    failDiv.innerText = "登录失败！";
+                    cocoMessage.error(failDiv);
+                }
+
             } else {
-                console.log(2)
                 $('#show_login').html("<a href='login.jsp' class='nav_header'>登录</a>")
                 $('#show_register').html("<a href='register.jsp' class='nav_header'>注册</a>")
             }
@@ -21,6 +32,7 @@ $(function () {
             $('body').innerText(res.responseText);
         }
     });
+
 
     $("#area").click(function () {
         $('#area svg:first').hide();
@@ -89,7 +101,9 @@ $(function () {
             $('#sort_area svg').toggle();
         }
     });
+
     $('#div_img').click(function () {
+
         location.href = "/housedetails";
     });
 
