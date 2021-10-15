@@ -109,4 +109,11 @@ public class Utils {
         }
         return result;
     }
+    public static String arrayToString(Object[] array,String reg){
+        StringBuilder sb = new StringBuilder();
+        for (Object o : array) {
+            sb.append(o.toString()+reg.trim());
+        }
+        return sb.toString().substring(0,sb.length()-1);
+    }
 }

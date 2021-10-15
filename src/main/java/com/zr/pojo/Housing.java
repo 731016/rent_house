@@ -17,7 +17,7 @@ public class Housing {
    private String houseType;  //户型
    private Double area;       //面积
    private Integer towardId;  //朝向编号
-   private String ImgList;    //图片列表
+   private String imgList;    //图片列表
    private Integer lId;       //房东编号
    private Integer typeId;    //类型编号
    private String facilities; //配套设施

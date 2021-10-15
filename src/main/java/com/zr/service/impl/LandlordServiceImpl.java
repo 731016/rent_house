@@ -52,4 +52,9 @@ public class LandlordServiceImpl implements LandlordService {
     public int deleteLandlordById(Integer id) {
         return landlordDao.deleteLandlordById(id);
     }
+
+    @Override
+    public Landlord getLandlordByAccount(String account) {
+        return landlordDao.getLandLordByAccount(account);
+    }
 }

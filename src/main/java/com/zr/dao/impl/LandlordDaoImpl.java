@@ -64,4 +64,10 @@ public class LandlordDaoImpl implements LandlordDao {
         String sql = "delete from landlord where lid = ?";
         return JDBCUtils.update(sql,id);
     }
+
+    @Override
+    public Landlord getLandLordByAccount(String account) {
+        String sql = selectAll + " where account = ?";
+        return JDBCUtils.query(sql,Landlord.class,account);
+    }
 }

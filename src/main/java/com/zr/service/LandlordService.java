@@ -27,4 +27,6 @@ public interface LandlordService {
 
     int deleteLandlordById(Integer id);
 
+    Landlord getLandlordByAccount(String account);
+
 }

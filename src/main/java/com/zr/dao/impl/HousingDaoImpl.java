@@ -80,7 +80,7 @@ public class HousingDaoImpl implements HousingDao {
 
     @Override
     public List<Housing> getHousesByMultiParams(Map<String,Object> map) {
-        StringBuilder sb = new StringBuilder(SELECT_ALL + "where 1=1 ");
+        StringBuilder sb = new StringBuilder(SELECT_ALL + "where state=1 ");
         List<Object> list = new ArrayList<>();
         for (Map.Entry<String, Object> entry : map.entrySet()) {
             if(entry.getKey().equals("rent")){

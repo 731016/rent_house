@@ -14,6 +14,7 @@ public interface LandlordDao {
     Landlord getLandlordById(Integer id);
     List<Landlord> getLandlordLikeName(String name);
     Landlord getLandLordByName(String name);
+    Landlord getLandLordByAccount(String account);
     int addLandlord(Landlord landlord);
     int updateLandlord(Landlord landlord);
     int deleteLandlordById(Integer id);
