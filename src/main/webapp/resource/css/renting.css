@@ -155,5 +155,5 @@
     left: 1px;
 }
 .selected{
-    color: #ffa357;
+    color: #ffa357 !important;
 }

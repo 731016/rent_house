@@ -142,72 +142,75 @@ $(function () {
     })
 
     //区域点击事件
-    $("input[name='area']").click(function () {
-        let $input = $("input[name='area']");
+    $("button[name='area']").click(function () {
+        let $input = $("button[name='area']");
         $.each($input,function () {
             $(this).removeClass("selected")
         })
         $(this).addClass("selected")
-        // addList();
+        addList();
     })
 
     //类型点击事件
-    $("input[name='type']").click(function () {
-        let $input = $("input[name='type']");
+    $("button[name='type']").click(function () {
+        let $input = $("button[name='type']");
         $.each($input,function () {
             $(this).removeClass("selected")
         })
         $(this).addClass("selected")
-        // addList();
+        addList();
     })
 
     //租金点击事件
-    $("input[name='rent']").click(function () {
-        let $input = $("input[name='rent']");
+    $("button[name='rent']").click(function () {
+        let $input = $("button[name='rent']");
         $.each($input,function () {
             $(this).removeClass("selected")
         })
         $(this).addClass("selected")
-        // addList();
+        addList();
     })
 
     //户型点击事件
-    $("input[name='housingType']").click(function () {
-        let $input = $("input[name='housingType']");
+    $("button[name='housingType']").click(function () {
+        let $input = $("button[name='housingType']");
         $.each($input,function () {
             $(this).removeClass("selected")
         })
         $(this).addClass("selected")
-        // addList();
+        addList();
     })
 
     //朝向点击事件
-    $("input[name='toward']").click(function () {
-        let $input = $("input[name='toward']");
+    $("button[name='toward']").click(function () {
+        let $input = $("button[name='toward']");
         $.each($input,function () {
             $(this).removeClass("selected")
         })
         $(this).addClass("selected")
-        // addList();
+        addList();
     })
-    // addList();
+    addList();
 })
 
 //租房列表添加方法
 function addList() {
     //需要获取数据传入后台作为筛选条件
-    let $area = $(".selected [name='area']").val(); //获取区域的value
-    let $type = $(".selected [name='type']").val(); //获取类型的value
-    let $rent = $(".selected [name='rent']").text(); //获取租金的value
-    let $housingType = $(".selected [name='housingType']").text(); //获取户型的value
-    let $toward = $(".selected [name='toward']").val(); //获取朝向的value
+    let $area = $(".selected[name='area']").val(); //获取区域的value
+    let $type = $(".selected[name='type']").val(); //获取类型的value
+    let $rent = $(".selected[name='rent']").text(); //获取租金的value
+    let $housingType = $(".selected[name='housingType']").text(); //获取户型的value
+    let $toward = $(".selected[name='toward']").val(); //获取朝向的value
     if ($rent==="确定"){
         let min = $("#rentMin").val();
         let max = $("#rentMax").val();
         $rent = min+"-"+max;
     }
     let ajax = {"area":$area,"type":$type,"rent":$rent,"housingType":$housingType,"toward":$toward};
+
+    //删除原有的房屋列表
     $("#div_house").children().remove();
+    //通过ajax添加新的
     $.ajax({
         type:"post",
         data:ajax,
@@ -215,12 +218,14 @@ function addList() {
         cache:false,
         url:"/rentingList",
         success:function (data) {
+            console.log(data)
+
             $.each(data,function () {
                 let $div = $("<div id=\"house_id\" class=\"div_inBlock house_id\"></div>");
-                $div.append("<div id=\"div_img\" class=\"div_img\"><a href=\"housedetails.jsp?id="+this.hId+"\"><img src=\"/upload/"+this.ImgList.split(",")[0]+"\" id=\"house_img\"></a></div>")
+                $div.append("<div id=\"div_img\" class=\"div_img\"><a href=\"housedetails.jsp?id="+this.hId+"\"><img src=\"/upload/"+this.imgList.split(",")[0]+"\" id=\"house_img\"></a></div>")
                 $div.append("<div id=\"house_info\" class=\"house_info\">\n" +
                    "          <span class=\"badge badge-pill badge-success incon\">即住</span>\n" +
-                   "          <h5><a href=\"#\">"+this.title+"</a></h5>\n" +
+                   "          <h5><a href=\"housedetails.jsp?id="+this.hId+"\">"+this.title+"</a></h5>\n" +
                    "          <div>面积："+this.area+"平米</div>\n" +
                    "          <div class=\"location\">地址："+this.address+"</div>\n" +
                    "          <div>￥"+this.rent+"/月</div>\n" +
