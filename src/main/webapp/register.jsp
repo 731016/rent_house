@@ -17,7 +17,8 @@
   <script src="/resource/js/register.js"></script>
 </head>
 <body>
-<form method="post" action="/register">
+<!--method="post" action="/register"-->
+<form >
 <span id="our">Lie flat租房</span>
 <div id="big">
   <div id="login">
@@ -97,7 +98,7 @@
       </tr>
       <tr id="reg_tr">
         <td colspan="2" style="text-align: center;">
-          <input type="submit" value="注册" id="btn_reg" class="btn btn-primary" />
+          <input type="button" value="注册" id="btn_reg" class="btn btn-primary" />
         </td>
       </tr>
     </table>

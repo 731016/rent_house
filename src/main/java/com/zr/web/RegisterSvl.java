@@ -23,9 +23,17 @@ public class RegisterSvl extends HttpServlet {
         String phone = request.getParameter("phone");
         UserInfo userInfo = new UserInfo(account, password, name, nickname, email, phone, "default.jpg", null);
         int addFlag = UserInfoService.getInstance().addUserInfo(userInfo);
-        ReturnResult returnResult = new ReturnResult();
+        ReturnResult result = new ReturnResult();
         if (addFlag > 0) {
-            response.sendRedirect("login.jsp");
+            result.setState(201);
+            result.setFlag(true);
+            String s = JSON.toJSONString(result);
+            response.getWriter().print(s);
+//            response.sendRedirect("login.jsp");
+        }else {
+            result.setFlag(false);
+            String s = JSON.toJSONString(result);
+            response.getWriter().print(s);
         }
     }
 
