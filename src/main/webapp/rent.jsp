@@ -28,7 +28,7 @@
         </li>
     </ul>
 </header>
-<form action="/rent">
+<form action="/rent" method="post">
     <div id="big">
         <div id="d1">
             <table id="t2">

@@ -116,6 +116,15 @@ public class HousingDaoImpl implements HousingDao {
         return JDBCUtils.update(sql,id);
     }
 
+
+//    @Override
+//    public Housing getHouseById(Integer id) {
+//        String sql = SELECT_ALL + " where hid = ?";
+//        return JDBCUtils.query(sql,Housing.class,id);
+//    }
+
+
+
     @Override
     public int updateHouse(Housing housing) {
         String sql = "update housing set title = ?,rent = ?,houseType=?,area=?,towardId=?,imgList=?,lid=?,typeId=?,facilities=?,state=?,aid=?,address=?,describe=? where hid = ?";

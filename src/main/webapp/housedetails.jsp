@@ -79,7 +79,7 @@
         <td class="td2">
           朝向
         </td>
-        <td>
+        <td id="houseType">
           户型
         </td>
       </tr>
@@ -91,7 +91,7 @@
     <div class="dv1">
       <span class="sp1">楼层</span>&ensp;
       <span>
-						<!--  -->
+
 					</span>
     </div>
     <div colspan="3" class="dv1">

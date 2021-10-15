@@ -102,11 +102,6 @@ $(function () {
         }
     });
 
-    $('#div_img').click(function () {
-
-        location.href = "/housedetails";
-    });
-
     $.ajax({
         type:"post",
         dataType:"json",
@@ -236,10 +231,10 @@ function addList() {
 
             $.each(data,function () {
                 let $div = $("<div id=\"house_id\" class=\"div_inBlock house_id\"></div>");
-                $div.append("<div id=\"div_img\" class=\"div_img\"><a href=\"housedetails.jsp?id="+this.hId+"\"><img src=\"/upload/"+this.imgList.split(",")[0]+"\" id=\"house_img\"></a></div>")
+                $div.append("<div id=\"div_img\" class=\"div_img\"><a href=\"/housedetails?id="+this.hId+"\"><img src=\"/upload/"+this.imgList.split(",")[0]+"\" id=\"house_img\"></a></div>")
                 $div.append("<div id=\"house_info\" class=\"house_info\">\n" +
                    "          <span class=\"badge badge-pill badge-success incon\">即住</span>\n" +
-                   "          <h5><a href=\"housedetails.jsp?id="+this.hId+"\">"+this.title+"</a></h5>\n" +
+                   "          <h5><a href=\"/housedetails?id="+this.hId+"\">"+this.title+"</a></h5>\n" +
                    "          <div>面积："+this.area+"平米</div>\n" +
                    "          <div class=\"location\">地址："+this.address+"</div>\n" +
                    "          <div>￥"+this.rent+"/月</div>\n" +

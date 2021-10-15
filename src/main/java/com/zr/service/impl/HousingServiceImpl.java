@@ -69,6 +69,13 @@ public class HousingServiceImpl implements HousingService {
         return housingDao.getHousesByMultiParams(map);
     }
 
+
+    @Override
+    public Housing getHouseById(Integer hId) {
+        return housingDao.getHouseById(hId);
+    }
+
+
     @Override
     public int updateHouse(Housing housing) {
         return housingDao.updateHouse(housing);
@@ -78,4 +85,5 @@ public class HousingServiceImpl implements HousingService {
     public int deleteHouseById(Integer id) {
         return housingDao.deleteHouseById(id);
     }
+
 }
