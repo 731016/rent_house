@@ -14,6 +14,8 @@ import java.io.IOException;
 @WebServlet(name = "RegisterJudgeSvl",urlPatterns = "/registerJudge")
 public class RegisterJudgeSvl extends HttpServlet {
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+      //用户注册判断账号是否存在
       String account = request.getParameter("account");
       UserInfoService user = UserInfoService.getInstance();
       boolean b = user.UserNotExistsByAccount(account);

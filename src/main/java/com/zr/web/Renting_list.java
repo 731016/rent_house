@@ -20,14 +20,14 @@ public class Renting_list extends HttpServlet {
       request.setCharacterEncoding("utf-8");
       response.setCharacterEncoding("utf-8");
       response.setContentType("text/html;charset=UTF-8");
-      int area = Integer.parseInt(request.getParameter("area")) ;//默认0
+      int aid = Integer.parseInt(request.getParameter("aid")) ;//默认0
       int type = Integer.parseInt(request.getParameter("type")) ;//默认0
       String rent = request.getParameter("rent");//默认”不限“
       String housingType = request.getParameter("housingType");//默认”不限“
       int toward = Integer.parseInt(request.getParameter("toward")); //默认0
       Map<String,Object> map = new HashMap<>();
-      if (area != 0){
-         map.put("area",area);
+      if (aid != 0){
+         map.put("aid",aid);
       }
       if (type != 0){
          map.put("typeId",type);
@@ -38,7 +38,7 @@ public class Renting_list extends HttpServlet {
       if (!housingType.equals("不限")){
          map.put("houseType",housingType);
       }
-      if (toward!=0){
+      if (toward != 0){
          map.put("towardId",toward);
       }
 

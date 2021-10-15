@@ -133,7 +133,7 @@ $(function () {
         url:"/area",
         success:function (data) {
             $.each(data,function () {
-                $("#area").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"area\" value='"+this.aid+"'>"+this.aName+"</button>"))
+                $("#area").append($("<button type=\"button\" class=\"btn btn-secondary\" name=\"aid\" value='"+this.aid+"'>"+this.aName+"</button>"))
             })
         },
         error:function (e) {
@@ -142,8 +142,8 @@ $(function () {
     })
 
     //区域点击事件
-    $("button[name='area']").click(function () {
-        let $input = $("button[name='area']");
+    $("button[name='aid']").click(function () {
+        let $input = $("button[name='aid']");
         $.each($input,function () {
             $(this).removeClass("selected")
         })
@@ -196,7 +196,7 @@ $(function () {
 //租房列表添加方法
 function addList() {
     //需要获取数据传入后台作为筛选条件
-    let $area = $(".selected[name='area']").val(); //获取区域的value
+    let $aid = $(".selected[name='aid']").val(); //获取区域的value
     let $type = $(".selected[name='type']").val(); //获取类型的value
     let $rent = $(".selected[name='rent']").text(); //获取租金的value
     let $housingType = $(".selected[name='housingType']").text(); //获取户型的value
@@ -206,7 +206,7 @@ function addList() {
         let max = $("#rentMax").val();
         $rent = min+"-"+max;
     }
-    let ajax = {"area":$area,"type":$type,"rent":$rent,"housingType":$housingType,"toward":$toward};
+    let ajax = {"aid":$aid,"type":$type,"rent":$rent,"housingType":$housingType,"toward":$toward};
 
     //删除原有的房屋列表
     $("#div_house").children().remove();

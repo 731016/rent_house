@@ -91,7 +91,7 @@
         <strong class="strong_title" style="vertical-align: top;">区域</strong>
         <div class="div_border div_inBlock">
           <div class="btn-group mr-2" id="area">
-            <button type="button" class="btn btn-secondary selected" name="area" value="0">不限</button>
+            <button type="button" class="btn btn-secondary selected" name="aid" value="0">不限</button>
           </div>
         </div>
       </li>
