@@ -2,6 +2,7 @@ package com.zr.service.impl;
 
 import com.zr.dao.CheckHouseRecordDao;
 import com.zr.pojo.CheckHouseRecord;
+import com.zr.pojo.ShowRecord;
 import com.zr.service.CheckHouseRecordService;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class CheckHouseRecordServiceImpl implements CheckHouseRecordService {
     }
 
     @Override
-    public List<CheckHouseRecord> getRecordByAccount(String account) {
+    public List<ShowRecord> getRecordByAccount(String account) {
         return checkHouseRecordDao.getRecordByAccount(account);
     }
 

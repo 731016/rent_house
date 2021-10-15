@@ -12,6 +12,7 @@ public interface HousingDao {
         return (HousingDao) FactoryUtils.createInstance(HousingDaoImpl.class.getName());
     }
     int addHouse(Housing housing);
+    Housing getHouseById(Integer hId);
     List<Housing> getAllHouses();
     List<Housing> getHousesLikeTitle(String title);
     List<Housing> getHousesByRentRange(double min,double max);

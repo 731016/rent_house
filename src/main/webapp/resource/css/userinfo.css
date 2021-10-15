@@ -122,7 +122,6 @@ a{
 .userinfo_ul {
     list-style: none;
     border-top: solid 1px rgb(117, 117, 117);
-    width: 130px;
     margin: 0 20px;
     padding: 10px 0 10px 30px;
 }

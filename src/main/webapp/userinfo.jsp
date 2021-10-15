@@ -32,7 +32,7 @@
   <div id="userinfo_menu" class="userinfo_left border">
     <div id="userinfo_menu_img" class="userinfo_menu_img">
       <img src="" alt="">
-      <p>用户姓名</p>
+      <p id="userName"></p>
     </div>
     <ul id="userinfo_ul" class="userinfo_ul">
       <li>
@@ -90,14 +90,14 @@
             <td colspan="3">
               <div class="password_div">
                 <span class="password_span div_inBlock">初始密码</span>
-                <input type="text" class="userinfo_input">
+                <input type="text" class="userinfo_input" id="initial_pwd">
               </div>
               <div class="password_div">
                 <span class="password_span div_inBlock">新密码</span>
-                <input type="text" class="userinfo_input">
+                <input type="text" class="userinfo_input" id="new_pwd">
               </div>
               <div class="password_div">
-                <span class="password_span div_inBlock">确认密码</span>
+                <span class="password_span div_inBlock" id="second_pwd">确认密码</span>
                 <input type="text" class="userinfo_input">
               </div>
             </td>
@@ -116,7 +116,7 @@
       看房记录
     </div>
     <div>
-      <table class="table table-striped">
+      <table class="table table-striped" id="record">
         <thead>
         <tr>
           <th scope="col">编号</th>
@@ -143,7 +143,7 @@
   <div id=" userhouse_menu " class="userinfo_left border ">
     <div id="userhouse_menu_img " class="userinfo_menu_img ">
       <img src=" " alt=" " style="min-width: 100px;">
-      <p>房东姓名</p>
+      <p id="landlordName"></p>
     </div>
     <ul id="userhouse_ul " class="userinfo_ul ">
       <li>
@@ -166,15 +166,15 @@
         <table id="userhouse_table " class="houseinfo_table ">
           <tr>
             <td class="table_td table_td_first">姓名</td>
-            <td class="table_td table_td_first"><input type="text " class="userinfo_input " id="nickname "></td>
+            <td class="table_td table_td_first"><input type="text " class="userinfo_input " id="lName"></td>
           </tr>
           <tr>
             <td class="table_td">身份证</td>
-            <td class="table_td"><input type="text " class="userinfo_input " id="phone "></td>
+            <td class="table_td"><input type="text " class="userinfo_input " id="idCard"></td>
           </tr>
           <tr>
             <td class="table_td">住址</td>
-            <td class="table_td"><input type="text " class="userinfo_input " id="email "></td>
+            <td class="table_td"><input type="text " class="userinfo_input " id="address"></td>
           </tr>
           <tr>
             <td class="table_td"></td>

@@ -33,6 +33,12 @@ public class HousingDaoImpl implements HousingDao {
     }
 
     @Override
+    public Housing getHouseById(Integer hId) {
+        String sql=SELECT_ALL+"where hId=?";
+        return JDBCUtils.query(sql,Housing.class,hId);
+    }
+
+    @Override
     public List<Housing> getAllHouses() {
         return JDBCUtils.queryList(SELECT_ALL, Housing.class);
     }
