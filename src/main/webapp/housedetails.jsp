@@ -28,9 +28,11 @@
     <!-- 图片 -->
     <div id="img">
       <div id="imgbig">
+<%--        350 270--%>
         <img src="img/mm01.jpeg" id="big">
       </div>
       <div id="imgsmall">
+<%--        100 100--%>
         <img src="img/mm01.jpeg" class="small">
         <img src="img/loginbg.jpg" class="small">
       </div>
@@ -42,12 +44,12 @@
 					</span>
       <div id="tubiao">
         <div>
-          <img src="img/loginbg.jpg" class="tubiaoimg">
+          <img src="/resource/images/1.png" class="tubiaoimg">
           <br>
           椅子
         </div>
         <div>
-          <img src="img/loginbg.jpg" class="tubiaoimg">
+          <img src="/resource/images/1.png" class="tubiaoimg">
           <br>
           椅子
         </div>
@@ -69,7 +71,7 @@
   </div>
   <!-- 身体部分右侧 -->
   <div id="bodyright">
-    <h2>标题</h2>
+    <h2 id="title">标题</h2>
     <span id="price">￥价格</span>
     <table style="border-top: 1px solid gainsboro;" cellspacing="0px">
       <tr style="text-align: center;">
@@ -85,7 +87,7 @@
       </tr>
     </table>
     <div class="dv1">
-      <span class="sp1">位置</span>&ensp;
+      <span class="sp1" id="address">位置</span>&ensp;
       <span>小区距4号线十里铺站步行约86米</span>
     </div>
     <div class="dv1">
