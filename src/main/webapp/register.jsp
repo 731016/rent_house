@@ -11,10 +11,12 @@
   <%--网页logo END --%>
   <link rel="stylesheet" href="./resource/css/regist.css">
   <link href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/resource/css/pwdStrongth.css" rel="stylesheet">
   <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
   <script src="/resource/js/coco-message.js"></script>
   <script src="/resource/js/register.js"></script>
+  <script src="/resource/js/pwdStrongth.js"></script>
 </head>
 <body>
 <!--method="post" action="/register"-->
@@ -44,6 +46,18 @@
         <td class="input">
           <input type="password" id="psw" class="inp" name="password" /><br>
           <span id="sppass" class="sp"></span>
+        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td id="level" class="pw-strength">
+          <div class="pw-bar"></div>
+          <div class="pw-bar-on"></div>
+          <div class="pw-txt">
+            <span>弱</span>
+            <span>中</span>
+            <span>强</span>
+          </div>
         </td>
       </tr>
       <tr>
