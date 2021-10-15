@@ -86,8 +86,10 @@ public class HousingDaoImpl implements HousingDao {
             if(entry.getKey().equals("rent")){
                 String[] strings = entry.getValue().toString().split("-");
                 if(strings.length==1){
+                    String numStr = entry.getValue().toString();
+                    numStr=numStr.substring(0,numStr.length()-1);
                     sb.append(String.format(" and %s > ? ",entry.getKey()));
-                    list.add(entry.getValue());
+                    list.add(numStr);
                 }else {
                     sb.append(String.format(" and (%s between ? and ?) ",entry.getKey()));
                     list.add(strings[0]);
