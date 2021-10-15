@@ -52,12 +52,27 @@
                         <select >
                             <option value="一室"disabled selected hidden>一室</option>
                             <option value="一室" >一室</option>
-                            <option value="两室" >两室</option>
+                            <option value="二室" >二室</option>
                             <option value="三室" >三室</option>
                             <option value="四室" >四室</option>
                             <option value="五室" >五室</option>
                         </select>
                     </td>
+                </tr>
+
+                <tr>
+                    <td class="m">类型 :</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="m">朝向 :</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="m">区域 :</td>
+                    <td></td>
                 </tr>
 
                 <tr>
@@ -71,7 +86,7 @@
                 </tr>
 
                 <tr>
-                    <td class="m" style="height: 80px">设施:</td>
+                    <td class="m" style="height: 89px">设施:</td>
                     <td id="check">
                         <input type="checkbox" value="3">浴霸
                         <input type="checkbox" value="4">书架
@@ -93,13 +108,21 @@
                 </tr>
 
                 <tr>
-                    <td class="m" style="height: 80px">房屋信息 :</td>
+                    <td class="m" style="height: 89px">房屋介绍 :</td>
                     <td><textarea  cols="20" id="td5"></textarea></td>
                 </tr>
 
                 <tr>
                     <td class="m">房屋图片上传:</td>
-                    <td><input type="file" id="file"></td>
+                    <td>
+                        <input multiple="multiple" type="file" id="file">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="m">户型图片上传:</td>
+                    <td>
+                        <input multiple="multiple" type="file" id="file2">
+                    </td>
                 </tr>
 
                 <tr>

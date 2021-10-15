@@ -34,7 +34,7 @@ body{
 
 .m{
 	width: 150px;
-	height: 50px;
+	height: 80px;
 	text-align: right;
 	padding-right: 20px;
 	font-size: 20px;
@@ -50,8 +50,9 @@ body{
 }
 	
 #t2{
-	width: 550px;
-	height: 600px;
+	margin: 0px auto;
+	width: 600px;
+	height: 700px;
 	border-collapse: collapse;
 	position: relative;
 	top: 20px;
@@ -89,7 +90,7 @@ body{
  }
 
 #big{
-    height: 900px;
+    height: 960px;
     width: 100%;
     background-image: url(../images/login_bg.jpg);
     background-repeat:no-repeat;
@@ -98,11 +99,12 @@ body{
 #d1{
 	margin: 0px auto;
 	position: relative;
-	top: 120px;
-	width: 550px;
-	height: 650px;
+	top: 102px;
+	width: 700px;
+	height: 820px;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;
+
 }
 
 #header{
@@ -119,4 +121,7 @@ body{
 #file{
 	border: 1px solid black;
 	cursor: pointer;
+}
+td{
+	border: 1px solid red;
 }
