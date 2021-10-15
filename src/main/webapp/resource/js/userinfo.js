@@ -39,4 +39,5 @@ $(function () {
         $('#userhouse_content').hide();
         $('#house_content').show();
     })
+
 })

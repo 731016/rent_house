@@ -16,9 +16,6 @@
   <script src="resource/js/userinfo.js"></script>
 </head>
 <body>
-<div class="div_header border_bottom" id="user_header">
-  <div class="div_body center"></div>
-</div>
 <div class="div_header" id="user_menu">
   <div class="div_body user_menu_div center">
     <div id="logo" class="div_inBlock"></div>
@@ -26,6 +23,7 @@
       <a href="javascript:;" class="user_menu_a" id="userinfo">我的信息</a>
       <a href="javascript:;" id="userhouse">我的房屋</a>
     </div>
+    <a class="backindex" id="backindex" href="/index.jsp">返回首页</a>
   </div>
 </div>
 <!-- 用户信息界面 -->
