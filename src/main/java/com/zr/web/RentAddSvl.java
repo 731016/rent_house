@@ -45,7 +45,8 @@ public class RentAddSvl extends HttpServlet {
             int towardId = Integer.parseInt(uploadRequest.getParameter("chaoxiang"));
             int aid = Integer.parseInt(uploadRequest.getParameter("quyu"));
             String address = uploadRequest.getParameter("address");
-            Housing housing = new Housing(-1,houseTitle,rent,housingType,area,towardId,imgList,lid,typeId,facility,1,aid,address);
+            String describe = uploadRequest.getParameter("describe");
+            Housing housing = new Housing(-1,houseTitle,rent,housingType,area,towardId,imgList,lid,typeId,facility,1,aid,address,describe);
             HousingService service = HousingService.getInstance();
             int i = service.addHouse(housing);
             if(i==1){

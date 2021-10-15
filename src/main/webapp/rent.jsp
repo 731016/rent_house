@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>房东提交房源页面</title>
@@ -46,9 +45,6 @@
                     <td class="m">类型 :</td>
                     <td>
                         <select name="housetype" id="housetype">
-                            <c:forEach items="${type}" var="n">
-                                <option value="${n.getTypeId}">${n.getTypename}</option>
-                            </c:forEach>
                         </select>
                     </td>
                 </tr>
@@ -57,9 +53,11 @@
                     <td class="m">户型 :</td>
                     <td colspan="3" >
                         <select name="huxing" id="huxing">
-                            <c:forEach items="${aaa}" var="n">
-                                <option value="${n.get}">${n.get}</option>
-                            </c:forEach>
+                            <option value="一室">一室</option>
+                            <option value="二室">二室</option>
+                            <option value="三室">三室</option>
+                            <option value="四室">四室</option>
+                            <option value="五室">五室</option>
                         </select>
                     </td>
                 </tr>
@@ -67,10 +65,7 @@
                 <tr>
                     <td class="m">朝向 :</td>
                     <td>
-                        <select name="chaoxiang" id="chaoxiang">
-                            <c:forEach items="${type}" var="n">
-                                <option value="${n.getTowardid}">${n.getTowardName}</option>
-                            </c:forEach>
+                        <select name="chaoxiang" id="toward">
                         </select>
                     </td>
                 </tr>
@@ -79,9 +74,6 @@
                     <td class="m">区域 :</td>
                     <td>
                         <select name="quyu" id="quyu">
-                            <c:forEach items="${quyu}" var="n">
-                                <option value="${n.getAid}">${n.getAname}</option>
-                            </c:forEach>
                         </select>
                     </td>
                 </tr>

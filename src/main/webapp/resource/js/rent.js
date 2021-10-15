@@ -1,15 +1,11 @@
-window.addEventListener('load',function(){
-    $(function () {
-        //显示上传的户型图片
-        $('#file2').change(function () {
-            let file=this.files[0];
+$(function () {
+    //显示上传的户型图片
+    $('#file2').change(function () {
+        let file = this.files[0];
 
-            let $imgfile=$(this);
-            let imgobj=$imgfile[0];
-            let windowURL=window.url || window.webkitURL;
-            let dataimgurl=windowURL.createObjectURL(imgobj.files[0]);
-            $("#hximg").attr("src",dataimgurl);
-        })
+        let dataImgUrl = getObjectURL(file);
+        $("#hximg").attr("src", dataImgUrl);
+    })
 
     //     let housetitle=$('#td3').val();//房屋标题
     //     let housetype=$('#housetype').selected();//类型
@@ -45,5 +41,60 @@ window.addEventListener('load',function(){
     //             // $('body').innerText(res.responseText);
     //         }
     //     });
-    });
 });
+function getObjectURL(file) {
+    let url = null;
+    if (window.createObjectURL != undefined) {
+        url = window.createObjectURL(file);
+    } else if (window.URL != undefined) {
+        url = window.URL.createObjectURL(file);
+    } else if (window.webkitURL != undefined) {
+        url = window.webkitURL.createObjectURL(file);
+    }
+    return url;
+}
+function initialHouseType() {
+    $.ajax({
+        type:'post',
+        url:'/type',
+        dataType:'json',
+        cache:false,
+        success:function (data) {
+            let $housetype = $('#housetype');
+            for (let i = 0; i < data.length; i++) {
+                let $option = $('<option value="'+data.typeId+'">'+data.typeName+'</option>');
+                $housetype.append($option);
+            }
+        }
+    })
+}
+function initialToward() {
+    $.ajax({
+        type:'post',
+        url:'/toward',
+        dataType: 'json',
+        cache: false,
+        success:function (data) {
+            let $toward = $('#toward');
+            for (let i = 0; i < data.length; i++) {
+                let $option = $('<option value="'+data.towardId+'">'+data.towardName+'</option>');
+                $toward.append($option);
+            }
+        }
+    })
+}
+function initialArea() {
+    $.ajax({
+        type:'post',
+        url:'/area',
+        dataType:'json',
+        cache:false,
+        success:function (data) {
+            let $area = $('#quyu');
+            for (let i = 0; i < data.length; i++) {
+                let $option = $('<option value="'+data.aid+'">'+data.aName+'</option>');
+                $area.append($option);
+            }
+        }
+    })
+}
