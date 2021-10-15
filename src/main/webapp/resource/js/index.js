@@ -44,13 +44,13 @@ window.addEventListener('load', function () {
             $('#search_input').attr('data-val', search_data_val);
         });
         $('#search_all').click(function () {
-            $('.triangle').animate({left: '19px'}, 300);
+            $('.triangle').animate({left: '17px'}, 300);
         });
         $('#search_entireRent').click(function () {
-            $('.triangle').animate({left: '72px'}, 300);
+            $('.triangle').animate({left: '70px'}, 300);
         });
         $('#search_share').click(function () {
-            $('.triangle').animate({left: '123px'}, 300);
+            $('.triangle').animate({left: '121px'}, 300);
         });
         $('#search_btn').on({
             click: function () {

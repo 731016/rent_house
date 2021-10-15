@@ -66,7 +66,7 @@
             </ul>
         </div>
         <br>
-        <span class="triangle icon-arrow-up"></span>
+        <span class="triangle"></span>
         <div class="search_main">
             <input type="text" class="search_input" id="search_input" placeholder="请输入小区..." data-val=""/>
             <a href="javascript:;" class="search_btn" id="search_btn" alt="开始找房">开始找房</a>

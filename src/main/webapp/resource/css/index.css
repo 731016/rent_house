@@ -140,7 +140,7 @@ section {
 }
 
 /*字体图标 START*/
-body {
+/*body {
     font-family: sans-serif;
     font-size: 1em;
     line-height: 1.5;
@@ -153,15 +153,22 @@ body {
 
 .fs1 {
     font-size: 32px;
-}
+}*/
 
 .triangle {
+    width:0;
+    height:0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    font-size: 0;
+    line-height: 0;
     position: relative;
-    left: 19px;
+    left: 17px;
     display: block;
     color: #fff;
-    font-size: 12px;
-    margin-bottom: -9px;
+    margin-bottom: -2px;
 }
 /*字体图标 END*/
 .landlord{
