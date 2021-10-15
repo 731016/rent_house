@@ -20,11 +20,12 @@
    <link href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet">
    <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
    <script src="/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
-   <script src="/resource/js/coco-message.js"></script>
+   <script src="/resource/js/admin.js"></script>
 </head>
 <body>
 <div class="divtop">
    <h1 class="title">管理员登录</h1>
+   <div id="judge"></div>
    <table>
       <tr>
          <td>账号：</td>
