@@ -37,22 +37,15 @@ public class RentAddSvl extends HttpServlet {
             String[] facilities = uploadRequest.getParameterValues("sheshi");
             String facility = Utils.arrayToString(facilities,",");
             String info = uploadRequest.getParameter("xinxi");
-            int tid = Integer.parseInt(uploadRequest.getParameter("tid"));
             UserInfo userInfo = (UserInfo)o;
             LandlordService service_landlord = LandlordService.getInstance();
             Landlord landlord = service_landlord.getLandlordByAccount(userInfo.getAccount());
             Integer lid = landlord.getLId();
-            //=================================================================================================================================================
-
-
-            //缺少参数
-
-
-            Housing housing = new Housing(-1,houseTitle,rent,housingType,area,null,imgList,lid,tid,facility,1,null,null);
-
-
-
-            //--------------------------------------------------------------------------------=================================================================
+            int typeId = Integer.parseInt(uploadRequest.getParameter("housetype"));
+            int towardId = Integer.parseInt(uploadRequest.getParameter("chaoxiang"));
+            int aid = Integer.parseInt(uploadRequest.getParameter("quyu"));
+            String address = uploadRequest.getParameter("address");
+            Housing housing = new Housing(-1,houseTitle,rent,housingType,area,towardId,imgList,lid,typeId,facility,1,aid,address);
             HousingService service = HousingService.getInstance();
             int i = service.addHouse(housing);
             if(i==1){
