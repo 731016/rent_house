@@ -34,8 +34,8 @@ public class HousingDaoImpl implements HousingDao {
 
     @Override
     public Housing getHouseById(Integer hId) {
-        String sql=SELECT_ALL+"where hId=?";
-        return JDBCUtils.query(sql,Housing.class,hId);
+        String sql = SELECT_ALL + "where hId=?";
+        return JDBCUtils.query(sql, Housing.class, hId);
     }
 
     @Override
@@ -70,60 +70,51 @@ public class HousingDaoImpl implements HousingDao {
     @Override
     public List<Housing> getHousesByTowardId(Integer towardId) {
         String sql = SELECT_ALL + "where towardId = ?";
-        return JDBCUtils.queryList(sql,Housing.class,towardId);
+        return JDBCUtils.queryList(sql, Housing.class, towardId);
     }
 
     @Override
     public List<Housing> getHousesByTypeId(Integer typeId) {
         String sql = SELECT_ALL + "where typeId = ?";
-        return JDBCUtils.queryList(sql,Housing.class,typeId);
+        return JDBCUtils.queryList(sql, Housing.class, typeId);
     }
 
     @Override
     public List<Housing> getHousesByState(Integer state) {
         String sql = SELECT_ALL + "where state = ?";
-        return JDBCUtils.queryList(sql,Housing.class,state);
+        return JDBCUtils.queryList(sql, Housing.class, state);
     }
 
     @Override
-    public List<Housing> getHousesByMultiParams(Map<String,Object> map) {
+    public List<Housing> getHousesByMultiParams(Map<String, Object> map) {
         StringBuilder sb = new StringBuilder(SELECT_ALL + "where state=1 ");
         List<Object> list = new ArrayList<>();
         for (Map.Entry<String, Object> entry : map.entrySet()) {
-            if(entry.getKey().equals("rent")){
+            if (entry.getKey().equals("rent")) {
                 String[] strings = entry.getValue().toString().split("-");
-                if(strings.length==1){
+                if (strings.length == 1) {
                     String numStr = entry.getValue().toString();
-                    numStr=numStr.substring(0,numStr.length()-1);
-                    sb.append(String.format(" and %s > ? ",entry.getKey()));
+                    numStr = numStr.substring(0, numStr.length() - 1);
+                    sb.append(String.format(" and %s > ? ", entry.getKey()));
                     list.add(numStr);
-                }else {
-                    sb.append(String.format(" and (%s between ? and ?) ",entry.getKey()));
+                } else {
+                    sb.append(String.format(" and (%s between ? and ?) ", entry.getKey()));
                     list.add(strings[0]);
                     list.add(strings[1]);
                 }
-            }else {
+            } else {
                 sb.append(String.format(" and %s = ? ", entry.getKey()));
                 list.add(entry.getValue());
             }
         }
-        return JDBCUtils.queryList(sb.toString(),Housing.class,list.toArray());
+        return JDBCUtils.queryList(sb.toString(), Housing.class, list.toArray());
     }
 
     @Override
     public int deleteHouseById(Integer id) {
         String sql = "delete from housing where hid = ?";
-        return JDBCUtils.update(sql,id);
+        return JDBCUtils.update(sql, id);
     }
-
-
-//    @Override
-//    public Housing getHouseById(Integer id) {
-//        String sql = SELECT_ALL + " where hid = ?";
-//        return JDBCUtils.query(sql,Housing.class,id);
-//    }
-
-
 
     @Override
     public int updateHouse(Housing housing) {
