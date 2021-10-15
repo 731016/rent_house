@@ -23,4 +23,6 @@ public interface HousingService {
     List<Housing> getHousesByTypeId(Integer typeId);
     List<Housing> getHousesByState(Integer state);
     List<Housing> getHousesByMultiParams(Map<String,Object> map);
+    int updateHouse(Housing housing);
+    int deleteHouseById(Integer id);
 }

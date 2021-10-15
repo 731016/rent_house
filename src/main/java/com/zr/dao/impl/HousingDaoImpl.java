@@ -13,7 +13,7 @@ public class HousingDaoImpl implements HousingDao {
 
     @Override
     public int addHouse(Housing housing) {
-        String sql = "insert into housing values(default,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into housing values(default,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Object[] params = {
                 housing.getTitle(),
                 housing.getRent(),
@@ -26,7 +26,8 @@ public class HousingDaoImpl implements HousingDao {
                 housing.getFacilities(),
                 housing.getState(),
                 housing.getAid(),
-                housing.getAddress()
+                housing.getAddress(),
+                housing.getDescribe()
         };
         return JDBCUtils.update(sql, params);
     }
@@ -107,5 +108,27 @@ public class HousingDaoImpl implements HousingDao {
     public int deleteHouseById(Integer id) {
         String sql = "delete from housing where hid = ?";
         return JDBCUtils.update(sql,id);
+    }
+
+    @Override
+    public int updateHouse(Housing housing) {
+        String sql = "update housing set title = ?,rent = ?,houseType=?,area=?,towardId=?,imgList=?,lid=?,typeId=?,facilities=?,state=?,aid=?,address=?,describe=? where hid = ?";
+        Object[] params = {
+                housing.getTitle(),
+                housing.getRent(),
+                housing.getHouseType(),
+                housing.getArea(),
+                housing.getTowardId(),
+                housing.getImgList(),
+                housing.getLId(),
+                housing.getTypeId(),
+                housing.getFacilities(),
+                housing.getState(),
+                housing.getAid(),
+                housing.getAddress(),
+                housing.getDescribe(),
+                housing.getHId()
+        };
+        return 0;
     }
 }
