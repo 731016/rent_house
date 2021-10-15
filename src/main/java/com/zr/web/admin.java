@@ -27,6 +27,7 @@ public class admin extends HttpServlet {
          UserInfo userInfoByAccount = user.getUserInfoByAccount(account);
          if (userInfoByAccount.getState().equals(2)){
             result.setFlag(true);
+            request.getSession().setAttribute("root",userInfoByAccount);
          }else {
             result.setFlag(false);
          }
