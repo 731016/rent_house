@@ -29,12 +29,12 @@
     </ul>
 </header>
 <form action="/rent">
-<div id="big">
-    <div id="d1">
-        <table id="t2">
-            <tr>
-                <td colspan="2" id="td1"><h1>房东房屋出租</h1></td>
-            </tr>
+    <div id="big">
+        <div id="d1">
+            <table id="t2">
+                <tr>
+                    <td colspan="2" id="td1"><h1>房东房屋出租</h1></td>
+                </tr>
 
                 <tr>
                     <td class="m">房屋标题 :</td>
@@ -51,7 +51,7 @@
 
                 <tr>
                     <td class="m">户型 :</td>
-                    <td colspan="3" >
+                    <td colspan="3">
                         <select name="huxing" id="huxing">
                             <option value="一室">一室</option>
                             <option value="二室">二室</option>
@@ -80,7 +80,8 @@
                 <tr>
                     <td class="m">面积 :</td>
                     <td>
-                        <input type="text" id="mianji" name="mianji" class="td4" oninput = "value=value.replace(/[^\d]/g,'')">
+                        <input type="text" id="mianji" name="mianji" class="td4"
+                               oninput="value=value.replace(/[^\d]/g,'')">
                         平米
                     </td>
                 </tr>
@@ -88,7 +89,8 @@
                 <tr>
                     <td class="m">租金 :</td>
                     <td>
-                        <input type="text" id="price" name="price" class="td4" oninput = "value=value.replace(/[^\d]/g,'')">
+                        <input type="text" id="price" name="price" class="td4"
+                               oninput="value=value.replace(/[^\d]/g,'')">
                         元/月
                     </td>
                 </tr>
@@ -96,22 +98,50 @@
                 <tr>
                     <td class="m" style="height: 89px">设施:</td>
                     <td id="check">
-                        <input type="checkbox" name="sheshi" value="3">浴霸
-                        <input type="checkbox" name="sheshi" value="4">书架
-                        <input type="checkbox" name="sheshi" value="1">油烟机
-                        <input type="checkbox" name="sheshi" value="2">热水器
-                        <input type="checkbox" name="sheshi" value="10">桌子
-                        <br>
-                        <input type="checkbox" name="sheshi" value="8">衣柜
-                        <input type="checkbox" name="sheshi" value="9">沙发
-                        <input type="checkbox" name="sheshi" value="6">微波炉
-                        <input type="checkbox" name="sheshi" value="14">中央空调
-                        <input type="checkbox" name="sheshi" value="5">床
-                        <br>
-                        <input type="checkbox" name="sheshi" value="11">床垫
-                        <input type="checkbox" name="sheshi" value="13">椅子
-                        <input type="checkbox" name="sheshi" value="12">智能锁
-                        <input type="checkbox" name="sheshi" value="7">洗衣机
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="3">浴霸
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="4">书架
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="1">油烟机
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="2">热水器
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="10">桌子
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="8">衣柜
+                        </label>
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="9">沙发
+                        </label>
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="6">微波炉
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="14">中央空调
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="5">床
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="11">床垫
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="13">椅子
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="12">智能锁
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="sheshi" value="7">洗衣机
+                        </label>
                     </td>
                 </tr>
                 <tr>
@@ -125,7 +155,7 @@
                 <tr>
                     <td class="m" style="height: 89px">房屋信息 :</td>
                     <td>
-                        <textarea  cols="41" name="xinxi" id="td5"></textarea>
+                        <textarea cols="41" name="xinxi" id="td5"></textarea>
                     </td>
                 </tr>
 
@@ -151,7 +181,7 @@
 
                 <tr>
                     <td colspan="2" class="tr1">
-                        <input class="btn btn-primary" id="btn" type="submit" value="提交" >
+                        <input class="btn btn-primary" id="btn" type="submit" value="提交">
                     </td>
                 </tr>
             </table>

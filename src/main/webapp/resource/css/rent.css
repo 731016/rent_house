@@ -152,3 +152,6 @@ select{
 .sheshi{
 	background-color: blue;
 }
+.btn>input:hover{
+	cursor: pointer;
+}

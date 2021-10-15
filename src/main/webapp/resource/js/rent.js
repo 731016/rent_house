@@ -6,6 +6,9 @@ $(function () {
         let dataImgUrl = getObjectURL(file);
         $("#hximg").attr("src", dataImgUrl);
     })
+    initialArea();
+    initialHouseType();
+    initialToward();
 
     //     let housetitle=$('#td3').val();//房屋标题
     //     let housetype=$('#housetype').selected();//类型
@@ -62,7 +65,7 @@ function initialHouseType() {
         success:function (data) {
             let $housetype = $('#housetype');
             for (let i = 0; i < data.length; i++) {
-                let $option = $('<option value="'+data.typeId+'">'+data.typeName+'</option>');
+                let $option = $('<option value="'+data[i].typeId+'">'+data[i].typeName+'</option>');
                 $housetype.append($option);
             }
         }
@@ -77,7 +80,7 @@ function initialToward() {
         success:function (data) {
             let $toward = $('#toward');
             for (let i = 0; i < data.length; i++) {
-                let $option = $('<option value="'+data.towardId+'">'+data.towardName+'</option>');
+                let $option = $('<option value="'+data[i].towardId+'">'+data[i].towardName+'</option>');
                 $toward.append($option);
             }
         }
@@ -92,7 +95,7 @@ function initialArea() {
         success:function (data) {
             let $area = $('#quyu');
             for (let i = 0; i < data.length; i++) {
-                let $option = $('<option value="'+data.aid+'">'+data.aName+'</option>');
+                let $option = $('<option value="'+data[i].aid+'">'+data[i].aName+'</option>');
                 $area.append($option);
             }
         }
