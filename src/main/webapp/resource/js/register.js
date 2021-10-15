@@ -8,6 +8,9 @@ let nick = false;   //昵称
 let email = false;  //邮箱
 let phone = false;  //手机号
 window.addEventListener('load',function () {
+    cocoMessage.config({
+        duration: 2000,
+    });
     $(function(){
         //用户名
         $('#txt').blur(function(){

@@ -11,6 +11,7 @@
   <%--网页logo END --%>
   <link rel="stylesheet" href="/resource/css/login.css">
   <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/resource/js/coco-message.js"></script>
   <script src="/resource/js/login.js"></script>
 
 </head>

@@ -27,8 +27,17 @@ public class LoginSvl extends HttpServlet {
             result.setFlag(false);
             if (request.getSession().getAttribute("UserInfo") != null) {
                 result.setObject(request.getSession().getAttribute("UserInfo"));
+                System.out.println("不是登录页进来");
+                result.setState(200);
+            } else if (request.getSession().getAttribute("regFlag") != null) {
+                System.out.println("注册设置的session");
+                result.setState(201);
+            } else {
+                result.setState(404);
             }
+
             String s = JSON.toJSONString(result);
+            System.out.println("不是登录"+s);
             response.getWriter().print(s);
             return;
         }
@@ -55,12 +64,15 @@ public class LoginSvl extends HttpServlet {
             UserInfo userInfo = user.getUserInfoByAccount(account);
             session.setAttribute("UserInfo", userInfo);
             result.setObject(userInfo);
+            result.setState(200);
+        } else if (request.getSession().getAttribute("regFlag") != null) {
+            result.setState(201);
+        } else {
+            result.setState(404);
         }
         String s = JSON.toJSONString(result);
 //        String s = "{\"log\":"+login+"}";
         response.getWriter().print(s);
-
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
