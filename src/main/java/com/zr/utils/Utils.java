@@ -1,9 +1,11 @@
 package com.zr.utils;
 
+import com.jspsmart.upload.Files;
 import com.jspsmart.upload.Request;
 import com.jspsmart.upload.SmartUpload;
 import com.zr.pojo.ReturnResult;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,10 +14,7 @@ import java.io.File;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Date;
-import java.util.Map;
-import java.util.Random;
-
+import java.util.*;
 public class Utils {
     /**
      * 消息摘要方法，md5加密
@@ -50,25 +49,43 @@ public class Utils {
 
     /**
      * 上传文件到指定的相对路径
-     *
+     * @param smartUpload
      * @param servlet
-     * @param request
-     * @param response
      * @param path
      * @return
+     * @throws Exception
      */
-    public static String fileUpload(HttpServlet servlet, HttpServletRequest request, HttpServletResponse response, String path) throws Exception {
+    public static List<String> fileUpload(SmartUpload smartUpload,HttpServlet servlet, String path) throws Exception {
         String realPath = servlet.getServletContext().getRealPath(path);
-        SmartUpload smartUpload = new SmartUpload();
-        smartUpload.initialize(servlet.getServletConfig(), request, response);
-        smartUpload.upload();
-        Request uploadRequest = smartUpload.getRequest();
-        String extension = smartUpload.getFiles().getFile(0).getFileExt();
-        String fileName = randomFileName(extension);
-        smartUpload.getFiles().getFile(0).saveAs(realPath + fileName);
-        return fileName;
+        List<String> filenames = new ArrayList<>();
+        Files files = smartUpload.getFiles();
+        for (int i = 0; i < files.getCount(); i++) {
+            com.jspsmart.upload.File file = files.getFile(i);
+            String fileExt = file.getFileExt();
+            String filename = randomFileName(fileExt);
+            file.saveAs(realPath+filename);
+            filenames.add(filename);
+        }
+//        String extension = smartUpload.getFiles().getFile(0).getFileExt();
+//        String fileName = randomFileName(extension);
+//        smartUpload.getFiles().getFile(0).saveAs(realPath + fileName);
+        return filenames;
     }
 
+    /**
+     * 获得一个已经初始化的SmartUpload对象，可以直接使用，无需上传
+     * @param config
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    public static SmartUpload getInitialedSmartUpload(ServletConfig config, HttpServletRequest request, HttpServletResponse response) throws Exception{
+        SmartUpload smartUpload = new SmartUpload();
+        smartUpload.initialize(config, request, response);
+        smartUpload.upload();
+        return smartUpload;
+    }
     /**
      * 删除指定路径的指定文件
      * @param servlet
