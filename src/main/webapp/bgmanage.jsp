@@ -19,7 +19,6 @@
   <script src="/resource/js/public_login.js"></script>
   <script src="/resource/js/manageusers.js" type="text/javascript" charset="utf-8"></script>
   <script src="/resource/js/coco-message.js"></script>
-  <script src="/resource/js/public_login.js"></script>
 </head>
 <body>
 
