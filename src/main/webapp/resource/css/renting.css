@@ -89,6 +89,10 @@
     margin-top: 30px;
 }
 
+.house_id{
+    margin: 0 20px;
+}
+
 .location::before {
     content: '';
     display: inline-block;
