@@ -16,17 +16,16 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-
-@WebServlet(name = "LoginSvl",urlPatterns = "/login")
+@WebServlet(name = "LoginSvl", urlPatterns = "/login")
 public class LoginSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String account = request.getParameter("account");
         String password = request.getParameter("password");
         //判断账号或密码是否为空
-        if (account==null||account.isBlank()||password==null||password.isBlank()){
+        if (account == null || account.isBlank() || password == null || password.isBlank()) {
             ReturnResult result = new ReturnResult();
             result.setFlag(false);
-            if(request.getSession().getAttribute("UserInfo")!=null){
+            if (request.getSession().getAttribute("UserInfo") != null) {
                 result.setObject(request.getSession().getAttribute("UserInfo"));
             }
             String s = JSON.toJSONString(result);
@@ -38,21 +37,23 @@ public class LoginSvl extends HttpServlet {
         UserInfoService user = UserInfoService.getInstance();
         boolean login = user.login(account, password);
         HttpSession session = request.getSession();
-        ReturnResult result ;
+        ReturnResult result;
 
         //查询是否为管理员权限
-        if (user.getUserInfoByAccount(account).getState().equals(2)){
-            result = new ReturnResult("root",null,false);
-        }else if (user.getUserInfoByAccount(account).getState().equals(0)){
-            result = new ReturnResult("disable",null,false);
-        }else {
-            result = new ReturnResult(null,null,login);
+        if (user.getUserInfoByAccount(account) == null) {
+            result = new ReturnResult(null, null, false);
+        } else if (user.getUserInfoByAccount(account).getState().equals(2)) {
+            result = new ReturnResult("root", null, false);
+        } else if (user.getUserInfoByAccount(account).getState().equals(0)) {
+            result = new ReturnResult("disable", null, false);
+        } else {
+            result = new ReturnResult(null, null, login);
         }
 
 
-        if (login){
+        if (login) {
             UserInfo userInfo = user.getUserInfoByAccount(account);
-            session.setAttribute("UserInfo",userInfo);
+            session.setAttribute("UserInfo", userInfo);
             result.setObject(userInfo);
         }
         String s = JSON.toJSONString(result);
