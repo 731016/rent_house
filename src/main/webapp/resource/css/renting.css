@@ -107,6 +107,7 @@
     width: 350px;
     height: 270px;
     border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
 }
 .div_img:hover{
     cursor: pointer;

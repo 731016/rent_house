@@ -156,7 +156,7 @@
                 <tr>
                     <td class="m" style="height: 89px">房屋信息 :</td>
                     <td>
-                        <textarea cols="41" name="xinxi" id="td5"></textarea>
+                        <textarea cols="41" name="describe" id="td5"></textarea>
                     </td>
                 </tr>
 

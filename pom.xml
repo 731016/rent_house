@@ -80,14 +80,22 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.38</version>
-    </dependency>
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java 数据库5.0+ -->
+<!--    <dependency>-->
+<!--      <groupId>mysql</groupId>-->
+<!--      <artifactId>mysql-connector-java</artifactId>-->
+<!--      <version>5.1.38</version>-->
+<!--    </dependency>-->
+      <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<!--      数据库8.0+-->
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>8.0.16</version>
+      </dependency>
 
-    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+
+      <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>

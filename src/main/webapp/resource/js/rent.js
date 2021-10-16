@@ -1,6 +1,6 @@
 $(function () {
     //显示上传的户型图片
-    if($('#file2').val().trim()!=="") {
+    if ($('#file2').val().trim() !== "") {
         $('#hximg').attr('src', getObjectURL(document.getElementById("file2").files[0]))
     }
     $('#file2').change(function () {
@@ -48,6 +48,7 @@ $(function () {
     //         }
     //     });
 });
+
 function getObjectURL(file) {
     let url = null;
     if (window.createObjectURL != undefined) {
@@ -59,46 +60,49 @@ function getObjectURL(file) {
     }
     return url;
 }
+
 function initialHouseType() {
     $.ajax({
-        type:'post',
-        url:'/type',
-        dataType:'json',
-        cache:false,
-        success:function (data) {
+        type: 'post',
+        url: '/type',
+        dataType: 'json',
+        cache: false,
+        success: function (data) {
             let $housetype = $('#housetype');
             for (let i = 0; i < data.length; i++) {
-                let $option = $('<option value="'+data[i].typeId+'">'+data[i].typeName+'</option>');
+                let $option = $('<option value="' + data[i].typeId + '">' + data[i].typeName + '</option>');
                 $housetype.append($option);
             }
         }
     })
 }
+
 function initialToward() {
     $.ajax({
-        type:'post',
-        url:'/toward',
+        type: 'post',
+        url: '/toward',
         dataType: 'json',
         cache: false,
-        success:function (data) {
+        success: function (data) {
             let $toward = $('#toward');
             for (let i = 0; i < data.length; i++) {
-                let $option = $('<option value="'+data[i].towardId+'">'+data[i].towardName+'</option>');
+                let $option = $('<option value="' + data[i].towardId + '">' + data[i].towardName + '</option>');
                 $toward.append($option);
             }
         }
     })
 }
+
 function initialArea() {
     $.ajax({
-        type:'post',
-        url:'/area',
-        dataType:'json',
-        cache:false,
-        success:function (data) {
+        type: 'post',
+        url: '/area',
+        dataType: 'json',
+        cache: false,
+        success: function (data) {
             let $area = $('#quyu');
             for (let i = 0; i < data.length; i++) {
-                let $option = $('<option value="'+data[i].aid+'">'+data[i].aName+'</option>');
+                let $option = $('<option value="' + data[i].aid + '">' + data[i].aName + '</option>');
                 $area.append($option);
             }
         }

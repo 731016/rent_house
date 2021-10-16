@@ -37,7 +37,7 @@ public class RentAddSvl extends HttpServlet {
                 return;
             }
             SmartUpload smartUpload = Utils.getInitialedSmartUpload(getServletConfig(),request,response);
-            List<String> filenames = Utils.fileUpload(smartUpload, this, "upload");
+            List<String> filenames = Utils.fileUpload(smartUpload, this,"/upload/");
             String imgList = Utils.arrayToString(filenames.toArray(), ",");
             Request uploadRequest = smartUpload.getRequest();
             String houseTitle = uploadRequest.getParameter("housetitle");

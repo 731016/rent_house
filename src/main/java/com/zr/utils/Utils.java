@@ -50,13 +50,19 @@ public class Utils {
     /**
      * 上传文件到指定的相对路径
      * @param smartUpload
-     * @param servlet
      * @param path
      * @return
      * @throws Exception
      */
     public static List<String> fileUpload(SmartUpload smartUpload,HttpServlet servlet, String path) throws Exception {
         String realPath = servlet.getServletContext().getRealPath(path);
+//        String realPath = Utils.class.getClassLoader().getResource(path).getFile();
+        {
+            File file = new File(realPath);
+            if (!file.exists()) {
+                boolean mkdir = file.mkdir();
+            }
+        }
         List<String> filenames = new ArrayList<>();
         Files files = smartUpload.getFiles();
         for (int i = 0; i < files.getCount(); i++) {
