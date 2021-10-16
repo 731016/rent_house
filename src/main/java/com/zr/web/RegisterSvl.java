@@ -15,6 +15,15 @@ import java.io.IOException;
 @WebServlet(name = "RegisterSvl", urlPatterns = "/register")
 public class RegisterSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        if (request.getSession().getAttribute("UserInfo") != null) {
+            System.out.println(111);
+            ReturnResult result = new ReturnResult();
+            result.setState(202);
+            response.getWriter().print(JSON.toJSONString(result));
+            return;
+        }
+
         String account = request.getParameter("account");
         String password = request.getParameter("password");
         String name = request.getParameter("name");
@@ -30,7 +39,7 @@ public class RegisterSvl extends HttpServlet {
             String s = JSON.toJSONString(result);
             response.getWriter().print(s);
 //            response.sendRedirect("login.jsp");
-        }else {
+        } else {
             result.setFlag(false);
             String s = JSON.toJSONString(result);
             response.getWriter().print(s);

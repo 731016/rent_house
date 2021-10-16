@@ -19,7 +19,8 @@ window.addEventListener('load', function () {
                         rsuccessDiv.innerText = "登录成功！";
                         cocoMessage.success(rsuccessDiv);
                         setTimeout(() => {
-                            location.href = "index.jsp"
+                            history.go(-1);
+                            // location.href = "index.jsp"
                         },2000);
                     } else if (data.msg === "disable") {
                         // $("#validation").html("<span>用户已被禁用</span>").css("color","red");
