@@ -21,9 +21,18 @@ import java.util.List;
 public class RentAddSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+            response.setCharacterEncoding("utf-8");
+            response.setContentType("text/html");
             Object o = request.getSession().getAttribute("UserInfo");
             if(o==null){
                 response.getWriter().print("<script>alert('会话过期');location.href=\"/login.jsp\"</script>");
+                return;
+            }
+            UserInfo userInfo = (UserInfo)o;
+            LandlordService service_landlord = LandlordService.getInstance();
+            Landlord landlord = service_landlord.getLandlordByAccount(userInfo.getAccount());
+            if(landlord==null){
+                response.getWriter().print("<script>alert('请先成为房东');history.go(-1)</script>");
                 return;
             }
             SmartUpload smartUpload = Utils.getInitialedSmartUpload(getServletConfig(),request,response);
@@ -37,9 +46,6 @@ public class RentAddSvl extends HttpServlet {
             String[] facilities = uploadRequest.getParameterValues("sheshi");
             String facility = Utils.arrayToString(facilities,",");
             String info = uploadRequest.getParameter("xinxi");
-            UserInfo userInfo = (UserInfo)o;
-            LandlordService service_landlord = LandlordService.getInstance();
-            Landlord landlord = service_landlord.getLandlordByAccount(userInfo.getAccount());
             Integer lid = landlord.getLId();
             int typeId = Integer.parseInt(uploadRequest.getParameter("housetype"));
             int towardId = Integer.parseInt(uploadRequest.getParameter("chaoxiang"));
@@ -58,7 +64,7 @@ public class RentAddSvl extends HttpServlet {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().print("<script>alert('添加失败');history.go(-1)</script>");
+            response.getWriter().print("<script>alert('出错了');history.go(-1)</script>");
         }
     }
 

@@ -58,7 +58,7 @@ window.addEventListener('load', function () {
          let psw = $(this).val().trim();
          if (psw.length !== 0) {
             if (!pwdReg.test(psw)) {
-               $('#sppass').text('密码长度必须大于6小于16').css('color', 'red');
+               $('#sppass').text('密码长度必须大于等于6小于等于16，且必须以英文开头').css('color', 'red');
                $(this).css('border-color', 'red');
                pwd = false;
             } else {
