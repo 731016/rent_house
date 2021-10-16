@@ -220,7 +220,7 @@
     <div id="div_house" class="div_inBlock div_house">
       <div id="house_id" class="div_inBlock house_id">
         <div id="div_img" class="div_img">
-          <a href="#"><img src="" alt="" id="house_img"></a>
+          <a href="#"><img style="width: 100%" src="" alt="" id="house_img"></a>
         </div>
         <div id="house_info" class="house_info">
           <span class="badge badge-pill badge-success incon">即住</span>
