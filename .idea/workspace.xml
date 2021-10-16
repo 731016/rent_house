@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b82ee4-fec6-4eea-9930-32206bd857b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/js/housedetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/js/housedetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,24 +147,6 @@
   <component name="SvnConfiguration" cleanupOnStartRun="true">
     <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
-  </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
-          <option name="myCopyRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
-          <option name="myCopyRoot" value="D:\workspace\jsp\demo_prj\rent_house" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
   </component>
   <component name="SvnFileUrlMappingImpl">
     <option name="myMappingRoots">
@@ -351,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634278815839</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="管理员后台管理过滤">
+      <created>1634353393406</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1634353393406</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +354,8 @@
     <MESSAGE value="ReturnResult.java添加了返回结果状态字段" />
     <MESSAGE value="Utils类增加了初始化SmartUpload方法，修改了文件上传的方法，参数列表进行了修改，返回值为所有上传文件的重命名" />
     <MESSAGE value="Housing.java添加了属性，dao层增加了修改的方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="管理员后台管理过滤" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理员后台管理过滤" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="423" key="#Custom_Plugin_Repositories" timestamp="1634125117799">
@@ -410,10 +400,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="711" y="336" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1634125345945" />
-    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634278814888">
+    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1634353391318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634278814888" />
+    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1634353391318" />
     <state x="718" y="365" key="FileChooserDialogImpl" timestamp="1634179597423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -510,10 +500,10 @@
     </state>
     <state x="461" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1634286573630" />
     <state x="461" y="156" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1634125550099" />
-    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634284864787">
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1634356321468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634284864787" />
+    <state x="773" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634356321468" />
     <state x="717" y="377" key="svn.lockDialog" timestamp="1634180927301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
