@@ -4,56 +4,64 @@ body{
 }
 
 /* 头部 */
-#top{
-	width: 100%;
-	height: 60px;
-	box-shadow: gainsboro 0px 3px 10px 3px;
+
+#header{
+	background-color:rgba(255, 255, 255, 0.5);
+	box-shadow: 2px 2px 8px silver;
 }
-#top2{
-	position: relative;
-	width: 1040px;
-	height: 58px;
-	margin: 0 auto;
+#header ul li a{
+	color: black;
 }
-#titlename{
-	display: block;
-	width: 20%;
-	font-size: 30px;
-	font-family: 华文新魏;
-	position: absolute;
-	top: 16px;
-	color: red;
-}
-#topright{
-	position: absolute;
-	width: 90%;
-	/*float: right;*/
-	height: 57px;
-	line-height: 57px;
-}
-#topright a{
-	color: #0C0C0C;
-}
-a{
-	text-decoration: none;
-}
-#home{
-	margin-left: 650px;
-	margin-right: 10px;
-}
-#login{
-	margin-left: 50px;
-}
-#topright a:hover{
-	color: red;
-}
+/*#top{*/
+/*	width: 100%;*/
+/*	height: 60px;*/
+/*	box-shadow: gainsboro 0px 3px 10px 3px;*/
+/*}*/
+/*#top2{*/
+/*	position: relative;*/
+/*	width: 1040px;*/
+/*	height: 58px;*/
+/*	margin: 0 auto;*/
+/*}*/
+/*#titlename{*/
+/*	display: block;*/
+/*	width: 20%;*/
+/*	font-size: 30px;*/
+/*	font-family: 华文新魏;*/
+/*	position: absolute;*/
+/*	top: 16px;*/
+/*	color: red;*/
+/*}*/
+/*#topright{*/
+/*	position: absolute;*/
+/*	width: 90%;*/
+/*	!*float: right;*!*/
+/*	height: 57px;*/
+/*	line-height: 57px;*/
+/*}*/
+/*#topright a{*/
+/*	color: #0C0C0C;*/
+/*}*/
+/*a{*/
+/*	text-decoration: none;*/
+/*}*/
+/*#home{*/
+/*	margin-left: 650px;*/
+/*	margin-right: 10px;*/
+/*}*/
+/*#login{*/
+/*	margin-left: 50px;*/
+/*}*/
+/*#topright a:hover{*/
+/*	color: red;*/
+/*}*/
 
 /* 身体部分 */
 #body{
 	width: 1040px;
 	height: 1400px;
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 120px;
 }
 #bodyleft{
 	width: 700px;

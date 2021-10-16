@@ -10,6 +10,7 @@
   <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>
   <%--网页logo END --%>
   <link rel="stylesheet" href="./resource/css/regist.css">
+  <link href="/resource/css/public.css" rel="stylesheet">
   <link href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="/resource/css/pwdStrongth.css" rel="stylesheet">
   <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
@@ -21,7 +22,10 @@
 <body>
 <!--method="post" action="/register"-->
 <form >
-<span id="our">Lie flat租房</span>
+  <%--头部 START--%>
+  <header id="header">
+    <span id="our">Lie flat租房</span>
+  </header>
 <div id="big">
   <div id="login">
     <div id="title" style="text-align: center;">

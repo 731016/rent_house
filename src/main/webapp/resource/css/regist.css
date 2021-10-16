@@ -5,7 +5,7 @@ body{
 #big{
     height: 750px;
     width: 100%;
-    margin-top: 90px;
+    margin-top: 75px;
     background-color: #555555;
     background-image: url(/resource/images/login_bg.jpg);
     background-repeat:no-repeat;
@@ -49,11 +49,9 @@ input{
     border: 1px solid black;
 }
 
-
 #our{
-    position: absolute;
-    top: 25px;
-    left: 500px;
+    position: relative;
+    left: 240px;
     font-size: 50px;
     font-family: 华文新魏;
     color: crimson;

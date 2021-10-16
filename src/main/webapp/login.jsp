@@ -9,6 +9,7 @@
   <link rel="icon" href="/resource/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>
   <%--网页logo END --%>
+  <link href="/resource/css/public.css" rel="stylesheet">
   <link rel="stylesheet" href="/resource/css/login.css">
   <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/resource/js/coco-message.js"></script>
@@ -17,12 +18,14 @@
 </head>
 <body>
 <form>
-  <span id="our">Lie flat租房</span>
+  <header id="header">
+    <span id="our">Lie flat租房</span>
+  </header>
   <div id="big">
     <div id="login">
       <a href="index.jsp" id="backhome">< 返回首页</a>
       <div id="title" style="text-align: center;">
-        <h1>登录</h1>
+        <h1 id="lab">登录</h1>
       </div>
       <div id="validation" style="text-align: center"></div>
       <div class="input">

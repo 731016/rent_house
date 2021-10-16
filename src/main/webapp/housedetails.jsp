@@ -6,22 +6,23 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   <link rel="stylesheet" type="text/css" href="/resource/css/housedetails.css"/>
+  <link rel="stylesheet" href="/resource/css/public.css">
   <script src="/resource/js/jquery-3.6.0.min.js"></script>
   <script src="/resource/js/coco-message.js"></script>
   <script src="/resource/js/housedetails.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-<div id="top">
-  <div id="top2">
-    <span id="titlename">Lie flat租房</span>
-    <div id="topright">
-      <a href="index.jsp" id="home">首页</a>
-      <a href="renting.jsp">租房</a>
-      <a href="login.jsp" id="login">登录</a>&nbsp;|&nbsp;
-      <a href="register.jsp" id="register">注册</a>
-    </div>
-  </div>
-</div>
+<%--头部 START--%>
+<header id="header">
+  <ul>
+    <li><a href="index.jsp" class="nav_header">首页</a></li>
+    <li><a href="renting.jsp" class="nav_header current">租房</a></li>
+    <li><a href="rent.jsp" class="nav_header">出租</a></li>
+    <li class="reg_log" id="show_register"><a href="register.jsp" class="nav_header">注册</a></li>
+    <li class="reg_log" style="color: #fff;">|</li>
+    <li class="reg_log" id="show_login"><a href="login.jsp" class="nav_header">登录</a></li>
+  </ul>
+</header>
 <div id="body">
   <!-- 身体部分左侧 -->
   <div id="bodyleft">
@@ -40,18 +41,11 @@
     <div id="jianjie">
       <h2>房源简介</h2>
       <span style="color: grey;">
-						房源位置 这套位于纽宾凯公园里的房源属于抢手房源。小区一共有7个楼栋。小区有24小时安保。小区有车位可出租。小区有1个门。有多项设施供住户使用，如健身广场，饮水站，快递柜。楼栋概况 小区是2020年建的，楼栋外立面较新。出入单元需通过门禁。楼栋总高46层。小区注重卫生管理，会定期安排人员维护楼栋的卫生。房源概况 这间4居室的05卧面积较大，两人住也不会太拥挤。房源在第17层，卧室朝向为南。有1个独立阳台，方便晾晒衣物和储物。厨房有1个阳台，瓶瓶罐罐可存放于此。装修亮点 卧室装修为原木色系，让人在木色与白色的交织中，感受自然纯粹。房间优选环保无醛板材，为您居住安全保驾护航。
-					</span>
+          房源位置  这套位于纽宾凯公园里的房源属于抢手房源。小区一共有7个楼栋。小区有24小时安保。小区有车位可出租。小区有1个门。有多项设施供住户使用，如健身广场，饮水站，快递柜。楼栋概况 小区是2020年建的，楼栋外立面较新。出入单元需通过门禁。楼栋总高46层。小区注重卫生管理，会定期安排人员维护楼栋的卫生。房源概况 这间4居室的05卧面积较大，两人住也不会太拥挤。房源在第17层，卧室朝向为南。有1个独立阳台，方便晾晒衣物和储物。厨房有1个阳台，瓶瓶罐罐可存放于此。装修亮点 卧室装修为原木色系，让人在木色与白色的交织中，感受自然纯粹。房间优选环保无醛板材，为您居住安全保驾护航。
+      </span>
       <div id="tubiao">
-        <div>
+        <div id="tubiao2">
           <img src="/resource/images/1.png" class="tubiaoimg">
-          <br>
-          椅子
-        </div>
-        <div>
-          <img src="/resource/images/1.png" class="tubiaoimg">
-          <br>
-          椅子
         </div>
       </div>
       <h2>租约信息</h2>
@@ -72,7 +66,7 @@
   <!-- 身体部分右侧 -->
   <div id="bodyright">
     <h2 id="title">标题</h2>
-    <span id="price">￥价格</span>
+    <span id="price">价格</span>
     <table style="border-top: 1px solid gainsboro;" cellspacing="0px">
       <tr style="text-align: center;">
         <td class="td1">

@@ -23,10 +23,13 @@ body{
     /* font-family: 楷体; */
 }
 #title{
-    height: 120px;
+    height: 130px;
     font-size: 30px;
-    padding-top: 5px;
+    line-height: 160px;
     font-family: 华文新魏;
+}
+#lab{
+    margin-top: 20px;
 }
 #txt,#psw{
     width: 260px;
@@ -57,10 +60,13 @@ a{
     left: 235px;
     top: 10px;
 }
+header{
+    height: 90px;
+}
 #our{
-    position: absolute;
-    top: 25px;
-    left: 500px;
+    position: relative;
+    top: 10px;
+    left: 240px;
     font-size: 50px;
     font-family: 华文新魏;
     color: crimson;
