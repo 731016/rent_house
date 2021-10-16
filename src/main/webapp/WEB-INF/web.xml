@@ -3,25 +3,35 @@
          xmlns="http://java.sun.com/xml/ns/j2ee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-  <filter>
-    <filter-name>EncodingFilter</filter-name>
-    <filter-class>com.zr.Filter.EncodingFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>EncodingFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
-  <filter>
-    <filter-name>HouseDetailsFilter</filter-name>
-    <filter-class>com.zr.Filter.HouseDetailsFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>HouseDetailsFilter</filter-name>
-    <url-pattern>/housedetails</url-pattern>
-  </filter-mapping>
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.zr.Filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>HouseDetailsFilter</filter-name>
+        <filter-class>com.zr.Filter.HouseDetailsFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HouseDetailsFilter</filter-name>
+        <url-pattern>/housedetails</url-pattern>
+    </filter-mapping>
 
-  <welcome-file-list>
-  <welcome-file>index.jsp</welcome-file>
-</welcome-file-list>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <filter>
+        <filter-name>root</filter-name>
+        <filter-class>com.zr.Filter.RootFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>root</filter-name>
+        <url-pattern>/bgmanage.jsp</url-pattern>
+    </filter-mapping>
+
 </web-app>
         

@@ -15,7 +15,7 @@ window.addEventListener('load',function () {
                 url:"/login",
                 success:function (data) {
                     if (data.flag){
-                        history.back();
+                        location.href="index.jsp"
                     }else if (data.msg==="disable"){
                         // $("#validation").html("<span>用户已被禁用</span>").css("color","red");
                         var disableDiv = document.createElement("div");
