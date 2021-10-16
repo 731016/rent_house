@@ -17,11 +17,9 @@ public class PaemasLandlordInfo extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
         String lid = request.getParameter("lid");
-        System.out.println(lid);
         LandlordService landlordService = LandlordService.getInstance();
         Landlord landlord = landlordService.getLandlordById(Integer.valueOf(lid));
         response.getWriter().print(JSON.toJSONString(landlord));
-        System.out.println(JSON.toJSONString(landlord));
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

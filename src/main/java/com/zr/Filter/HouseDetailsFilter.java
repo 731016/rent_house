@@ -12,14 +12,14 @@ public class HouseDetailsFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-//        HttpServletResponse httpResp = (HttpServletResponse) resp;
-//        HttpServletRequest httpReq = (HttpServletRequest) req;
-//
-//        Object userInfoObj = httpReq.getSession().getAttribute("UserInfo");
-//        if (userInfoObj == null) {
-//            httpResp.sendRedirect("/login.jsp");
-//            return;
-//        }
+        HttpServletResponse httpResp = (HttpServletResponse) resp;
+        HttpServletRequest httpReq = (HttpServletRequest) req;
+
+        Object userInfoObj = httpReq.getSession().getAttribute("UserInfo");
+        if (userInfoObj == null) {
+            httpResp.sendRedirect("/login.jsp");
+            return;
+        }
         chain.doFilter(req, resp);
     }
 
