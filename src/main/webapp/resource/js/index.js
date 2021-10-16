@@ -71,7 +71,7 @@ window.addEventListener('load', function () {
         });
         // 出租
         $('.con_father_zf').on('click', function () {
-            location.href = 'rent.jsp';
+            location.href = '/fdregister.jsp';
         });
     });
 

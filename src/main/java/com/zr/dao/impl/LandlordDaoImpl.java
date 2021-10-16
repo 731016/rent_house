@@ -17,13 +17,13 @@ public class LandlordDaoImpl implements LandlordDao {
     @Override
     public Landlord getLandlordById(Integer id) {
         String sql = selectAll + "where lid = ?";
-        return JDBCUtils.query(sql, Landlord.class);
+        return JDBCUtils.query(sql, Landlord.class,id);
     }
 
     @Override
     public List<Landlord> getLandlordLikeName(String name) {
         String sql = selectAll + "where instr(lName,?)!=0";
-        return JDBCUtils.queryList(sql, Landlord.class);
+        return JDBCUtils.queryList(sql, Landlord.class,name);
     }
 
     @Override
