@@ -17,7 +17,6 @@ import java.io.IOException;
 @WebServlet(name = "LandlordRegisterSvl", urlPatterns = "/fdregister")
 public class LandlordRegisterSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("已进入fdregister");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
         String IName = request.getParameter("name");

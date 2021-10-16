@@ -15,10 +15,12 @@ window.addEventListener('load', function () {
                     $('#show_register').html("<a href='/exit' class='nav_header'>退出</a>");
                     $('.vertical_line').css('visibility', 'hidden').css('margin-right', '5%');
                     if (data.state == 200){
+                        console.log(200)
                         var successDiv = document.createElement("div");
                         successDiv.innerText = "登录成功！";
                         cocoMessage.success(successDiv);
                     }else if(data.state == 404){
+                        console.log(404)
                         var failDiv = document.createElement("div");
                         failDiv.innerText = "登录失败！";
                         cocoMessage.error(failDiv);

@@ -21,12 +21,10 @@
     <%--网站说明 END --%>
     <link rel="stylesheet" href="/resource/css/index.css">
     <link rel="stylesheet" href="/resource/css/public.css">
-    <link rel="stylesheet" href="/resource/css/style.css">
     <script src="/resource/js/jquery-3.6.0.min.js"></script>
     <%--消息提示插件--%>
     <script src="/resource/js/coco-message.js"></script>
     <script src="/resource/js/index.js"></script>
-
 </head>
 
 <body>
