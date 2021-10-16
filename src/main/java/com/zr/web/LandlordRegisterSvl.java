@@ -44,7 +44,8 @@ public class LandlordRegisterSvl extends HttpServlet {
         Landlord landlord = new Landlord(null, IName, phone, address, idCard, user.getAccount());
         int addLines = landlordService.addLandlord(landlord);
         if (addLines > 0) {
-            // TODO:房东信息 存储sesion
+            // 房东信息 存储sesion
+            request.getSession().setAttribute("FdRegister", user.getAccount());
             response.sendRedirect("/renting.jsp");
             System.out.println("房东注册成功");
             return;

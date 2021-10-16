@@ -14,7 +14,7 @@ public class LoginExit extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getSession().removeAttribute("UserInfo");
+        request.getSession().invalidate();
         response.sendRedirect("login.jsp");
     }
 }
