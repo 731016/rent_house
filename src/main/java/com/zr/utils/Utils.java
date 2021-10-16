@@ -110,6 +110,9 @@ public class Utils {
         return result;
     }
     public static String arrayToString(Object[] array,String reg){
+        if (array.length==0){
+            return "";
+        }
         StringBuilder sb = new StringBuilder();
         for (Object o : array) {
             sb.append(o.toString()+reg.trim());

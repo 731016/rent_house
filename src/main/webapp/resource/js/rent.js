@@ -1,5 +1,8 @@
 $(function () {
     //显示上传的户型图片
+    if($('#file2').val().trim()!=="") {
+        $('#hximg').attr('src', getObjectURL(document.getElementById("file2").files[0]))
+    }
     $('#file2').change(function () {
         let file = this.files[0];
 

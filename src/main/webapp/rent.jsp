@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/resource/css/rent.css"/>
 
     <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/resource/js/coco-message.js"></script>
     <script src="/resource/js/public_login.js"></script>
     <script src="/resource/js/rent.js"></script>
 </head>
@@ -28,7 +29,7 @@
         </li>
     </ul>
 </header>
-<form action="/rent" method="post">
+<form action="/rent" method="post" enctype="multipart/form-data">
     <div id="big">
         <div id="d1">
             <table id="t2">
@@ -38,7 +39,7 @@
 
                 <tr>
                     <td class="m">房屋标题 :</td>
-                    <td><input type="text" id="td3" name="housetitle"></td>
+                    <td><input type="text" id="td3" name="housetitle" required autofocus></td>
                 </tr>
 
                 <tr>
@@ -81,7 +82,7 @@
                     <td class="m">面积 :</td>
                     <td>
                         <input type="text" id="mianji" name="mianji" class="td4"
-                               oninput="value=value.replace(/[^\d]/g,'')">
+                               oninput="value=value.replace(/[^\d]/g,'')" required>
                         平米
                     </td>
                 </tr>
@@ -90,7 +91,7 @@
                     <td class="m">租金 :</td>
                     <td>
                         <input type="text" id="price" name="price" class="td4"
-                               oninput="value=value.replace(/[^\d]/g,'')">
+                               oninput="value=value.replace(/[^\d]/g,'')" required>
                         元/月
                     </td>
                 </tr>
@@ -149,7 +150,7 @@
                         详细地址:
                     </td>
                     <td>
-                        <input name="address" id="address">
+                        <input name="address" id="address" required>
                     </td>
                 </tr>
                 <tr>

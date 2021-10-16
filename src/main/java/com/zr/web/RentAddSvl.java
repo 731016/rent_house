@@ -15,9 +15,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
-@WebServlet(name = "RentAddSvl",urlPatterns = "/rent")
+@WebServlet(name = "RentAddSvl", urlPatterns = "/rent")
 public class RentAddSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -36,15 +37,18 @@ public class RentAddSvl extends HttpServlet {
                 return;
             }
             SmartUpload smartUpload = Utils.getInitialedSmartUpload(getServletConfig(),request,response);
-            Request uploadRequest = smartUpload.getRequest();
             List<String> filenames = Utils.fileUpload(smartUpload, this, "upload");
-            String imgList = Utils.arrayToString(filenames.toArray(),",");
+            String imgList = Utils.arrayToString(filenames.toArray(), ",");
+            Request uploadRequest = smartUpload.getRequest();
             String houseTitle = uploadRequest.getParameter("housetitle");
             String housingType = uploadRequest.getParameter("huxing");
             double area = Double.parseDouble(uploadRequest.getParameter("mianji"));
             int rent = Integer.parseInt(uploadRequest.getParameter("price"));
             String[] facilities = uploadRequest.getParameterValues("sheshi");
-            String facility = Utils.arrayToString(facilities,",");
+            String facility = "";
+            if (facilities != null) {
+                facility = Utils.arrayToString(facilities, ",");
+            }
             String info = uploadRequest.getParameter("xinxi");
             Integer lid = landlord.getLId();
             int typeId = Integer.parseInt(uploadRequest.getParameter("housetype"));
