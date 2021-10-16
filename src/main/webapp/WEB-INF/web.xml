@@ -32,6 +32,13 @@
         <filter-name>root</filter-name>
         <url-pattern>/bgmanage.jsp</url-pattern>
     </filter-mapping>
-
+    <filter>
+        <filter-name>FdRegister</filter-name>
+        <filter-class>com.zr.Filter.FdRegister</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FdRegister</filter-name>
+        <url-pattern>/fdregister.jsp</url-pattern>
+    </filter-mapping>
 </web-app>
         
