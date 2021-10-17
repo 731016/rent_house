@@ -15,6 +15,6 @@ import java.util.Date;
 public class CheckHouseRecord {
    private Integer cId;    //编号
    private Integer hId;    //房屋ID
-   private Integer account;//用户账号
+   private String account;//用户账号
    private Date checkDate; //看房日期
 }

@@ -1,4 +1,7 @@
 $(function () {
+    cocoMessage.config({
+        duration: 2000,
+    });
     $('#userinfo').click(function () {
         $('#userhouse').removeClass('user_menu_a');
         $(this).addClass('user_menu_a');
@@ -42,6 +45,12 @@ $(function () {
         $('#userhouse_content').hide();
         $('#house_content').show();
     })
+
+    $('#landlord_update').click(function () {
+        updateLandlord();
+    })
+
+
     showUser();
     isLandlord();
 })
@@ -74,7 +83,7 @@ function isLandlord() {
         url: '/landlordInfo',
         cache: false,
         success: function (landlordInfo) {
-            if(landlordInfo==null){
+            if (landlordInfo == null) {
                 $('#userhouse').hide();
             }
         },
@@ -94,6 +103,7 @@ function showLandlord() {
         success: function (landlordInfo) {
             $('#landlordName').text(landlordInfo.lName);
             $('#lName').val(landlordInfo.lName);
+            $('#lId').text(landlordInfo.lId);
             $('#idCard').val(landlordInfo.idCard);
             $('#address').val(landlordInfo.address);
         },
@@ -111,15 +121,18 @@ function showHouseRecord() {
         url: '/checkHouseRecord',
         cache: false,
         success: function (recordList) {
-            $.each(recordList,function (i,record) {
+            $('#record').children(":gt(0)").remove();
+            $.each(recordList, function (i, record) {
                 let $tr = $("<tr></tr>");
-                let $td1=$('<td>'+record.checkHouseRecord.cId+'</td>');
-                let $td2=$('<td>'+record.checkHouseRecord.checkDate+'</td>');
-                let $td3=$('<td><a href="">'+record.title+'</a></td>');
+                let $td1 = $('<td>' + record.checkHouseRecord.cId + '</td>');
+                let $td2 = $('<td>' + record.checkHouseRecord.checkDate + '</td>');
+                let $td3 = $('<td><a href="javascript:;">' + record.title + '</a></td>');
+                let $td4 = $('<td><button type="button"  class="userinfo_button" onclick="return delHouseRecord(this)">删除</button></td>');
 
                 $tr.append($td1);
                 $tr.append($td2);
                 $tr.append($td3);
+                $tr.append($td4);
 
                 $('#record').append($tr);
             })
@@ -128,4 +141,64 @@ function showHouseRecord() {
             $("body").html(e.responseText);
         }
     })
+}
+
+//删除看房记录
+function delHouseRecord(button) {
+    let $button = $(button);
+    if (!confirm('确定删除吗？')) {
+        return false;
+    }
+    let cid = $button.parent().parent().children(":eq(0)").text();
+    $.ajax({
+        type: 'post',
+        data: {'cid': cid},
+        dataType: 'json',
+        cache: false,
+        url: '/delHouseRecord',
+        success: function (data) {
+            if (data.state == 203) {
+                var delSuccessDiv = document.createElement("div");
+                delSuccessDiv.innerText = "删除成功！";
+                cocoMessage.warning(delSuccessDiv);
+                $button.parent().parent().remove();
+            } else {
+                var delErrorDiv = document.createElement("div");
+                delErrorDiv.innerText = "删除失败！";
+                cocoMessage.error(delErrorDiv);
+            }
+        },
+        error: function (e) {
+            $("body").html(e.responseText);
+        }
+    });
+}
+
+//修改房东信息
+function updateLandlord() {
+    let lId = $("#lId").text();
+    let lName = $('#lName').val();
+    let phone = $('#phone').val();
+    let idCard = $('#idCard').val();
+    let address = $('#address').val();
+    let js = "{'lId':" + lId + ",'lName':'" + lName + "','phone':'" + phone + "','address':'" + address + "'," +
+        "'idCard':'" + idCard + "'}";
+    $.ajax({
+        type: 'post',
+        data:{'json':js},
+        dataType:'json',
+        cache: false,
+        url:'/LandlordInfoUpdate',
+        success:function (data) {
+            if (data.state == 204) {
+                var delSuccessDiv = document.createElement("div");
+                delSuccessDiv.innerText = "修改成功！";
+                cocoMessage.success(delSuccessDiv);
+                $('#landlordName').text(lName);
+            }
+        },
+        error: function (e) {
+            $("body").html(e.responseText);
+        }
+    });
 }

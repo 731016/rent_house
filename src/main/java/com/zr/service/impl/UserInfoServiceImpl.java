@@ -16,6 +16,7 @@ import java.util.List;
 public class UserInfoServiceImpl implements UserInfoService {
     // 工厂模式 + 单例模式(饿汉)
     private static UserInfoDao userInfoDao; //dao接口
+
     public UserInfoServiceImpl() {
         userInfoDao = UserInfoDao.getInstance(); // dao实例，多态
     }
@@ -46,6 +47,11 @@ public class UserInfoServiceImpl implements UserInfoService {
     }
 
     @Override
+    public int updateUserName(String userName, String account) {
+        return userInfoDao.updateUserName(userName, account);
+    }
+
+    @Override
     public int deleteUserInfo(String account) {
         return userInfoDao.deleteUserInfo(account);
     }
@@ -67,6 +73,6 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Override
     public boolean UserNotExistsByAccount(String account) {
-        return userInfoDao.getUserInfoByAccount(account) ==null;
+        return userInfoDao.getUserInfoByAccount(account) == null;
     }
 }

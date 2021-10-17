@@ -61,6 +61,12 @@ public class UserInfoDaoImpl implements UserInfoDao {
     }
 
     @Override
+    public int updateUserName(String userName, String account) {
+        String sql = "update userInfo set userName = ? where account=?";
+        return JDBCUtils.update(sql, userName, account);
+    }
+
+    @Override
     public int deleteUserInfo(String account) {
         String sql = "delete from userInfo where account = ?";
         return JDBCUtils.update(sql, account);

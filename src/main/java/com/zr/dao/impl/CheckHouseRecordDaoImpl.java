@@ -16,13 +16,13 @@ public class CheckHouseRecordDaoImpl implements CheckHouseRecordDao {
     public List<ShowRecord> getRecordByAccount(String account) {
         String sql = "select * from checkHouseRecord where account = ?";
         List<CheckHouseRecord> checkHouseRecords = JDBCUtils.queryList(sql, CheckHouseRecord.class, account);
-        if(checkHouseRecords!=null){
-            List<ShowRecord> showRecords=new ArrayList<>();
+        if (checkHouseRecords != null) {
+            List<ShowRecord> showRecords = new ArrayList<>();
             for (CheckHouseRecord checkHouseRecord : checkHouseRecords) {
                 Integer hId = checkHouseRecord.getHId();
-                HousingDao housingDao=new HousingDaoImpl();
+                HousingDao housingDao = new HousingDaoImpl();
                 Housing houseById = housingDao.getHouseById(hId);
-                showRecords.add(new ShowRecord(checkHouseRecord,houseById.getTitle()));
+                showRecords.add(new ShowRecord(checkHouseRecord, houseById.getTitle()));
             }
             return showRecords;
         }
@@ -32,13 +32,13 @@ public class CheckHouseRecordDaoImpl implements CheckHouseRecordDao {
     @Override
     public int addRecord(CheckHouseRecord record) {
         String sql = "insert into checkHouseRecord values(default,?,?,?)";
-        Object[] params = {record.getHId(),record.getAccount(),record.getCheckDate()};
-        return JDBCUtils.update(sql,params);
+        Object[] params = {record.getHId(), record.getAccount(), record.getCheckDate()};
+        return JDBCUtils.update(sql, params);
     }
 
     @Override
     public int deleteRecord(Integer cid) {
         String sql = "delete from checkHouseRecord where cid = ?";
-        return JDBCUtils.update(sql,cid);
+        return JDBCUtils.update(sql, cid);
     }
 }
