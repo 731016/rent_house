@@ -18,6 +18,7 @@ $(function () {
         $('#userhouse_body').show();
         $('#userhouse_content').show();
         $('#house_list_div').hide();
+        $('#house_content').hide();
         showLandlord();
     })
 
@@ -39,19 +40,19 @@ $(function () {
     $('#landlord_info').click(function () {
         $('#userhouse_content').show();
         $('#house_list_div').hide();
+        $('#house_content').hide();
     })
 
     $('#house_info').click(function () {
         $('#userhouse_content').hide();
         $('#house_list_div').show();
-        showHouseInfo();
+        $('#house_content').hide();
+        showHouseInfoList();
     })
 
     $('#landlord_update').click(function () {
         updateLandlord();
     })
-
-    $('')
 
     showUser();
     isLandlord();
@@ -206,7 +207,7 @@ function updateLandlord() {
 }
 
 //查询房屋信息列表
-function showHouseInfo() {
+function showHouseInfoList() {
     let lId = $('#lId').text();
     $.ajax({
         type: 'post',
@@ -224,7 +225,7 @@ function showHouseInfo() {
                 let $td3 = $('<td>' + houseInfo.title + '</td>');
                 let $td4 = $('<td>' +
                     '<button type="button"  class="userinfo_button" onclick="return delHouseInfo(this)">删除</button>' +
-                    '<button type="button"  class="userinfo_button" id="update_houseInfo">修改</button></td>');
+                    '<button type="button"  class="userinfo_button" id="update_houseInfo" onclick="return showHouseInfo(this)">修改</button></td>');
 
                 $tr.append($td1);
                 $tr.append($td2);
@@ -269,6 +270,31 @@ function delHouseInfo(button) {
             $("body").html(e.responseText);
         }
     });
+}
+
+//显示房屋详细信息
+function showHouseInfo(button) {
+    $('#house_list_div').hide();
+    $('#house_content').show();
+    let $button = $(button);
+    let hid = $button.parent().parent().children(":eq(1)").text();
+    $.ajax({
+        type: 'post',
+        data: {'hid': hid},
+        dataType: 'json',
+        url: '/landlordInfo',
+        cache: false,
+        success: function (houseInfo) {
+            $('#house_title').val(houseInfo.title);
+            $('option[value='+ houseInfo.houseType+']').selected();
+            $('#house_area').val(houseInfo.area);
+            $('#house_rent').val(houseInfo.rent);
+            $()
+        },
+        error: function (e) {
+            $("body").html(e.responseText);
+        }
+    })
 }
 
 //修改房屋信息

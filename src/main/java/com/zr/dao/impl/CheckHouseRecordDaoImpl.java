@@ -22,7 +22,9 @@ public class CheckHouseRecordDaoImpl implements CheckHouseRecordDao {
                 Integer hId = checkHouseRecord.getHId();
                 HousingDao housingDao = new HousingDaoImpl();
                 Housing houseById = housingDao.getHouseById(hId);
-                showRecords.add(new ShowRecord(checkHouseRecord, houseById.getTitle()));
+                if (houseById != null) {
+                    showRecords.add(new ShowRecord(checkHouseRecord, houseById.getTitle()));
+                }
             }
             return showRecords;
         }

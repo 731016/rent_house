@@ -206,7 +206,7 @@
         <table class="houseinfo_table ">
             <tr>
                 <td class="table_td table_td_first">房屋标题 :</td>
-                <td class="table_td table_td_first"><input type="text" id="td3" class="userinfo_input "></td>
+                <td class="table_td table_td_first"><input type="text" id="house_title" class="userinfo_input "></td>
             </tr>
             <tr>
                 <td class="table_td">户型 :</td>
@@ -224,15 +224,14 @@
 
             <tr>
                 <td class="table_td">面积 :</td>
-                <td class="table_td"><input type="text" oninput="value=value.replace(/[^\d]/g,'')"
-                                            class="userinfo_input ">平米
+                <td class="table_td"><input type="number" class="userinfo_input " id="house_area">平米
                 </td>
             </tr>
 
             <tr>
                 <td class="table_td">租金 :</td>
                 <td class="table_td"><input type="text" oninput="value=value.replace(/[^\d]/g,'')"
-                                            class="userinfo_input ">元/月
+                                            class="userinfo_input " id="house_rent">元/月
                 </td>
             </tr>
 
