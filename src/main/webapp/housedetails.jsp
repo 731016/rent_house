@@ -5,10 +5,12 @@
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
-  <link rel="stylesheet" type="text/css" href="/resource/css/housedetails.css"/>
   <link rel="stylesheet" href="/resource/css/public.css">
+  <link rel="stylesheet" type="text/css" href="/resource/css/housedetails.css"/>
+  <link rel="stylesheet" href="/resource/css/imgstyle.css">
   <script src="/resource/js/jquery-3.6.0.min.js"></script>
   <script src="/resource/js/coco-message.js"></script>
+  <script src="/resource/js/jqueryPhoto.js"></script>
   <script src="/resource/js/housedetails.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
@@ -27,20 +29,29 @@
   <!-- 身体部分左侧 -->
   <div id="bodyleft">
     <!-- 图片 -->
-    <div id="img">
-      <div id="imgbig">
-<%--        350 270--%>
-        <img src="img/mm01.jpeg" id="big">
+    <div class="mod18"> <span id="prev" class="btn prev"></span> <span id="next" class="btn next"></span> <span id="prevTop" class="btn prev"></span> <span id="nextTop" class="btn next"></span>
+      <div id="picBox" class="picBox">
+        <ul class="cf">
+        </ul>
       </div>
-      <div id="imgsmall">
-<%--        100 100--%>
-        <img src="img/mm01.jpeg" class="small">
-        <img src="img/loginbg.jpg" class="small">
+
+      <div id="listBox" class="listBox">
+        <ul class="cf">
+        </ul>
       </div>
+      <div class="clear"></div>
     </div>
+<%--    <div id="img">--%>
+<%--      <div id="imgbig">--%>
+<%--        <img src="" id="big">--%>
+<%--      </div>--%>
+<%--      <div id="imgsmall">--%>
+<%--        <img src="" class="small">--%>
+<%--      </div>--%>
+<%--    </div>--%>
     <div id="jianjie">
       <h2>房源简介</h2>
-      <span style="color: grey;">
+      <span id="Introduction" style="color: grey;">
           房源位置  这套位于纽宾凯公园里的房源属于抢手房源。小区一共有7个楼栋。小区有24小时安保。小区有车位可出租。小区有1个门。有多项设施供住户使用，如健身广场，饮水站，快递柜。楼栋概况 小区是2020年建的，楼栋外立面较新。出入单元需通过门禁。楼栋总高46层。小区注重卫生管理，会定期安排人员维护楼栋的卫生。房源概况 这间4居室的05卧面积较大，两人住也不会太拥挤。房源在第17层，卧室朝向为南。有1个独立阳台，方便晾晒衣物和储物。厨房有1个阳台，瓶瓶罐罐可存放于此。装修亮点 卧室装修为原木色系，让人在木色与白色的交织中，感受自然纯粹。房间优选环保无醛板材，为您居住安全保驾护航。
       </span>
       <div id="tubiao">

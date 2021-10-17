@@ -19,11 +19,25 @@ window.addEventListener('load', function () {
                 $('body').text(resp.responseText)
             }
         });
-    }
+    };
+
+    function loadjscssfile(filename, filetype) {
+        if (filetype == "js") { //判定文件类型
+            var fileref = document.createElement('script')//创建标签
+            fileref.setAttribute("type", "text/javascript")//定义属性type的值为text/javascript
+            fileref.setAttribute("src", filename)//文件的地址
+        } else if (filetype == "css") { //判定文件类型
+            var fileref = document.createElement("link")
+            fileref.setAttribute("rel", "stylesheet")
+            fileref.setAttribute("type", "text/css")
+            fileref.setAttribute("href", filename)
+        }
+        if (typeof fileref != "undefined")
+            document.getElementsByTagName("head")[0].appendChild(fileref)
+    };
 
     $(function () {
-
-
+        var flag = false;
         // 登录ajax
         $.ajax({
             type: 'post',
@@ -54,19 +68,42 @@ window.addEventListener('load', function () {
                 $('body').innerText(res.responseText);
             }
         });
+
         $.ajax({
             type: 'post',
             dataType: 'json',
+            async: false,
             url: '/housedetails',
             cache: false,
             success: function (data) {
                 // 房源轮播图
-                $('#imgsmall').children().remove();
-                $.each(data.imgList.split(','), function () {
-                    $('#imgsmall').append($('<img src="/upload/' + this + '" class="small">'))
-                });
-                // 房源简介 数据库无此字段
-                // $('#jianjie').text();
+                var picBox = document.getElementById('picBox');
+                var listBox = document.getElementById('listBox');
+
+                picBox.innerHTML = "";
+                listBox.innerHTML = "";
+
+                var picul = document.createElement("ul");
+                picul.className = 'cf';
+                var listul = document.createElement("ul");
+                listul.className = 'cf';
+
+
+                for (let index = 0; index < data.imgList.split(',').length; index++) {
+                    picul.insertAdjacentHTML('beforeend', '<li> <a href="javascript:;"><img src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a>  </li>');
+
+                    if (index == 0) {
+                        listul.insertAdjacentHTML('beforeend', '<li class="on"><i class="arr2"></i><a href="javascript:;"><img src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a></li>');
+                    } else {
+                        listul.insertAdjacentHTML('beforeend', '<li><i class="arr2"></i><a href="javascript:;"><img src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a></li>');
+                    }
+                }
+                picBox.appendChild(picul);
+                listBox.appendChild(listul);
+
+
+                // 房源简介
+                $('#Introduction').text(data.describe);
 
                 //房屋设施列表
                 $('#tubiao2').empty();
@@ -117,19 +154,30 @@ window.addEventListener('load', function () {
                 // 房东信息
                 getFd(data.lId);
 
+                flag = true;
             },
             error: function (res) {
                 $('body').html(res.responseText);
             }
         });
-    });
 
-    let big = document.getElementById("big");
-    let small = document.getElementsByClassName("small");
-    for (let i = 0; i < small.length; i++) {
-        small[i].onclick = function () {
-            big.src = this.src;
-        }
-    }
+        var loadFile;
+
+        loadFile = setTimeout(function () {
+            if (flag) {
+                loadjscssfile("/resource/css/public.css", "css");
+                loadjscssfile("/resource/css/housedetails.css", "css");
+                loadjscssfile("/resource/css/imgstyle.css", "css");
+                loadjscssfile("/resource/js/jquery-3.6.0.min.js", "js");
+                loadjscssfile("/resource/js/coco-message.js", "js");
+                loadjscssfile("/resource/js/jqueryPhoto.js", "js");
+                loadjscssfile("/resource/js/housedetails.js", "js");
+                clearTimeout(loadFile);
+            }
+        },50);
+
+
+
+    });
 
 });
