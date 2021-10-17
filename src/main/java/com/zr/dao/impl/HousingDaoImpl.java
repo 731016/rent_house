@@ -86,6 +86,12 @@ public class HousingDaoImpl implements HousingDao {
     }
 
     @Override
+    public List<Housing> getHousesBylId(Integer lId) {
+        String sql = SELECT_ALL + "where lId = ?";
+        return JDBCUtils.queryList(sql, Housing.class, lId);
+    }
+
+    @Override
     public List<Housing> getHousesByMultiParams(Map<String, Object> map) {
         StringBuilder sb = new StringBuilder(SELECT_ALL + "where state=1 ");
         List<Object> list = new ArrayList<>();

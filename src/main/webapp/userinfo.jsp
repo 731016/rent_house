@@ -52,7 +52,7 @@
             个人信息
         </div>
         <div id="user_tableForm">
-            <form action="">
+            <form action="/rent" method="post" enctype="multipart/form-data">
                 <table id="userinfo_table" class="userinfo_table">
                     <tr>
                         <td style="width: 100px;">头像</td>
@@ -130,7 +130,6 @@
                 <tbody>
                 </tbody>
             </table>
-            </table>
         </div>
     </div>
 </div>
@@ -181,6 +180,25 @@
             </table>
         </div>
     </div>
+    <div id="house_list_div" class="userinfo_right border" style="display: none">
+        <div id="houselist_title " class="userinfo_title border_bottom ">
+            我的房屋
+        </div>
+        <div>
+            <table class="table table-striped" id="house_list">
+                <thead>
+                <tr>
+                    <th scope="col">编号</th>
+                    <th scope="col">房屋编号</th>
+                    <th scope="col">房屋标题</th>
+                    <th scope="col">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div id="house_content" class="userinfo_right border" style="display: none;">
         <div id="houseinfo_title " class="userinfo_title border_bottom ">
             房屋信息
@@ -190,7 +208,6 @@
                 <td class="table_td table_td_first">房屋标题 :</td>
                 <td class="table_td table_td_first"><input type="text" id="td3" class="userinfo_input "></td>
             </tr>
-
             <tr>
                 <td class="table_td">户型 :</td>
                 <td class="table_td">

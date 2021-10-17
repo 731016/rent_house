@@ -36,7 +36,7 @@ public class HousingServiceImpl implements HousingService {
 
     @Override
     public List<Housing> getHousesByRentRange(double min, double max) {
-        return housingDao.getHousesByRentRange(min,max);
+        return housingDao.getHousesByRentRange(min, max);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class HousingServiceImpl implements HousingService {
 
     @Override
     public List<Housing> getHousesByAreaRange(double min, double max) {
-        return housingDao.getHousesByAreaRange(min,max);
+        return housingDao.getHousesByAreaRange(min, max);
     }
 
     @Override
@@ -62,6 +62,11 @@ public class HousingServiceImpl implements HousingService {
     @Override
     public List<Housing> getHousesByState(Integer state) {
         return housingDao.getHousesByState(state);
+    }
+
+    @Override
+    public List<Housing> getHousesBylId(Integer lId) {
+        return housingDao.getHousesBylId(lId);
     }
 
     @Override
