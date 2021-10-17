@@ -2,7 +2,28 @@ window.addEventListener('load', function () {
     cocoMessage.config({
         duration: 2000,
     });
+
+    function getFd(lid) {
+        let json = {'lid': lid};
+        $.ajax({
+            type: 'post',
+            data: json,
+            dataType: 'json',
+            cache: false,
+            url: '/getLandlordInfo',
+            success: function (data) {
+                $('#name').text(data.lName);
+                $('#phone').text(data.phone);
+            },
+            error: function (resp) {
+                $('body').text(resp.responseText)
+            }
+        });
+    }
+
     $(function () {
+
+
         // 登录ajax
         $.ajax({
             type: 'post',
@@ -58,11 +79,11 @@ window.addEventListener('load', function () {
                         }
                     });
                     let $div = $('<div><img class="tubiaoimg"><br>' + facility[i] + '</div>');
-                    if (flag){
-                        $div.children(':eq(0)').attr('src','/resource/images/'+ (i+1) + '.png');
+                    if (flag) {
+                        $div.children(':eq(0)').attr('src', '/resource/images/' + (i + 1) + '.png');
                         // $('#tubiao2').append('<div><img class="tubiaoimg" src="/resource/images/' + (i+1) + '.png"><br>' + facility[i] + '</div>');
-                    }else{
-                        $div.children(':eq(0)').attr('src','/resource/images/empty.png');
+                    } else {
+                        $div.children(':eq(0)').attr('src', '/resource/images/empty.png');
                         // $('#tubiao2').append('<div><img src="/resource/images/empty.png"><br>' + facility[i] + '</div>');
 
                     }
@@ -82,8 +103,6 @@ window.addEventListener('load', function () {
                 let toward = ['东', '南', '西', '北', '东南', '东北', '西南', '西北'];
                 for (let i = 0; i < 8; i++) {
                     if (data.towardId == i + 1) {
-                        console.log(data.towardId)
-                        console.log(toward[i + 1]);
                         $('.td2').html('朝向<h3>' + toward[i] + '</h3>');
                     }
                 }
@@ -100,8 +119,7 @@ window.addEventListener('load', function () {
 
             },
             error: function (res) {
-                $('body').html(res.responseText)
-                console.log("error")
+                $('body').html(res.responseText);
             }
         });
     });
