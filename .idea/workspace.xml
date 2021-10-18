@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b82ee4-fec6-4eea-9930-32206bd857b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zr/web/housedetailsSvl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zr/web/housedetailsSvl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/housedetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/housedetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resource/css/housedetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resource/css/housedetails.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cao-liang-gitee/rent_house" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -63,14 +61,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\zrgj_project\rent_house\src\main\resources\upload" />
-      <recent name="D:\zrgj_project\rent_house\src\main\webapp\resource\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\小组项目\First\rent_house\src\main\webapp" />
+      <recent name="D:\workspace\小组项目\First\rent_house\src\main\webapp\resource\css" />
       <recent name="D:\workspace\jsp\demo_prj\rent_house\src\main\webapp" />
       <recent name="D:\workspace\rent_house\src\main\webapp\resource\css" />
       <recent name="D:\workspace\rent_house\src\main\webapp\resource\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zrgj_project\rent_house\src\main\resources\upload" />
+      <recent name="D:\zrgj_project\rent_house\src\main\webapp\resource\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -155,16 +155,16 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\课程部分\JSP动态网页\hezuo\rent_house" />
-          <option name="myCopyRoot" value="D:\workspace\课程部分\JSP动态网页\hezuo\rent_house" />
+          <option name="myVcsRoot" value="D:\workspace\小组项目\First\rent_house" />
+          <option name="myCopyRoot" value="D:\workspace\小组项目\First\rent_house" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\课程部分\JSP动态网页\hezuo\rent_house" />
-          <option name="myCopyRoot" value="D:\workspace\课程部分\JSP动态网页\hezuo\rent_house" />
+          <option name="myVcsRoot" value="D:\workspace\小组项目\First\rent_house" />
+          <option name="myCopyRoot" value="D:\workspace\小组项目\First\rent_house" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -189,6 +189,7 @@
       <workItem from="1634286371720" duration="367000" />
       <workItem from="1634287238811" duration="3350000" />
       <workItem from="1634292643293" duration="89000" />
+      <workItem from="1634524542609" duration="38000" />
     </task>
     <task id="LOCAL-00001">
       <created>1634175128561</created>

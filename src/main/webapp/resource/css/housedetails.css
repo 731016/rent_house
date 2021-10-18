@@ -111,6 +111,7 @@
 
 #jianjie {
     border-top: 1px solid gainsboro;
+    margin-top: 10px;
 }
 
 #tubiao {
@@ -131,7 +132,7 @@
 }
 
 .dv3 {
-    height: 40px;
+    margin-top: 15px;
 }
 
 .sp2 {
@@ -246,4 +247,7 @@ td {
     color: white;
     margin-top: 10px;
     cursor: pointer;
+}
+.h2{
+    margin-top: 40px;
 }

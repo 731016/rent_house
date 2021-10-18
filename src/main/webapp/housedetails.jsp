@@ -11,7 +11,6 @@
   <script src="/resource/js/jquery-3.6.0.min.js"></script>
   <script src="/resource/js/coco-message.js"></script>
   <script src="/resource/js/jqueryPhoto.js"></script>
-  <script src="/resource/js/public_login.js"></script>
   <script src="/resource/js/housedetails.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
@@ -51,7 +50,7 @@
 <%--      </div>--%>
 <%--    </div>--%>
     <div id="jianjie">
-      <h2>房源简介</h2>
+      <h2 class="h2">房源简介</h2>
       <span id="Introduction" style="color: grey;">
           房源位置  这套位于纽宾凯公园里的房源属于抢手房源。小区一共有7个楼栋。小区有24小时安保。小区有车位可出租。小区有1个门。有多项设施供住户使用，如健身广场，饮水站，快递柜。楼栋概况 小区是2020年建的，楼栋外立面较新。出入单元需通过门禁。楼栋总高46层。小区注重卫生管理，会定期安排人员维护楼栋的卫生。房源概况 这间4居室的05卧面积较大，两人住也不会太拥挤。房源在第17层，卧室朝向为南。有1个独立阳台，方便晾晒衣物和储物。厨房有1个阳台，瓶瓶罐罐可存放于此。装修亮点 卧室装修为原木色系，让人在木色与白色的交织中，感受自然纯粹。房间优选环保无醛板材，为您居住安全保驾护航。
       </span>
@@ -60,7 +59,7 @@
           <img src="/resource/images/1.png" class="tubiaoimg">
         </div>
       </div>
-      <h2>租约信息</h2>
+      <h2 class="h2">租约信息</h2>
       <div class="dv3">
         <span class="sp2">可入住日期</span>
         <span style="margin-left: 30px;">随时入住</span>
@@ -134,7 +133,7 @@
         </h2>
         <div id="fangdongtitle">
           <div id="touxiang">
-            <img src="/resource/images/default.png" id="touxiangimg">
+            <img src="img/mm01.jpeg" id="touxiangimg">
           </div>
           <div id="fangdongname">
             <span id="name">房东姓名</span><br>
