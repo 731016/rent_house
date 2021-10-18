@@ -119,7 +119,7 @@ public class HousingDaoImpl implements HousingDao {
     @Override
     public List<Housing> getHousesByAddress(String address) {
         String sql = SELECT_ALL + "address where instr(address,?)!=0";
-        return JDBCUtils.queryList(sql,Housing.class,address);
+        return JDBCUtils.queryList(sql, Housing.class, address);
     }
 
     @Override
@@ -130,7 +130,7 @@ public class HousingDaoImpl implements HousingDao {
 
     @Override
     public int updateHouse(Housing housing) {
-        String sql = "update housing set title = ?,rent = ?,houseType=?,area=?,towardId=?,imgList=?,lid=?,typeId=?,facilities=?,state=?,aid=?,address=?,describe=? where hid = ?";
+        String sql = "update housing set title = ?,rent = ?,houseType=?,area=?,towardId=?,imgList=?,lid=?,typeId=?,facilities=?,state=?,aid=?,address=?,`describe`=? where hid = ?";
         Object[] params = {
                 housing.getTitle(),
                 housing.getRent(),
@@ -147,6 +147,6 @@ public class HousingDaoImpl implements HousingDao {
                 housing.getDescribe(),
                 housing.getHId()
         };
-        return 0;
+        return JDBCUtils.update(sql, params);
     }
 }

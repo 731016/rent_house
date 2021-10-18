@@ -68,6 +68,9 @@ public class Utils {
         for (int i = 0; i < files.getCount(); i++) {
             com.jspsmart.upload.File file = files.getFile(i);
             String fileExt = file.getFileExt();
+            if(fileExt.isBlank()){
+                continue;
+            }
             String filename = randomFileName(fileExt);
             file.saveAs(realPath+filename);
             filenames.add(filename);

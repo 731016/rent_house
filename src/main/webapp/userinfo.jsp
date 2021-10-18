@@ -15,7 +15,6 @@
   <script src="/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
   <script src="resource/js/userinfo.js"></script>
   <script src="/resource/js/coco-message.js"></script>
-  <script src="resource/js/rent.js"></script>
 </head>
 <body>
 <div class="div_header" id="user_menu">

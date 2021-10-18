@@ -27,8 +27,13 @@ public class UpdateRentSvl extends HttpServlet {
             Housing houseById = instance.getHouseById(hId);
             List<String> filenames = Utils.fileUpload(smartUpload, this, "/upload/");
             String imgList = Utils.arrayToString(filenames.toArray(), ",");
-            if (imgList == "") {
+            if (imgList.equals("")) {
                 imgList = houseById.getImgList();
+            }else {
+                String[] split = houseById.getImgList().split(",");
+                for (String s : split) {
+                    Utils.deleteFileByFilename(this,"/upload/",s);
+                }
             }
             String title = uploadRequest.getParameter("house_title"); //房屋标题
             Integer typeId = Integer.parseInt(uploadRequest.getParameter("housetype")); //房屋类型

@@ -29,6 +29,8 @@ public class UpdateUserInfoSvl extends HttpServlet {
             String imgList = Utils.arrayToString(filenames.toArray(), ",");
             if (imgList == "") {
                 imgList = userInfoByAccount.getImg();
+            } else {
+                Utils.deleteFileByFilename(this, "/upload/", userInfoByAccount.getImg());
             }
             Request uploadRequest = smartUpload.getRequest();
             String nickname = uploadRequest.getParameter("nickname");

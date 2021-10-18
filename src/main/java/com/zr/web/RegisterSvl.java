@@ -30,7 +30,7 @@ public class RegisterSvl extends HttpServlet {
         String nickname = request.getParameter("nickname");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
-        UserInfo userInfo = new UserInfo(account, password, name, nickname, email, phone, "default.jpg", 1);
+        UserInfo userInfo = new UserInfo(account, password, name, nickname, email, phone, "", 1);
         int addFlag = UserInfoService.getInstance().addUserInfo(userInfo);
         ReturnResult result = new ReturnResult();
         if (addFlag > 0) {

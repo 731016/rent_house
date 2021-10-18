@@ -57,6 +57,9 @@ $(function () {
         updateLandlord();
     })
 
+    initialArea();
+    initialHouseType();
+    initialToward();
     showUser();
     isLandlord();
 
@@ -105,6 +108,17 @@ $(function () {
         let dataImgUrl = getObjectURL(file);
         $("#user_img").attr("src", dataImgUrl);
     })
+
+    //显示上传的户型图片
+    if ($('#file2').val().trim() !== "") {
+        $('#hximg').attr('src', getObjectURL($('#file2').attr('files')[0]))
+    }
+    $('#file2').change(function () {
+        let file = this.files[0];
+
+        let dataImgUrl = getObjectURL(file);
+        $("#hximg").attr("src", dataImgUrl);
+    })
 })
 
 //显示用户信息
@@ -117,7 +131,7 @@ function showUser() {
         success: function (userinfo) {
             $('#userName').text(userinfo.userName);
             if (userinfo.img == "") {
-                $("img[name='user_img']").attr('src', '/resource/images/1.png');
+                $("img[name='user_img']").attr('src', '/resource/images/default.png');
             } else {
                 $("img[name='user_img']").attr('src', '/upload/' + userinfo.img);
             }
@@ -181,7 +195,7 @@ function showHouseRecord() {
             $.each(recordList, function (i, record) {
                 let $tr = $("<tr></tr>");
                 let $td1 = $('<td>' + record.checkHouseRecord.cId + '</td>');
-                let $td2 = $('<td>' + record.checkHouseRecord.checkDate + '</td>');
+                let $td2 = $('<td>' + timeToString(record.checkHouseRecord.checkDate) + '</td>');
                 let $td3 = $('<td><a href="javascript:;">' + record.title + '</a></td>');
                 let $td4 = $('<td><button type="button"  class="userinfo_button" onclick="return delHouseRecord(this)">删除</button></td>');
 
@@ -197,6 +211,16 @@ function showHouseRecord() {
             $("body").html(e.responseText);
         }
     })
+}
+
+function timeToString(time) {
+    let date = new Date(time);
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    return year + "年" + month + "月" + day + "日 " + hour + "时" + minute + "分";
 }
 
 //删除看房记录
@@ -278,7 +302,7 @@ function showHouseInfoList() {
                 let $td3 = $('<td>' + houseInfo.title + '</td>');
                 let $td4 = $('<td>' +
                     '<button type="button"  class="userinfo_button" onclick="return delHouseInfo(this)">删除</button>' +
-                    '<button type="button"  class="userinfo_button" id="update_houseInfo" onclick="return showHouseInfo(this)">修改</button></td>');
+                    '<button type="button"  class="userinfo_button" name="update_houseInfo">修改</button></td>');
 
                 $tr.append($td1);
                 $tr.append($td2);
@@ -287,6 +311,7 @@ function showHouseInfoList() {
 
                 $('#house_list').append($tr);
             })
+            initialEditBtn();
         },
         error: function (e) {
             $("body").html(e.responseText);
@@ -325,55 +350,55 @@ function delHouseInfo(button) {
     });
 }
 
-//显示房屋详细信息
-function showHouseInfo(button) {
-    $('#house_list_div').hide();
-    $('#house_content').show();
-    let $button = $(button);
-    let hid = $button.parent().parent().children(":eq(1)").text();
-    $.ajax({
-        type: 'post',
-        data: {'hid': hid},
-        dataType: 'json',
-        url: '/houseInfo',
-        cache: false,
-        success: function (houseInfo) {
-            $('#house_title').val(houseInfo.title);
+function initialEditBtn() {
+    $('button[name="update_houseInfo"]').on('click', function () {
+        $('#house_list_div').hide();
+        $('#house_content').show();
+        let hid = $(this).parent().parent().children(":eq(1)").text();
+        $.ajax({
+            type: 'post',
+            data: {'hid': hid},
+            dataType: 'json',
+            url: '/houseInfo',
+            cache: false,
+            success: function (houseInfo) {
+                $('#house_title').val(houseInfo.title);
 
-            $('#housetype').parent().append('<input style="display: none" name="hid" value="'+houseInfo.hId+'">');
+                $('#housetype').parent().append('<input style="display: none" name="hid" value="' + houseInfo.hId + '">');
 
-            $('#housetype').children().attr("selected", false);
-            $("#housetype option[value='" + houseInfo.typeId + "']").prop("selected", true);
+                $('#housetype').children().attr("selected", false);
+                $("#housetype option[value='" + houseInfo.typeId + "']").prop("selected", true);
 
-            $('#house_type').children().attr("selected", false);
-            $("#house_type option[value='" + houseInfo.houseType + "']").prop("selected", true);
+                $('#house_type').children().attr("selected", false);
+                $("#house_type option[value='" + houseInfo.houseType + "']").prop("selected", true);
 
-            $('#toward').children().attr("selected", false);
-            $("#toward option[value='" + houseInfo.towardId + "']").prop("selected", true);
+                $('#toward').children().attr("selected", false);
+                $("#toward option[value='" + houseInfo.towardId + "']").prop("selected", true);
 
-            $('#quyu').children().attr("selected", false);
-            $("#quyu option[value='" + houseInfo.aid + "']").prop("selected", true);
+                $('#quyu').children().attr("selected", false);
+                $("#quyu option[value='" + houseInfo.aid + "']").prop("selected", true);
 
-            $('#house_area').val(houseInfo.area);
+                $('#house_area').val(houseInfo.area);
 
-            $('#house_rent').val(houseInfo.rent);
+                $('#house_rent').val(houseInfo.rent);
 
-            $('#check input').prop('checked', false);
-            let obj = houseInfo.facilities.split(',');
-            $.each(obj, function () {
-                $('#check input[value="' + this + '"]').prop('checked', true);
-            })
+                $('#check input').prop('checked', false);
+                let obj = houseInfo.facilities.split(',');
+                $.each(obj, function () {
+                    $('#check input[value="' + this + '"]').prop('checked', true);
+                })
 
-            $('')
+                $('#house_address').val(houseInfo.address);
 
-            $('#house_describe').val(houseInfo.describe);
+                $('#house_describe').val(houseInfo.describe);
 
-            let imgList = houseInfo.imgList.split(',');
-            $('#hximg').attr('src', '/upload/' + imgList[imgList.length - 1]);
-        },
-        error: function (e) {
-            $("body").html(e.responseText);
-        }
+                let imgList = houseInfo.imgList.split(',');
+                $('#hximg').attr('src', '/upload/' + imgList[imgList.length - 1]);
+            },
+            error: function (e) {
+                $("body").html(e.responseText);
+            }
+        })
     })
 }
 
@@ -388,4 +413,52 @@ function getObjectURL(file) {
         url = window.webkitURL.createObjectURL(file);
     }
     return url;
+}
+
+function initialHouseType() {
+    $.ajax({
+        type: 'post',
+        url: '/type',
+        dataType: 'json',
+        cache: false,
+        success: function (data) {
+            let $housetype = $('#housetype');
+            for (let i = 0; i < data.length; i++) {
+                let $option = $('<option value="' + data[i].typeId + '">' + data[i].typeName + '</option>');
+                $housetype.append($option);
+            }
+        }
+    })
+}
+
+function initialToward() {
+    $.ajax({
+        type: 'post',
+        url: '/toward',
+        dataType: 'json',
+        cache: false,
+        success: function (data) {
+            let $toward = $('#toward');
+            for (let i = 0; i < data.length; i++) {
+                let $option = $('<option value="' + data[i].towardId + '">' + data[i].towardName + '</option>');
+                $toward.append($option);
+            }
+        }
+    })
+}
+
+function initialArea() {
+    $.ajax({
+        type: 'post',
+        url: '/area',
+        dataType: 'json',
+        cache: false,
+        success: function (data) {
+            let $area = $('#quyu');
+            for (let i = 0; i < data.length; i++) {
+                let $option = $('<option value="' + data[i].aid + '">' + data[i].aName + '</option>');
+                $area.append($option);
+            }
+        }
+    })
 }
