@@ -12,8 +12,9 @@ window.addEventListener('load', function () {
             cache: false,
             url: '/getLandlordInfo',
             success: function (data) {
-                $('#name').text(data.lName);
-                $('#phone').text(data.phone);
+                $('#name').text(data.object.lName);
+                $('#phone').text(data.object.phone);
+                $('#touxiangimg').prop('src', '/upload/' + data.msg);
             },
             error: function (resp) {
                 $('body').text(resp.responseText)
@@ -174,8 +175,7 @@ window.addEventListener('load', function () {
                 loadjscssfile("/resource/js/housedetails.js", "js");
                 clearTimeout(loadFile);
             }
-        },50);
-
+        }, 50);
 
 
     });

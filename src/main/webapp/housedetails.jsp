@@ -134,7 +134,7 @@
         </h2>
         <div id="fangdongtitle">
           <div id="touxiang">
-            <img src="img/mm01.jpeg" id="touxiangimg">
+            <img src="/resource/images/default.png" id="touxiangimg">
           </div>
           <div id="fangdongname">
             <span id="name">房东姓名</span><br>
