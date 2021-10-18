@@ -8,10 +8,13 @@
   <%--网页logo START --%>
   <link rel="icon" href="/resource/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/resource/favicon.ico" type="image/x-icon"/>
-  <%--网页logo END --%>
+  <link href="/resource/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+<%--网页logo END --%>
   <link href="/resource/css/public.css" rel="stylesheet">
   <link rel="stylesheet" href="/resource/css/login.css">
   <script src="/resource/js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/resource/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
   <script src="/resource/js/coco-message.js"></script>
   <script src="/resource/js/login.js"></script>
 
@@ -42,9 +45,9 @@
         <input type="checkbox"/>记住密码
       </div>
       <div id="sub">
-        <input type="button" value="登录" id="btn" />
+        <input type="button" value="登录" id="btn" class="btn btn-primary btn_log" />
       </div>
-      <a href="register.jsp">注册</a>
+      <a href="register.jsp" >注册</a>
     </div>
   </div>
 </form>
