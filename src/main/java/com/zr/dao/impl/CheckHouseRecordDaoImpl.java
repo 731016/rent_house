@@ -43,4 +43,16 @@ public class CheckHouseRecordDaoImpl implements CheckHouseRecordDao {
         String sql = "delete from checkHouseRecord where cid = ?";
         return JDBCUtils.update(sql, cid);
     }
+
+    @Override
+    public int updateRecord(CheckHouseRecord record) {
+        String sql = "update checkHouseRecord set hId = ?,account=?,checkDate=? where cId = ?";
+        Object[] params = {
+              record.getHId(),
+              record.getAccount(),
+              record.getCheckDate(),
+              record.getCId()
+        };
+        return JDBCUtils.update(sql,params);
+    }
 }

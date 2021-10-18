@@ -16,5 +16,5 @@ public interface CheckHouseRecordService {
     List<ShowRecord> getRecordByAccount(String account);
     int addRecord(CheckHouseRecord record);
     int deleteRecord(Integer cid);
-
+    int updateRecord(CheckHouseRecord record);
 }

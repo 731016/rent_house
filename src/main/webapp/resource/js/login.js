@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
                         setTimeout(() => {
                             history.go(-1);
                             // location.href = "index.jsp"
-                        },2000);
+                        },500);
                     } else if (data.msg === "disable") {
                         // $("#validation").html("<span>用户已被禁用</span>").css("color","red");
                         var disableDiv = document.createElement("div");

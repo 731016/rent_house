@@ -33,4 +33,9 @@ public class CheckHouseRecordServiceImpl implements CheckHouseRecordService {
     public int deleteRecord(Integer cid) {
         return checkHouseRecordDao.deleteRecord(cid);
     }
+
+    @Override
+    public int updateRecord(CheckHouseRecord record) {
+        return checkHouseRecordDao.updateRecord(record);
+    }
 }
