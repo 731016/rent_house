@@ -23,6 +23,7 @@ public interface HousingService {
     List<Housing> getHousesByTypeId(Integer typeId);
     List<Housing> getHousesByState(Integer state);
     List<Housing> getHousesBylId(Integer lId);
+    List<Housing> getHousesByAddress(String address);
     List<Housing> getHousesByMultiParams(Map<String,Object> map);
 
     Housing getHouseById(Integer hId);

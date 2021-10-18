@@ -13,7 +13,6 @@ public class SelectSvl extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
         String search_input = request.getParameter("search_input");
-        System.out.println(search_input);
         request.getSession().setAttribute("search_input", search_input);
         response.sendRedirect("renting.jsp");
     }

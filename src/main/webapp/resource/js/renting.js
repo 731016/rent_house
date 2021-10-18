@@ -152,6 +152,7 @@ $(function () {
 
     //区域点击事件
     $("button[name='aid']").click(function () {
+        $("#button-addon2").val("")
         let $input = $("button[name='aid']");
         $.each($input,function () {
             $(this).removeClass("selected")
@@ -162,6 +163,7 @@ $(function () {
 
     //类型点击事件
     $("button[name='type']").click(function () {
+        $("#button-addon2").val("")
         let $input = $("button[name='type']");
         $.each($input,function () {
             $(this).removeClass("selected")
@@ -172,6 +174,7 @@ $(function () {
 
     //租金点击事件
     $("button[name='rent']").click(function () {
+        $("#button-addon2").val("")
         let $input = $("button[name='rent']");
         $.each($input,function () {
             $(this).removeClass("selected")
@@ -182,6 +185,7 @@ $(function () {
 
     //户型点击事件
     $("button[name='housingType']").click(function () {
+        $("#button-addon2").val("")
         let $input = $("button[name='housingType']");
         $.each($input,function () {
             $(this).removeClass("selected")
@@ -192,6 +196,7 @@ $(function () {
 
     //朝向点击事件
     $("button[name='toward']").click(function () {
+        $("#button-addon2").val("")
         let $input = $("button[name='toward']");
         $.each($input,function () {
             $(this).removeClass("selected")
@@ -199,7 +204,51 @@ $(function () {
         $(this).addClass("selected")
         addList();
     })
-    addList();
+
+
+    $("#button-addon2").click(function () {
+        //按钮样式设置默认
+        //区域按钮
+        let aid = $("button[name='aid']");
+        $.each(aid,function () {
+            $(this).removeClass("selected")
+        })
+        $("button[name='aid']").eq(0).addClass("selected")
+
+        //类型按钮
+        let type = $("button[name='type']");
+        $.each(type,function () {
+            $(this).removeClass("selected")
+        })
+        $("button[name='type']").eq(0).addClass("selected")
+
+        //租金按钮
+        let rent = $("button[name='rent']");
+        $.each(rent,function () {
+            $(this).removeClass("selected")
+        })
+        $("button[name='rent']").eq(0).addClass("selected")
+
+        //户型按钮
+        let housingType = $("button[name='housingType']");
+        $.each(housingType,function () {
+            $(this).removeClass("selected")
+        })
+        $("button[name='housingType']").eq(0).addClass("selected")
+
+        //朝向按钮
+        let toward = $("button[name='toward']");
+        $.each(toward,function () {
+            $(this).removeClass("selected")
+        })
+        $("button[name='toward']").eq(0).addClass("selected")
+
+
+        addressAddList()
+    })
+
+    addressAddList()
+
 })
 
 //租房列表添加方法
@@ -227,8 +276,41 @@ function addList() {
         cache:false,
         url:"/rentingList",
         success:function (data) {
-            console.log(data)
+            $.each(data,function () {
+                let $div = $("<div id=\"house_id\" class=\"div_inBlock house_id\"></div>");
+                $div.append("<div id=\"div_img\" class=\"div_img\"><a href=\"/housedetails?id="+this.hId+"\"><img style=\"width: 100%\" src=\"/upload/"+this.imgList.split(",")[0]+"\" id=\"house_img\"></a></div>")
+                $div.append("<div id=\"house_info\" class=\"house_info\">\n" +
+                   "          <span class=\"badge badge-pill badge-success incon\">即住</span>\n" +
+                   "          <h5><a href=\"/housedetails?id="+this.hId+"\">"+this.title+"</a></h5>\n" +
+                   "          <div>面积："+this.area+"平米</div>\n" +
+                   "          <div class=\"location\">地址："+this.address+"</div>\n" +
+                   "          <div>￥"+this.rent+"/月</div>\n" +
+                   "        </div>")
+                $("#div_house").append($div)
+            })
+        },
+        error:function (e) {
+            $("body").html(e.responseText)
+        }
+    })
+}
 
+
+function addressAddList() {
+    //需要获取数据传入后台作为筛选条件
+    let inputSelect = $("#input_select").val();
+    let ajax = {"address":inputSelect};
+
+    //删除原有的房屋列表
+    $("#div_house").children().remove();
+    //通过ajax添加新的
+    $.ajax({
+        type:"post",
+        data:ajax,
+        dataType:"json",
+        cache:false,
+        url:"/selectadd",
+        success:function (data) {
             $.each(data,function () {
                 let $div = $("<div id=\"house_id\" class=\"div_inBlock house_id\"></div>");
                 $div.append("<div id=\"div_img\" class=\"div_img\"><a href=\"/housedetails?id="+this.hId+"\"><img style=\"width: 100%\" src=\"/upload/"+this.imgList.split(",")[0]+"\" id=\"house_img\"></a></div>")

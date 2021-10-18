@@ -117,6 +117,12 @@ public class HousingDaoImpl implements HousingDao {
     }
 
     @Override
+    public List<Housing> getHousesByAddress(String address) {
+        String sql = SELECT_ALL + "address where instr(address,?)!=0";
+        return JDBCUtils.queryList(sql,Housing.class,address);
+    }
+
+    @Override
     public int deleteHouseById(Integer id) {
         String sql = "delete from housing where hid = ?";
         return JDBCUtils.update(sql, id);

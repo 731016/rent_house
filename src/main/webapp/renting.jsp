@@ -35,7 +35,7 @@
 <div id="page_body">
   <div class="div_bodyHeight">
     <div class="input-group mb-3" id="div_select">
-      <input type="text" class="form-control" placeholder="请输入小区..." id="input_select">
+      <input type="text" class="form-control" placeholder="请输入地址..." id="input_select">
       <div class="input-group-append">
         <button class="btn btn-warning" type="button" id="button-addon2">开始找房</button>
       </div>

@@ -70,6 +70,11 @@ public class HousingServiceImpl implements HousingService {
     }
 
     @Override
+    public List<Housing> getHousesByAddress(String address) {
+        return housingDao.getHousesByAddress(address);
+    }
+
+    @Override
     public List<Housing> getHousesByMultiParams(Map<String, Object> map) {
         return housingDao.getHousesByMultiParams(map);
     }

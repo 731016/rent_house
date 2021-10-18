@@ -23,6 +23,7 @@ public interface HousingDao {
     List<Housing> getHousesByState(Integer state);
     List<Housing> getHousesBylId(Integer lId);
     List<Housing> getHousesByMultiParams(Map<String,Object> map);
+    List<Housing> getHousesByAddress(String address);
     int deleteHouseById(Integer id);
     int updateHouse(Housing housing);
 
