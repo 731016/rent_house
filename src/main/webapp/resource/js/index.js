@@ -2,6 +2,15 @@ window.addEventListener('load', function () {
     cocoMessage.config({
         duration: 2000,
     });
+    function checkLenAndIsChinese(input) {
+        var reg = /^[\u4e00-\u9fa5]+$/;
+        var len = input.length;
+        var flag = true;
+        if (len < 1 || len > 4 || !reg.test(input)) {
+            flag = false;
+        }
+        return flag;
+    }
     $(function () {
         $.ajax({
             type: 'post',
@@ -14,12 +23,12 @@ window.addEventListener('load', function () {
                     $('#show_login').html("<a href='/userinfo.jsp' class='nav_header'>" + object.account + "</a>");
                     $('#show_register').html("<a href='/exit' class='nav_header'>退出</a>");
                     $('.vertical_line').css('visibility', 'hidden').css('margin-right', '5%');
-                    if (data.state == 200){
+                    if (data.state == 200) {
                         console.log(200)
                         var successDiv = document.createElement("div");
                         successDiv.innerText = "登录成功！";
                         cocoMessage.success(successDiv);
-                    }else if(data.state == 404){
+                    } else if (data.state == 404) {
                         console.log(404)
                         var failDiv = document.createElement("div");
                         failDiv.innerText = "登录失败！";
@@ -39,12 +48,14 @@ window.addEventListener('load', function () {
             $(this).css('color', '#FF961E');
             // 点击 【全部/整租/全选】，下面输入框的placeholder替换为data-placeholder的值。
             let search_data = $(this).attr('data-placeholder');
-            let search_data_val = $(this).attr('data-val');
+            // let search_data_val = $(this).attr('data-val');
 
             // 点击开始找房，获取data-val的值
             $('#search_input').prop('placeholder', search_data);
-            $('#search_input').attr('data-val', search_data_val);
+
         });
+
+
         $('#search_all').click(function () {
             $('.triangle').animate({left: '17px'}, 300);
         });
@@ -56,10 +67,15 @@ window.addEventListener('load', function () {
         });
         $('#search_btn').on({
             click: function () {
+                $('#search_input').attr('data-val', $('#search_input').val());
                 let val = $('#search_input').attr('data-val');
-                let rgx = new RegExp('^[\u4e00-\u9fa5],{0,}$');
-                if (!rgx.test(val)) {
+                if (checkLenAndIsChinese(val) == false) {
+                    var selectfailDiv = document.createElement("div");
+                    selectfailDiv.innerText = "输入格式错误，请输入1~4个中文！";
+                    cocoMessage.error(selectfailDiv);
                     return false;
+                } else {
+                    $('#form').submit();
                 }
             }
         });
