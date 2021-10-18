@@ -14,7 +14,12 @@ window.addEventListener('load', function () {
             success: function (data) {
                 $('#name').text(data.object.lName);
                 $('#phone').text(data.object.phone);
-                $('#touxiangimg').prop('src', '/upload/' + data.msg);
+                if (data.msg == "default.png"){
+                    $('#touxiangimg').attr('src', '/resource/images/default.png');
+                }else{
+                    $('#touxiangimg').attr('src', '/upload/' + data.msg);
+                }
+
             },
             error: function (resp) {
                 $('body').text(resp.responseText)
