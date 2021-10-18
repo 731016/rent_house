@@ -11,6 +11,7 @@
   <script src="/resource/js/jquery-3.6.0.min.js"></script>
   <script src="/resource/js/coco-message.js"></script>
   <script src="/resource/js/jqueryPhoto.js"></script>
+  <script src="/resource/js/public_login.js"></script>
   <script src="/resource/js/housedetails.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>

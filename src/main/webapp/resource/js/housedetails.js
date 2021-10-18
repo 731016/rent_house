@@ -90,12 +90,12 @@ window.addEventListener('load', function () {
 
 
                 for (let index = 0; index < data.imgList.split(',').length; index++) {
-                    picul.insertAdjacentHTML('beforeend', '<li> <a href="javascript:;"><img src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a>  </li>');
+                    picul.insertAdjacentHTML('beforeend', '<li> <a href="javascript:;"><img style="width: 100%" src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a>  </li>');
 
                     if (index == 0) {
-                        listul.insertAdjacentHTML('beforeend', '<li class="on"><i class="arr2"></i><a href="javascript:;"><img src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a></li>');
+                        listul.insertAdjacentHTML('beforeend', '<li class="on"><i class="arr2"></i><a href="javascript:;"><img style="width: 100%" src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a></li>');
                     } else {
-                        listul.insertAdjacentHTML('beforeend', '<li><i class="arr2"></i><a href="javascript:;"><img src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a></li>');
+                        listul.insertAdjacentHTML('beforeend', '<li><i class="arr2"></i><a href="javascript:;"><img style="width: 100%" src="/upload/' + data.imgList.split(',')[index] + '" alt=""></a></li>');
                     }
                 }
                 picBox.appendChild(picul);
