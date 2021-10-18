@@ -58,7 +58,7 @@ public class LoginSvl extends HttpServlet {
         }
 
 
-        if (login) {
+        if (result.getFlag()) {
             UserInfo userInfo = user.getUserInfoByAccount(account);
             session.setAttribute("UserInfo", userInfo);
             result.setObject(userInfo);
