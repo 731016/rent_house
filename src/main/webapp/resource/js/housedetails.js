@@ -51,10 +51,9 @@ window.addEventListener('load', function () {
             cache: false,
             success: function (data) {
                 let object = data.object;
-                if (object !== undefined) {
-                    // TODO :点击账户名进入账户信息页面
-                    $('#topright #login').text(object.account).prop('href', 'userinfo.jsp');
-                    $('#topright #register').text('退出').prop('href', '/exit');
+                if (object != undefined) {
+                    $('#topright #login').text(object.account).attr('href', 'userinfo.jsp');
+                    $('#topright #register').text('退出').attr('href', '/exit');
                     if (data.state == 200) {
                         var successDiv = document.createElement("div");
                         successDiv.innerText = "登录成功！";
@@ -65,8 +64,8 @@ window.addEventListener('load', function () {
                         cocoMessage.error(failDiv);
                     }
                 } else {
-                    $('#topright #login').text('登录').prop('href', 'login.jsp');
-                    $('#topright #register').text('注册').prop('href', 'register.jsp');
+                    $('#topright #login').text('登录').attr('href', 'login.jsp');
+                    $('#topright #register').text('注册').attr('href', 'register.jsp');
                 }
             },
             error: function (res) {
