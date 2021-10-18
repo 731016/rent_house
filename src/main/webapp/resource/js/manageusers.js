@@ -1,80 +1,141 @@
-window.addEventListener('load',function(){
-	cocoMessage.config({
-		duration: 2000,
-	});
-	initialTable();
-	let no=document.getElementsByClassName("no");
-	let state=document.getElementsByClassName("state");
-	//根据状态显示启用禁用
-	for (var j = 0; j < state.length; j++) {
-		if(state[j].innerHTML==-1){
-			no[j].innerHTML="启用";
-		}else{
-			no[j].innerHTML="禁用";
-		}
-	}
-	//禁用启用变换
-	for (var i = 0; i < no.length; i++) {
-		no[i].onclick=function(){
-			let sta=this.parentElement.previousElementSibling;
-			let na=this.parentElement.parentElement.firstChild.nextElementSibling.innerHTML;
-			let noo=this.innerHTML;
-			if(confirm('确定要'+noo+' '+na+' 吗')){
-				if(sta.innerHTML==1){
-					this.innerHTML="启用";
-					sta.innerHTML=-1;
-				}else{
-					this.innerHTML="禁用";
-					sta.innerHTML=1;
-				}
-			}
-		}
-	}
-
-
-	// let chkall=document.getElementById("chkall");
-	// let chk=document.getElementsByClassName("chk");
-
-	// // 全选
-	// chkall.onclick=function(){
-	// 	for (var i = 0; i < chk.length; i++) {
-	// 		chk[i].checked=this.checked;
-	// 	}
-	// }
-	// for (var i = 0; i < chk.length; i++) {
-	// 	chk[i].onclick=function(){
-	// 		for (var j = 0; j < chk.length; j++) {
-
-	// 			if(chk[j].checked==false){
-	// 				chkall.checked=false;
-	// 				break;
-	// 			}else{
-	// 				chkall.checked=true;
-	// 			}
-	// 		}
-	// 	}
-	// }
+window.addEventListener('load', function () {
+    cocoMessage.config({
+        duration: 2000,
+    });
+    initialUsers();
+    initialHouseManager();
+    initialUserManager();
 });
-function initialTable() {
-	$('#tbody').children().remove();
-	$.ajax({
-		type:'post',
-		async:false,
-		url:'/userlist',
-		dataType:'json',
-		success:function (data) {
-			let json = data.object;
-			$.each(json,function () {
-				let $tr = $('<tr>\n' +
-					'<td class="td">'+this.userName+'</td>\n' +
-					'<td>'+this.account+'</td>\n' +
-					'<td>'+this.phone+'</td>\n' +
-					'<td>'+this.email+'</td>\n' +
-					'<td class="state">'+this.state+'</td>\n' +
-					'<td><a href="#" class="no">'+(this.state==='1'?"禁用":"启用")+'</a></td>\n' +
-					'</tr>');
-				$('#tbody').append($tr);
-			})
-		}
-	})
+
+function initialUserManager() {
+    $('#userManager').on('click', function () {
+        $('#dv2').addClass("hidden");
+        $('#dv1').removeClass('hidden');
+        initialUsers();
+    })
+}
+
+function initialHouseManager() {
+    $('#houseManager').on('click', function () {
+        $('#dv1').addClass("hidden");
+        $('#dv2').removeClass('hidden');
+        initialHouses();
+    })
+
+}
+
+function initialUserChange() {
+    $('button[name="users"]').on('click', function () {
+        let $sta = $(this).parent().prev();
+        let na = $(this).parent().parent().children(':eq(1)').html();
+        let noo = $(this).html();
+        if (confirm('确定要' + noo + ' ' + na + ' 吗')) {
+            if ($sta.html() == 1) {
+                $(this).html("启用");
+                $sta.html(-1);
+            } else {
+                $(this).html("禁用");
+                $sta.html(1);
+            }
+        }
+    })
+}
+
+function initialUsers() {
+    $('#tbody_user').children().remove();
+    $.ajax({
+        type: 'post',
+        async: false,
+        cache: false,
+        url: '/userlist',
+        dataType: 'json',
+        success: function (data) {
+            if (!data.flag) {
+                alert('会话过期');
+                location.href = "/admin.jsp";
+                return;
+            }
+            let json = data.object;
+            $.each(json, function () {
+                let $tr = $('<tr>\n' +
+                    '<td>' + this.userName + '</td>\n' +
+                    '<td>' + this.account + '</td>\n' +
+                    '<td>' + this.phone + '</td>\n' +
+                    '<td>' + this.email + '</td>\n' +
+                    '<td class="state">' + this.state + '</td>\n' +
+                    '<td><button class="btn btn-primary" name="users">' + (this.state === '1' ? "禁用" : "启用") + '</button></td>\n' +
+                    '</tr>');
+                $('#tbody_user').append($tr);
+            })
+        }
+    })
+    initialUserChange();
+}
+
+function initialHousesDelete() {
+    $('button[name="houses"]').on('click', function () {
+        let hid = $(this).parent().parent().children(':eq(0)').text();
+        if (!confirm('确定删除 ' + hid + '的记录？')) {
+            return;
+        }
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            data: {"hid": hid},
+            cache: false,
+            url: "/housedel",
+            success: function (data) {
+                if (data.flag) {
+                    if (data.state !== 0) {
+                        alert(data.msg);
+                    } else {
+                        initialHouses();
+                    }
+                } else {
+                    if (data.state === 1) {
+                        alert(data.msg);
+                        location.href = "/admin.jsp";
+                    } else {
+                        alert(data.msg);
+                    }
+                }
+            },
+            error:function (response) {
+                $('body').html(response.responseText);
+            }
+        })
+    })
+
+}
+
+function initialHouses() {
+    $('#tbody_house').children().remove();
+    $.ajax({
+        type: 'post',
+        dataType: 'json',
+        url: '/houselist',
+        async: false,
+        cache: false,
+        success: function (data) {
+            if (!data.flag) {
+                alert('会话过期');
+                location.href = "/admin.jsp";
+                return;
+            }
+            let json = data.object;
+            $.each(json, function () {
+                let $tr = $('<tr>\n' +
+                    '<td>' + this.hId + '</td>' +
+                    '<td>' + this.title + '</td>\n' +
+                    '<td>' + this.rent + '</td>\n' +
+                    '<td>' + this.houseType + '</td>\n' +
+                    '<td>' + this.area + '</td>\n' +
+                    '<td>' + this.address + '</td>\n' +
+                    '<td><button type="button" class="btn btn-danger" name="houses">删除</button></td>\n' +
+                    '</tr>');
+                $('#tbody_house').append($tr);
+            })
+        }
+    })
+    initialHousesDelete();
 }

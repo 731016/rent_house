@@ -2,11 +2,13 @@
 .td1{
 	background-color: gainsboro;
 }
-#dv{
-	width: 1300px;
+.dv{
+	width: 100%;
 	margin: 0 auto;
 }
-
+.hidden{
+	display: none;
+}
 #header{
 	background-color:rgba(0, 0, 0, 0.2);
 	box-shadow: 2px 2px 8px silver;

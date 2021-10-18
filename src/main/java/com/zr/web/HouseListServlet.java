@@ -1,9 +1,9 @@
 package com.zr.web;
 
 import com.alibaba.fastjson.JSON;
+import com.zr.pojo.Housing;
 import com.zr.pojo.ReturnResult;
-import com.zr.pojo.UserInfo;
-import com.zr.service.UserInfoService;
+import com.zr.service.HousingService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,8 +14,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "UserListServlet",urlPatterns = "/userlist")
-public class UserListServlet extends HttpServlet {
+@WebServlet(name = "HouseListServlet",urlPatterns = "/houselist")
+public class HouseListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html");
@@ -27,14 +27,14 @@ public class UserListServlet extends HttpServlet {
             writer.print(JSON.toJSONString(result));
             return;
         }
-        UserInfoService service = UserInfoService.getInstance();
-        List<UserInfo> list = service.getAllUserInfo();
-        list.remove(service.getUserInfoByAccount("root"));
-        result.setObject(list);
         result.setFlag(true);
+        HousingService service = HousingService.getInstance();
+        List<Housing> list = service.getAllHouses();
+        result.setObject(list);
         writer.print(JSON.toJSONString(result));
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 }

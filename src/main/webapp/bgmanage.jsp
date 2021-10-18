@@ -24,42 +24,41 @@
 
 <header id="header">
   <ul>
-    <li><a class="nav_header a">用户管理</a></li>
-    <li><a class="nav_header a">房屋管理</a></li>
-    <li class="reg_log"><a href="#" class="nav_header a">退出</a></li>
+    <li><a class="nav_header a" id="userManager">用户管理</a></li>
+    <li><a class="nav_header a" id="houseManager">房屋管理</a></li>
+    <li class="reg_log"><a href="/adminlogout" class="nav_header a">退出</a></li>
   </ul>
 </header>
-<div id="dv">
-  <table class="table table-hover">
+<div id="dv1" class="dv show">
+  <table class="table table-dark table-hover">
     <thead>
     <tr>
-      <td id="td" id="td1" class="td1">姓名</td>
-      <td class="td1">用户名</td>
-      <td class="td1">手机号</td>
-      <td class="td1">邮箱</td>
-      <td class="td1">状态</td>
-      <td class="td1">操作</td>
+      <th>姓名</th>
+      <th>用户名</th>
+      <th>手机号</th>
+      <th>邮箱</th>
+      <th>状态</th>
+      <th>操作</th>
     </tr>
     </thead>
-    <tbody id="tbody"></tbody>
-<%--    <tr>--%>
-<%--      <td class="td">姓名</td>--%>
-<%--      <td>用户名</td>--%>
-<%--      <td>手机号</td>--%>
-<%--      <td>邮箱</td>--%>
-<%--      <td class="state">-1</td>--%>
-<%--      <td><a href="#" class="no"></a></td>--%>
-<%--    </tr>--%>
-<%--    <tr>--%>
-<%--      <td class="td">adas</td>--%>
-<%--      <td>用户名</td>--%>
-<%--      <td>手机号</td>--%>
-<%--      <td>邮箱</td>--%>
-<%--      <td class="state">1</td>--%>
-<%--      <td><a href="#" class="no"></a></td>--%>
-<%--    </tr>--%>
+    <tbody id="tbody_user"></tbody>
   </table>
 </div>
-
+<div id="dv2" class="dv hidden">
+  <table class="table table-dark table-hover">
+    <thead>
+    <tr>
+      <th>编号</th>
+      <th>标题</th>
+      <th>租金</th>
+      <th>户型</th>
+      <th>面积</th>
+      <th>地址</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+      <tbody id="tbody_house"></tbody>
+  </table>
+</div>
 </body>
 </html>
