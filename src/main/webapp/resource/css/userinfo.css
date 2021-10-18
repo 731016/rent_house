@@ -232,3 +232,29 @@ tr {
     height: 40px;
     padding-bottom: 20px;
 }
+
+#dvimg{
+    background: rgba(255,255,255,0.5);
+    border: 1px solid black;
+    width: 160px;
+    height: 90px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 87px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+#hximg{
+    /*border: 1px solid black;*/
+    width: 158px;
+    height: 88px;
+    position: absolute;
+    margin-left: -69px;
+    cursor: pointer;
+}
+
+.sp{
+    font-size: 10px;
+    left: 175px;
+}

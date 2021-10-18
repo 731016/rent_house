@@ -1,3 +1,6 @@
+let pwdReg = new RegExp(/^[a-zA-Z][a-zA-Z0-9]{5,15}$/);
+let pwd = false;    //密码
+let pwd2 = false;   //二次密码
 $(function () {
     cocoMessage.config({
         duration: 2000,
@@ -56,6 +59,52 @@ $(function () {
 
     showUser();
     isLandlord();
+
+    //密码
+    $('#new_pwd').blur(function () {
+        let psw = $(this).val().trim();
+        if (psw.length !== 0) {
+            if (!pwdReg.test(psw)) {
+                $('#sppass').text('密码长度必须大于等于6小于等于16，且必须以英文开头').css('color', 'red');
+                $(this).css('border-color', 'red');
+                pwd = false;
+            } else {
+                $('#sppass').text('密码格式正确').css('color', 'green');
+                $(this).css('border-color', 'green');
+                pwd = true;
+            }
+        } else {
+            $('#sppass').text('密码不能为空').css('color', 'red');
+            $(this).css('border-color', 'red');
+            pwd = false;
+        }
+    });
+    //第二次密码
+    $('#second_pwd').blur(function () {
+        var psw2 = $(this).val().trim();
+        var psw = $('#new_pwd').val().trim();
+        if (psw2.length !== 0) {
+            if (psw2 === psw) {
+                $('#sppass2').text('密码格式正确').css('color', 'green');
+                $(this).css('border-color', 'green');
+                pwd2 = true;
+            } else {
+                $('#sppass2').text('两次密码不一致').css('color', 'red');
+                $(this).css('border-color', 'red');
+                pwd2 = false;
+            }
+        } else {
+            $('#sppass2').text('密码不能为空').css('color', 'red');
+            $(this).css('border-color', 'red');
+            pwd2 = false;
+        }
+    });
+
+    $('#img_file').change(function () {
+        let file = this.files[0];
+        let dataImgUrl = getObjectURL(file);
+        $("#user_img").attr("src", dataImgUrl);
+    })
 })
 
 //显示用户信息
@@ -67,7 +116,11 @@ function showUser() {
         cache: false,
         success: function (userinfo) {
             $('#userName').text(userinfo.userName);
-            $('img').attr('src', '/upload/' + userinfo.img);
+            if (userinfo.img == "") {
+                $("img[name='user_img']").attr('src', '/resource/images/1.png');
+            } else {
+                $("img[name='user_img']").attr('src', '/upload/' + userinfo.img);
+            }
             $('#nickname').val(userinfo.nickName);
             $('#phone').val(userinfo.phone);
             $('#email').val(userinfo.email);
@@ -282,14 +335,41 @@ function showHouseInfo(button) {
         type: 'post',
         data: {'hid': hid},
         dataType: 'json',
-        url: '/landlordInfo',
+        url: '/houseInfo',
         cache: false,
         success: function (houseInfo) {
             $('#house_title').val(houseInfo.title);
-            $('option[value='+ houseInfo.houseType+']').selected();
+
+            $('#housetype').parent().append('<input style="display: none" name="hid" value="'+houseInfo.hId+'">');
+
+            $('#housetype').children().attr("selected", false);
+            $("#housetype option[value='" + houseInfo.typeId + "']").prop("selected", true);
+
+            $('#house_type').children().attr("selected", false);
+            $("#house_type option[value='" + houseInfo.houseType + "']").prop("selected", true);
+
+            $('#toward').children().attr("selected", false);
+            $("#toward option[value='" + houseInfo.towardId + "']").prop("selected", true);
+
+            $('#quyu').children().attr("selected", false);
+            $("#quyu option[value='" + houseInfo.aid + "']").prop("selected", true);
+
             $('#house_area').val(houseInfo.area);
+
             $('#house_rent').val(houseInfo.rent);
-            $()
+
+            $('#check input').prop('checked', false);
+            let obj = houseInfo.facilities.split(',');
+            $.each(obj, function () {
+                $('#check input[value="' + this + '"]').prop('checked', true);
+            })
+
+            $('')
+
+            $('#house_describe').val(houseInfo.describe);
+
+            let imgList = houseInfo.imgList.split(',');
+            $('#hximg').attr('src', '/upload/' + imgList[imgList.length - 1]);
         },
         error: function (e) {
             $("body").html(e.responseText);
@@ -297,7 +377,15 @@ function showHouseInfo(button) {
     })
 }
 
-//修改房屋信息
-function updateHouseInfo() {
 
+function getObjectURL(file) {
+    let url = null;
+    if (window.createObjectURL != undefined) {
+        url = window.createObjectURL(file);
+    } else if (window.URL != undefined) {
+        url = window.URL.createObjectURL(file);
+    } else if (window.webkitURL != undefined) {
+        url = window.webkitURL.createObjectURL(file);
+    }
+    return url;
 }

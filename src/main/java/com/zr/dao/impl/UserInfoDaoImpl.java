@@ -48,7 +48,7 @@ public class UserInfoDaoImpl implements UserInfoDao {
     public int updateUserInfo(UserInfo userInfo) {
         String sql = "update userInfo set `password` = ?,userName = ?,nickName=?,email=?,phone=?,img=?,state = ? where account=?";
         Object[] params = {
-                Utils.msgEncrypt(userInfo.getPassword()),
+                userInfo.getPassword(),
                 userInfo.getUserName(),
                 userInfo.getNickName(),
                 userInfo.getEmail(),
