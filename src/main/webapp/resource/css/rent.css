@@ -94,9 +94,13 @@ select{
 #big{
     height:1300px;
     width: 100%;
-    background-image: url(../images/login_bg.jpg);
+    background-image: url(/resource/images/login_bg.jpg);
     background-repeat:no-repeat;
     background-size:100% 100%;
+}
+#big input[type="text"],
+#big input[type="password"]{
+	padding: 0 5px;
 }
 #d1{
 	margin: 0px auto;

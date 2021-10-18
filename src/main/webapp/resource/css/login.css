@@ -11,6 +11,10 @@ body{
     background-repeat:no-repeat;
     background-size:100% 100%;
 }
+#big input[type="text"],
+#big input[type="password"]{
+    padding: 0 5px;
+}
 #login{
     height: 500px;
     width: 500px;

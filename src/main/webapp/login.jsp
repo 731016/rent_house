@@ -33,16 +33,13 @@
       <div id="validation" style="text-align: center"></div>
       <div class="input">
         账号：
-        <input id="txt" name="account" /><br />
+        <input type="text" id="txt" name="account" /><br />
         <span id="sptxt" class="sp"></span>
       </div>
       <div class="input">
         密码：
         <input type="password" id="psw" name="password" /><br>
         <span id="sppass" class="sp"></span>
-      </div>
-      <div id="aa">
-        <input type="checkbox"/>记住密码
       </div>
       <div id="sub">
         <input type="button" value="登录" id="btn" class="btn btn-primary btn_log" />
