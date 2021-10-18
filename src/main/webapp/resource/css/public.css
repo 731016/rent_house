@@ -43,7 +43,15 @@ header ul li {
     font-size: 18px;
     font-weight: 700;
 }
-
+.a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white !important;
+}
+.a:hover{
+    color: darkorange !important;
+    text-decoration: none;
+}
 .reg_log {
     float: right;
     margin: 0;

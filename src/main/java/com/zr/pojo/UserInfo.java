@@ -1,9 +1,6 @@
 package com.zr.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.rmi.StubNotFoundException;
 
@@ -11,6 +8,7 @@ import java.rmi.StubNotFoundException;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@EqualsAndHashCode
 public class UserInfo {
    private String account;    //用户名
    private String password;   //密码

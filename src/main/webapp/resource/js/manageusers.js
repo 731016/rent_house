@@ -2,6 +2,7 @@ window.addEventListener('load',function(){
 	cocoMessage.config({
 		duration: 2000,
 	});
+	initialTable();
 	let no=document.getElementsByClassName("no");
 	let state=document.getElementsByClassName("state");
 	//根据状态显示启用禁用
@@ -54,3 +55,26 @@ window.addEventListener('load',function(){
 	// 	}
 	// }
 });
+function initialTable() {
+	$('#tbody').children().remove();
+	$.ajax({
+		type:'post',
+		async:false,
+		url:'/userlist',
+		dataType:'json',
+		success:function (data) {
+			let json = data.object;
+			$.each(json,function () {
+				let $tr = $('<tr>\n' +
+					'<td class="td">'+this.userName+'</td>\n' +
+					'<td>'+this.account+'</td>\n' +
+					'<td>'+this.phone+'</td>\n' +
+					'<td>'+this.email+'</td>\n' +
+					'<td class="state">'+this.state+'</td>\n' +
+					'<td><a href="#" class="no">'+(this.state==='1'?"禁用":"启用")+'</a></td>\n' +
+					'</tr>');
+				$('#tbody').append($tr);
+			})
+		}
+	})
+}
