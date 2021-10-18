@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
         $.ajax({
             type: "post",
             dataType: "json",
-            url: "/register",
+            url: "/login",
             success: function (data) {
                 if (data.state == 202) {
                     location.href = "/index.jsp";

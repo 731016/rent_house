@@ -27,6 +27,7 @@ public class LoginSvl extends HttpServlet {
             result.setFlag(false);
             if (request.getSession().getAttribute("UserInfo") != null) {
                 result.setObject(request.getSession().getAttribute("UserInfo"));
+                result.setState(202);
 //                result.setState(200);
             } else if (request.getSession() .getAttribute("regFlag") != null) {
                 result.setState(201);
