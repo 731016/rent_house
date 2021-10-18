@@ -30,13 +30,36 @@ function initialUserChange() {
         let na = $(this).parent().parent().children(':eq(1)').html();
         let noo = $(this).html();
         if (confirm('确定要' + noo + ' ' + na + ' 吗')) {
-            if ($sta.html() == 1) {
-                $(this).html("启用");
-                $sta.html(-1);
-            } else {
-                $(this).html("禁用");
-                $sta.html(1);
-            }
+            $.ajax({
+                type:'post',
+                data:{"account":na},
+                cache:false,
+                url:'/updateuser',
+                dataType:'json',
+                success:function (data) {
+                    if(data.flag){
+                        if(data.state === 0) {
+                            initialUsers();
+                        }else{
+                            alert('修改失败')
+                        }
+                    }else{
+                        switch (data.state) {
+                            case 1:
+                                alert("会话过期");
+                                location.href="/admin.jsp";
+                                break;
+                            case 2:
+                                alert('缺少参数');
+                                break;
+                            case 3:
+                                alert('没有用户名为' + na + '的用户');
+                                initialHouses();
+                                break;
+                        }
+                    }
+                }
+            })
         }
     })
 }
@@ -63,7 +86,7 @@ function initialUsers() {
                     '<td>' + this.phone + '</td>\n' +
                     '<td>' + this.email + '</td>\n' +
                     '<td class="state">' + this.state + '</td>\n' +
-                    '<td><button class="btn btn-primary" name="users">' + (this.state === '1' ? "禁用" : "启用") + '</button></td>\n' +
+                    '<td><button class="btn btn-primary" name="users">' + (this.state === 1 ? "禁用" : "启用") + '</button></td>\n' +
                     '</tr>');
                 $('#tbody_user').append($tr);
             })
