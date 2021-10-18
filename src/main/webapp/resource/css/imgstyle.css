@@ -76,7 +76,7 @@ a:hover {
 }
 
 .mod18 #prev, .mod18 #next {
-    top: 490px;
+    top: 626px;
     width: 10px;
     height: 16px;
 }
@@ -126,7 +126,7 @@ a:hover {
 
 .mod18 .picBox {
     width: 526px;
-    height: 394px;
+    height: 526px;
     padding-left: 75px;
     padding-right: 76px;
     position: relative;
