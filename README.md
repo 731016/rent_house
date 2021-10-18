@@ -6,6 +6,56 @@
 https://docs.qq.com/sheet/DQk5qSmZFbWR3Y0NE?groupUin=4ffoQqsgdrk51OP5JTQ3ng%253D%253D&tab=0stqpd
 
 ## 常用的代码
+### 弹出层消息模块
+```html
+<script src="/resource/js/jquery-3.6.0.min.js"></script>
+<script src="/resource/js/coco-message.js"></script>
+<script>
+cocoMessage.config({
+        duration: 2000,
+    });
+function example(n) {
+        let div = document.createElement("div");
+        switch (n) {
+          case 0:
+            cocoMessage.info(3000, "请先登录！", function () {
+              console.log("close");
+            });
+            break;
+
+          case 1:
+            div.innerText = "修改成功！";
+            cocoMessage.success(div);
+            break;
+
+          case 2:
+            cocoMessage.warning("需要手动关闭", 0);
+            break;
+
+          case 3:
+            cocoMessage.error("修改失败！", 3000);
+            break;
+
+          case 4:
+            var closeMsg = cocoMessage.loading(true);
+            setTimeout(function () {
+              closeMsg();
+            }, 4000);
+            break;
+
+          case 5:
+            cocoMessage.destroyAll();
+            break;
+
+          default:
+            break;
+        }
+      }
+</script>
+```
+
+
+
 ### header头部登录模块和退出
 ```html
 <link rel="stylesheet" href="/resource/css/public.css">
