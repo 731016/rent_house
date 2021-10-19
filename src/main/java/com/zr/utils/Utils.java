@@ -118,6 +118,13 @@ public class Utils {
         }
         return result;
     }
+
+    /**
+     * 将数组转换为字符串
+     * @param array
+     * @param reg
+     * @return
+     */
     public static String arrayToString(Object[] array,String reg){
         if (array.length==0){
             return "";

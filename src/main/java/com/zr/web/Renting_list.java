@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+//多条件查询，通过Map传入数据到服务层。（注意：Map的key需要和数据库的字段名相同）
 @WebServlet(name = "Renting_list",urlPatterns = "/rentingList")
 public class Renting_list extends HttpServlet {
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,6 +26,7 @@ public class Renting_list extends HttpServlet {
       String housingType = request.getParameter("housingType");//默认”不限“
       int toward = Integer.parseInt(request.getParameter("toward")); //默认0
       Map<String,Object> map = new HashMap<>();
+      //去掉查询条件中的“不限”
       if (aid != 0){
          map.put("aid",aid);
       }

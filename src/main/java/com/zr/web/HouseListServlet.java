@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-
+//管理员获取所有的租房信息列表
 @WebServlet(name = "HouseListServlet",urlPatterns = "/houselist")
 public class HouseListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

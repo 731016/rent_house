@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
+//获取用户的所有看房记录
 @WebServlet(name = "checkHouseRecordSvl" ,urlPatterns = "/checkHouseRecord")
 public class checkHouseRecordSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

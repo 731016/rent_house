@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-
+//登录请求，同时也是首页判断是否登录过的
 @WebServlet(name = "LoginSvl", urlPatterns = "/login")
 public class LoginSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

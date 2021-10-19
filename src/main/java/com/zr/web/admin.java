@@ -11,17 +11,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+//管理员登录
 @WebServlet(name = "admin",urlPatterns = "/adminlogin")
 public class admin extends HttpServlet {
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      //设置编码
       request.setCharacterEncoding("utf-8");
       response.setCharacterEncoding("utf-8");
       response.setContentType("text/html;charset=UTF-8");
+      //获取前台数据
       String account = request.getParameter("account");
       String password = request.getParameter("password");
+      //登录
       UserInfoService user = UserInfoService.getInstance();
       boolean login = user.login(account, password);
+      //设置返回的结果
       ReturnResult result = new ReturnResult();
       if (login){
          UserInfo userInfoByAccount = user.getUserInfoByAccount(account);

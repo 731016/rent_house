@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+//修改了房东信息
 @WebServlet(name = "LandlordInfoUpdateSvl", urlPatterns = "/LandlordInfoUpdate")
 public class LandlordInfoUpdateSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,10 +22,12 @@ public class LandlordInfoUpdateSvl extends HttpServlet {
 
         String strJson = request.getParameter("json");
         UserInfo userInfo = (UserInfo) request.getSession().getAttribute("UserInfo");
+        //根据前台传来的数据，转换为相应的对象
         Landlord landlord = JSON.parseObject(strJson, Landlord.class);
 
         String account = userInfo.getAccount();
         UserInfoService instance1 = UserInfoService.getInstance();
+        //更新房东的名字
         int updateUserNameFlag = instance1.updateUserName(landlord.getLName(), account);
         LandlordService instance = LandlordService.getInstance();
         int updateFlag = instance.updateLandlord(landlord);

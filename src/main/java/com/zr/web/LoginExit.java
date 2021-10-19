@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+//普通用户登出
 @WebServlet(name = "LoginExit",urlPatterns = "/exit")
 public class LoginExit extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -14,7 +14,7 @@ public class LoginExit extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getSession().invalidate();
+        request.getSession().removeAttribute("UserInfo");
         response.sendRedirect("login.jsp");
     }
 }

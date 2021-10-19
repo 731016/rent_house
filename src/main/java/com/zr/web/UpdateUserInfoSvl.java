@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
+//用户更新用户信息
 @WebServlet(name = "UpdateUserInfoSvl", urlPatterns = "/UpdateUserInfo")
 public class UpdateUserInfoSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,7 +40,7 @@ public class UpdateUserInfoSvl extends HttpServlet {
 
             if (!initial_pwd.equals("")) {
                 String new_pwd = uploadRequest.getParameter("new_pwd");
-                //加密
+                //MD5加密
                 initial_pwd = Utils.msgEncrypt(initial_pwd);
                 new_pwd = Utils.msgEncrypt(new_pwd);
                 //判断初始密码是否一致

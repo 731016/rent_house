@@ -92,16 +92,16 @@
             <td colspan="3">
               <div class="password_div">
                 <span class="password_span div_inBlock">初始密码</span>
-                <input type="text" class="userinfo_input" id="initial_pwd" name="initial_pwd">
+                <input type="password" class="userinfo_input" id="initial_pwd" name="initial_pwd">
               </div>
               <div class="password_div">
                 <span class="password_span div_inBlock">新密码</span>
-                <input type="text" class="userinfo_input" id="new_pwd" name="new_pwd">
+                <input type="password" class="userinfo_input" id="new_pwd" name="new_pwd">
                 <span id="sppass" class="sp"></span>
               </div>
               <div class="password_div">
                 <span class="password_span div_inBlock">确认密码</span>
-                <input type="text" class="userinfo_input" id="second_pwd" name="second_pwd">
+                <input type="password" class="userinfo_input" id="second_pwd" name="second_pwd">
                 <span id="sppass2" class="sp"></span>
               </div>
             </td>

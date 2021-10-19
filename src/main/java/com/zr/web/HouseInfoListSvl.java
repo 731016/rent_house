@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
+//用户获取到自己发布的租房信息
 @WebServlet(name = "HouseInfoListSvl" ,urlPatterns = "/HouseInfoList")
 public class HouseInfoListSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

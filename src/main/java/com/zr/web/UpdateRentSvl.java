@@ -14,27 +14,31 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+//更新出租房屋信息
 @WebServlet(name = "UpdateRentSvl", urlPatterns = "/UpdateRent")
 public class UpdateRentSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             response.setCharacterEncoding("utf-8");
             response.setContentType("text/html;charset=UTF-8");
+            //获取已装载的SmartUpload对象
             SmartUpload smartUpload = Utils.getInitialedSmartUpload(getServletConfig(), request, response);
             Request uploadRequest = smartUpload.getRequest();
             Integer hId = Integer.parseInt(uploadRequest.getParameter("hid"));
             HousingService instance = HousingService.getInstance();
             Housing houseById = instance.getHouseById(hId);
+            //获取所有的文件名
             List<String> filenames = Utils.fileUpload(smartUpload, this, "/upload/");
             String imgList = Utils.arrayToString(filenames.toArray(), ",");
             if (imgList.equals("")) {
                 imgList = houseById.getImgList();
-            }else {
+            } else {
                 String[] split = houseById.getImgList().split(",");
                 for (String s : split) {
-                    Utils.deleteFileByFilename(this,"/upload/",s);
+                    Utils.deleteFileByFilename(this, "/upload/", s);
                 }
             }
+            //获取前台传来的参数
             String title = uploadRequest.getParameter("house_title"); //房屋标题
             Integer typeId = Integer.parseInt(uploadRequest.getParameter("housetype")); //房屋类型
             String houseType = uploadRequest.getParameter("house_type"); //户型
@@ -50,9 +54,10 @@ public class UpdateRentSvl extends HttpServlet {
             String describe = uploadRequest.getParameter("house_describe");
 
             String address = uploadRequest.getParameter("house_address");
-
+            //转换为对象
             Housing housing = new Housing(hId, title, rent, houseType, area, towardId, imgList, houseById.getLId(), typeId, facility, houseById.getState(), aid, address, describe);
             HousingService service = HousingService.getInstance();
+            //处理结果
             int i = service.updateHouse(housing);
             if (i == 1) {
                 //修改成功

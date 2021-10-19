@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+//发起注册
 @WebServlet(name = "RegisterSvl", urlPatterns = "/register")
 public class RegisterSvl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,7 +23,7 @@ public class RegisterSvl extends HttpServlet {
             response.getWriter().print(JSON.toJSONString(result));
             return;
         }
-
+//获取参数
         String account = request.getParameter("account");
         String password = request.getParameter("password");
         String name = request.getParameter("name");
@@ -33,6 +33,7 @@ public class RegisterSvl extends HttpServlet {
         UserInfo userInfo = new UserInfo(account, password, name, nickname, email, phone, "", 1);
         int addFlag = UserInfoService.getInstance().addUserInfo(userInfo);
         ReturnResult result = new ReturnResult();
+        //返回注册结果
         if (addFlag > 0) {
             result.setState(201);
             result.setFlag(true);
