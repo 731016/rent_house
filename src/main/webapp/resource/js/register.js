@@ -176,7 +176,7 @@ function add() {
     let nickName = $("[name='nickname']").val();
     let email = $("[name='email']").val();
     let phone = $("[name='phone']").val();
-    let ajax = {"account": acc, "password": pwd, "name": name, "nickName": nickName, "email": email, "phone": phone}
+    let ajax = {"account": acc, "password": pwd, "name": name, "nickname": nickName, "email": email, "phone": phone}
     $.ajax({
         type: "post",
         data: ajax,
