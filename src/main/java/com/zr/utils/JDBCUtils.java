@@ -23,7 +23,6 @@ public class JDBCUtils {
         try {
             Properties pro = new Properties();
             pro.load(JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
-            System.out.println(pro.get("username"));
             ds = DruidDataSourceFactory.createDataSource(pro);
         } catch (Exception e) {
             e.printStackTrace();
