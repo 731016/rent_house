@@ -29,7 +29,7 @@ public class HouseListServlet extends HttpServlet {
         }
         result.setFlag(true);
         HousingService service = HousingService.getInstance();
-        List<Housing> list = service.getAllHouses(1);
+        List<Housing> list = service.getAllHouses(0);
         result.setObject(list);
         writer.print(JSON.toJSONString(result));
     }

@@ -98,7 +98,7 @@ function initialUsers() {
 function initialHousesDelete() {
     $('button[name="houses"]').on('click', function () {
         let hid = $(this).parent().parent().children(':eq(0)').text();
-        let value = $(this).val();
+        let value = $(this).text();
         if (!confirm('确定 '+ value + hid + '的记录？')) {
             return;
         }
@@ -155,7 +155,7 @@ function initialHouses() {
                     '<td>' + this.houseType + '</td>\n' +
                     '<td>' + this.area + '</td>\n' +
                     '<td>' + this.address + '</td>\n' +
-                    '<td><button type="button" class="btn btn-danger" name="houses">删除</button></td>\n' +
+                    '<td><button type="button" class="btn btn-danger" name="houses">'+(this.state===1?'禁用':'启用')+'</button></td>\n' +
                     '</tr>');
                 $('#tbody_house').append($tr);
             })
