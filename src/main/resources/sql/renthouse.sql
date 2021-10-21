@@ -14,18 +14,14 @@
  Date: 15/10/2021 16:48:12
 */
 
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
-
 -- ----------------------------
 -- Table structure for area
 -- ----------------------------
 DROP TABLE IF EXISTS `area`;
 CREATE TABLE `area`  (
-  `aid` int(11) NOT NULL AUTO_INCREMENT,
-  `aname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`aid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `aid` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `aname` varchar(255)
+) DEFAULT charset=utf8;
 
 -- ----------------------------
 -- Records of area
@@ -49,34 +45,32 @@ INSERT INTO `area` VALUES (13, ' 汉南区');
 -- ----------------------------
 DROP TABLE IF EXISTS `checkhouserecord`;
 CREATE TABLE `checkhouserecord`  (
-  `cId` int(11) NOT NULL AUTO_INCREMENT,
+  `cId` int(11) PRIMARY KEY AUTO_INCREMENT,
   `hId` varchar(50) NOT NULL,
   `account` int(11) DEFAULT NULL,
-  `checkDate` datetime(0) NOT NULL,
-  PRIMARY KEY (`cId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `checkDate` datetime(0) NOT NULL
+) DEFAULT CHARSET=UTF8;
 
 -- ----------------------------
 -- Table structure for housing
 -- ----------------------------
 DROP TABLE IF EXISTS `housing`;
 CREATE TABLE `housing`  (
-  `hid` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `rent` int(11) DEFAULT NULL,
-  `houseType` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `area` double DEFAULT NULL,
-  `towardid` int(11) DEFAULT NULL,
-  `imgList` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `lid` int(11) DEFAULT NULL,
-  `typeId` int(11) DEFAULT NULL,
-  `facilities` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `state` int(11) DEFAULT NULL,
-  `aid` int(11) DEFAULT NULL,
-  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`hid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `hid` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `title` varchar(255),
+  `rent` int(11) ,
+  `houseType` varchar(50),
+  `area` double ,
+  `towardid` int(11),
+  `imgList` varchar(1024) ,
+  `lid` int(11) ,
+  `typeId` int(11) ,
+  `facilities` varchar(255),
+  `state` int(11),
+  `aid` int(11),
+  `address` varchar(255),
+  `describe` varchar(255)
+) DEFAULT CHARSET=UTF8;
 
 -- ----------------------------
 -- Records of housing
@@ -89,10 +83,9 @@ INSERT INTO `housing` VALUES (2, '精品房屋曙光新城c区aaa', 1500, '三�
 -- ----------------------------
 DROP TABLE IF EXISTS `housingtype`;
 CREATE TABLE `housingtype`  (
-  `typeId` int(11) NOT NULL AUTO_INCREMENT,
-  `typename` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`typeId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `typeId` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `typename` varchar(255)
+) DEFAULT CHARSET=UTF8;
 
 -- ----------------------------
 -- Records of housingtype
@@ -111,24 +104,22 @@ INSERT INTO `housingtype` VALUES (8, '老公房');
 -- ----------------------------
 DROP TABLE IF EXISTS `landlord`;
 CREATE TABLE `landlord`  (
-  `lId` int(11) NOT NULL AUTO_INCREMENT,
-  `lName` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `phone` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `address` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `idCard` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `account` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  PRIMARY KEY (`lId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `lId` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `lName` varchar(50),
+  `phone` varchar(50),
+  `address` varchar(50),
+  `idCard` varchar(50),
+  `account` varchar(255)
+)DEFAULT CHARSET=UTF8;
 
 -- ----------------------------
 -- Table structure for toward
 -- ----------------------------
 DROP TABLE IF EXISTS `toward`;
 CREATE TABLE `toward`  (
-  `towardid` int(11) NOT NULL AUTO_INCREMENT,
-  `towardName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`towardid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `towardid` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `towardName` varchar(255)
+) DEFAULT CHARSET=UTF8;
 
 -- ----------------------------
 -- Records of toward
@@ -147,16 +138,15 @@ INSERT INTO `toward` VALUES (8, '西北');
 -- ----------------------------
 DROP TABLE IF EXISTS `userinfo`;
 CREATE TABLE `userinfo`  (
-  `account` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `password` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `nickname` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `phone` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `state` int(11) DEFAULT NULL,
-  PRIMARY KEY (`account`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `account` varchar(50) PRIMARY KEY,
+  `password` varchar(50),
+  `username` varchar(50),
+  `nickname` varchar(50),
+  `email` varchar(50),
+  `phone` varchar(50),
+  `img` varchar(255),
+  `state` int(11) DEFAULT NULL
+) DEFAULT CHARSET=UTF8;
 
 -- ----------------------------
 -- Records of userinfo
