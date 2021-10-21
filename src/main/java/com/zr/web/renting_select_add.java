@@ -33,7 +33,7 @@ public class renting_select_add extends HttpServlet {
          //删除session
          request.getSession().removeAttribute("search_input");
       }else {
-         allHouses = housing.getAllHouses();
+         allHouses = housing.getAllHouses(1);
       }
       String s = JSON.toJSONString(allHouses);
       response.getWriter().print(s);

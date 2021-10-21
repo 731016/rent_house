@@ -301,7 +301,8 @@ function showHouseInfoList() {
                 let $td1 = $('<td>' + index++ + '</td>');
                 let $td2 = $('<td>' + houseInfo.hId + '</td>');
                 let $td3 = $('<td>' + houseInfo.title + '</td>');
-                let $td4 = $('<td>' +
+                let $td4 = $('<td>'+(houseInfo.state==1?'正常':'下架')+'</td>')
+                let $td5 = $('<td>' +
                     '<button type="button"  class="userinfo_button" onclick="return delHouseInfo(this)">删除</button>' +
                     '<button type="button"  class="userinfo_button" name="update_houseInfo">修改</button></td>');
 
@@ -309,6 +310,7 @@ function showHouseInfoList() {
                 $tr.append($td2);
                 $tr.append($td3);
                 $tr.append($td4);
+                $tr.append($td5);
 
                 $('#house_list').append($tr);
             })

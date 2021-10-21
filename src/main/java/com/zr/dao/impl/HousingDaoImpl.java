@@ -51,37 +51,37 @@ public class HousingDaoImpl implements HousingDao {
 
     @Override
     public List<Housing> getHousesLikeTitle(String title) {
-        String sql = SELECT_ALL + "where title = ?";
+        String sql = SELECT_ALL + "where state=1 and title = ?";
         return JDBCUtils.queryList(sql, Housing.class, title);
     }
 
     @Override
     public List<Housing> getHousesByRentRange(double min, double max) {
-        String sql = SELECT_ALL + "where rent between ? and ?;";
+        String sql = SELECT_ALL + "where state=1 (rent between ? and ?);";
         return JDBCUtils.queryList(sql, Housing.class, min, max);
     }
 
     @Override
     public List<Housing> getHousesByHouseType(String houseType) {
-        String sql = SELECT_ALL + "where houseType = ?";
+        String sql = SELECT_ALL + "where state=1 houseType = ?";
         return JDBCUtils.queryList(sql, Housing.class, houseType);
     }
 
     @Override
     public List<Housing> getHousesByAreaRange(double min, double max) {
-        String sql = SELECT_ALL + "where area between ? and ?";
+        String sql = SELECT_ALL + "where state=1 and (area between ? and ?)";
         return JDBCUtils.queryList(sql, Housing.class, min, max);
     }
 
     @Override
     public List<Housing> getHousesByTowardId(Integer towardId) {
-        String sql = SELECT_ALL + "where towardId = ?";
+        String sql = SELECT_ALL + "where state = 1 towardId = ?";
         return JDBCUtils.queryList(sql, Housing.class, towardId);
     }
 
     @Override
     public List<Housing> getHousesByTypeId(Integer typeId) {
-        String sql = SELECT_ALL + "where typeId = ?";
+        String sql = SELECT_ALL + "where state = 1 and typeId = ?";
         return JDBCUtils.queryList(sql, Housing.class, typeId);
     }
 
@@ -124,7 +124,7 @@ public class HousingDaoImpl implements HousingDao {
 
     @Override
     public List<Housing> getHousesByAddress(String address) {
-        String sql = SELECT_ALL + "address where instr(address,?)!=0";
+        String sql = SELECT_ALL + "address where state=1 and instr(address,?)!=0";
         return JDBCUtils.queryList(sql, Housing.class, address);
     }
 

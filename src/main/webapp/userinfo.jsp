@@ -193,6 +193,7 @@
           <th scope="col">编号</th>
           <th scope="col">房屋编号</th>
           <th scope="col">房屋标题</th>
+          <th scope="col">状态</th>
           <th scope="col">操作</th>
         </tr>
         </thead>
