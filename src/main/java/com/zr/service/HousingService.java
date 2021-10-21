@@ -15,6 +15,7 @@ public interface HousingService {
     }
     int addHouse(Housing housing);
     List<Housing> getAllHouses();
+    List<Housing> getAllHouses(Integer state);
     List<Housing> getHousesLikeTitle(String title);
     List<Housing> getHousesByRentRange(double min,double max);
     List<Housing> getHousesByHouseType(String houseType);

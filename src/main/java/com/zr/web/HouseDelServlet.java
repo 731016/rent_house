@@ -1,6 +1,7 @@
 package com.zr.web;
 
 import com.alibaba.fastjson.JSON;
+import com.zr.pojo.Housing;
 import com.zr.pojo.ReturnResult;
 import com.zr.service.HousingService;
 
@@ -39,10 +40,12 @@ public class HouseDelServlet extends HttpServlet {
         result.setFlag(true);
         Integer hid = Integer.valueOf(hidStr);
         HousingService service = HousingService.getInstance();
-        int i = service.deleteHouseById(hid);
+        Housing house = service.getHouseById(hid);
+        house.setState(house.getState()==1?0:1);
+        int i = service.updateHouse(house);
         //防止数据库更新了但前台管理员不知道，返回一个结果信息
         if(i < 1){
-            result.setMsg("删除失败");
+            result.setMsg("修改失败");
             result.setState(3);
         }else{
             result.setState(0);

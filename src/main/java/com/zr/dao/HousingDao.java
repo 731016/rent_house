@@ -14,6 +14,7 @@ public interface HousingDao {
     int addHouse(Housing housing);
     Housing getHouseById(Integer hId);
     List<Housing> getAllHouses();
+    List<Housing> getAllHouses(Integer state);
     List<Housing> getHousesLikeTitle(String title);
     List<Housing> getHousesByRentRange(double min,double max);
     List<Housing> getHousesByHouseType(String houseType);

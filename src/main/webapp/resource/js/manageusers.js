@@ -98,7 +98,8 @@ function initialUsers() {
 function initialHousesDelete() {
     $('button[name="houses"]').on('click', function () {
         let hid = $(this).parent().parent().children(':eq(0)').text();
-        if (!confirm('确定删除 ' + hid + '的记录？')) {
+        let value = $(this).val();
+        if (!confirm('确定 '+ value + hid + '的记录？')) {
             return;
         }
         $.ajax({

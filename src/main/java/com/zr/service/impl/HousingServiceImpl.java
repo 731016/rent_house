@@ -3,6 +3,7 @@ package com.zr.service.impl;
 import com.zr.dao.HousingDao;
 import com.zr.pojo.Housing;
 import com.zr.service.HousingService;
+import com.zr.utils.JDBCUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -27,6 +28,11 @@ public class HousingServiceImpl implements HousingService {
     @Override
     public List<Housing> getAllHouses() {
         return housingDao.getAllHouses();
+    }
+
+    @Override
+    public List<Housing> getAllHouses(Integer state) {
+        return housingDao.getAllHouses(state);
     }
 
     @Override
