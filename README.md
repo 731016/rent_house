@@ -161,8 +161,3 @@ JSON.parse:JSON字符串-->对象
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/1014/103637_5ad1221e_8254421.png "租户租房流程.png")
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/1014/103544_3e0ce51a_8254421.png "房东发布房源流程.png")
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/1014/103602_3f01b638_8254421.png "管理员用例图.png")
-
-# 运行注意事项
-
-1. SQL脚本存放在项目src/main/resources/sql中
-2. 数据库的连接配置文件是druid.properties
