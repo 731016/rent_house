@@ -196,7 +196,7 @@ function showHouseRecord() {
                 let $tr = $("<tr></tr>");
                 let $td1 = $('<td>' + record.checkHouseRecord.cId + '</td>');
                 let $td2 = $('<td>' + timeToString(record.checkHouseRecord.checkDate) + '</td>');
-                let $td3 = $('<td><a href="javascript:;">' + record.title + '</a></td>');
+                let $td3 = $('<td><a href="/housedetails?id='+record.checkHouseRecord.cId+'">' + record.title + '</a></td>');
                 let $td4 = $('<td><button type="button"  class="userinfo_button" onclick="return delHouseRecord(this)">删除</button></td>');
 
                 $tr.append($td1);
@@ -213,6 +213,7 @@ function showHouseRecord() {
     })
 }
 
+//修改时间显示格式
 function timeToString(time) {
     let date = new Date(time);
     let year = date.getFullYear();
@@ -350,6 +351,7 @@ function delHouseInfo(button) {
     });
 }
 
+//修改房屋信息
 function initialEditBtn() {
     $('button[name="update_houseInfo"]').on('click', function () {
         $('#house_list_div').hide();
@@ -401,7 +403,6 @@ function initialEditBtn() {
         })
     })
 }
-
 
 function getObjectURL(file) {
     let url = null;
