@@ -1,9 +1,23 @@
 # 出租房屋信息管理系统
 
-## <ins>提交项目禁止提交`.idea`和`target目录` !!!</ins>
+## 说明
+项目采用本地的`tomcat`作为服务器
+使用`maven`管理jar文件
+jdk版本为 `11`
+
+sql文件内的管理员账号为
+```
+username：root
+password：root
+```
+### 遇到问题提交Issue
+
+
+### <ins>提交项目禁止提交`.idea`和`target目录` !!!</ins>
 
 ## 任务进度和每日任务：
-https://docs.qq.com/sheet/DQk5qSmZFbWR3Y0NE?groupUin=4ffoQqsgdrk51OP5JTQ3ng%253D%253D&tab=0stqpd
+<del>https://docs.qq.com/sheet/DQk5qSmZFbWR3Y0NE?groupUin=4ffoQqsgdrk51OP5JTQ3ng%253D%253D&tab=0stqpd</del><br >
+ :white_check_mark: 已完成！
 
 ## 常用的代码
 ### 弹出层消息模块
