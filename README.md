@@ -1,5 +1,12 @@
 # 出租房屋信息管理系统
 
+<img src="https://img.shields.io/badge/maven-v3.1-blue" alt="">
+<img src="https://img.shields.io/badge/druid-1.1.19-blue" alt="">
+<img src="https://img.shields.io/badge/lombok-1.18.12-blue" alt="">
+<img src="https://img.shields.io/badge/fastjson-1.2.47-blue" alt="">
+<img src="https://img.shields.io/badge/jsp-servlet-orange" alt="">
+<img src="https://img.shields.io/badge/jQuery-bootstrap-red" alt="">
+
 ## 说明
 项目采用本地的`tomcat`作为服务器
 使用`maven`管理jar文件
