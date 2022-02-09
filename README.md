@@ -1,5 +1,8 @@
 # 出租房屋信息管理系统
 
+## 体验地址
+    [https://gitee.com/LovelyHzz/rent_house](http://119.3.104.52:8082/)
+
 <img src="https://img.shields.io/badge/maven-v3.1-blue" alt="">
 <img src="https://img.shields.io/badge/druid-1.1.19-blue" alt="">
 <img src="https://img.shields.io/badge/lombok-1.18.12-blue" alt="">
