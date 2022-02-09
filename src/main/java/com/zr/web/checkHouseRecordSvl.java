@@ -18,6 +18,7 @@ import java.util.List;
 //获取用户的所有看房记录
 @WebServlet(name = "checkHouseRecordSvl" ,urlPatterns = "/checkHouseRecord")
 public class checkHouseRecordSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -30,6 +31,7 @@ public class checkHouseRecordSvl extends HttpServlet {
         response.getWriter().print(s);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/index.jsp");
     }

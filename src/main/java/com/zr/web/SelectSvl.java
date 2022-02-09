@@ -9,6 +9,7 @@ import java.io.IOException;
 //实现搜索功能
 @WebServlet(name = "SelectSvl", urlPatterns = "/selectHouse")
 public class SelectSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -17,6 +18,7 @@ public class SelectSvl extends HttpServlet {
         response.sendRedirect("renting.jsp");
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

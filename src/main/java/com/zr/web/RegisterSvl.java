@@ -14,6 +14,7 @@ import java.io.IOException;
 //发起注册
 @WebServlet(name = "RegisterSvl", urlPatterns = "/register")
 public class RegisterSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         if (request.getSession().getAttribute("UserInfo") != null) {
@@ -47,6 +48,7 @@ public class RegisterSvl extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

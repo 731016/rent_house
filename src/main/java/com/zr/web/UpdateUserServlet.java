@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 //管理员更新用户状态(启用<----->禁用)
 @WebServlet(name = "UpdateUserServlet",urlPatterns = "/updateuser")
 public class UpdateUserServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html");
@@ -54,6 +55,7 @@ public class UpdateUserServlet extends HttpServlet {
         writer.print(JSON.toJSONString(result));
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

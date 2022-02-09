@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 //管理员删除房屋信息
 @WebServlet(name = "HouseDelServlet",urlPatterns = "/housedel")
 public class HouseDelServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html");
@@ -53,6 +54,7 @@ public class HouseDelServlet extends HttpServlet {
         writer.print(JSON.toJSONString(result));
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 }

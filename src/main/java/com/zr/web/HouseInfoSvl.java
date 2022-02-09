@@ -15,6 +15,7 @@ import java.io.IOException;
 //获取到某个租房的详细信息
 @WebServlet(name = "HouseInfoSvl", urlPatterns = "/houseInfo")
 public class HouseInfoSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -26,6 +27,7 @@ public class HouseInfoSvl extends HttpServlet {
         response.getWriter().print(s);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/index.jsp");
     }

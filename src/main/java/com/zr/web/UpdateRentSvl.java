@@ -17,6 +17,7 @@ import java.util.List;
 //更新出租房屋信息
 @WebServlet(name = "UpdateRentSvl", urlPatterns = "/UpdateRent")
 public class UpdateRentSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             response.setCharacterEncoding("utf-8");
@@ -71,6 +72,7 @@ public class UpdateRentSvl extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

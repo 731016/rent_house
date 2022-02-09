@@ -16,6 +16,7 @@ import java.util.Map;
 //多条件查询，通过Map传入数据到服务层。（注意：Map的key需要和数据库的字段名相同）
 @WebServlet(name = "Renting_list",urlPatterns = "/rentingList")
 public class Renting_list extends HttpServlet {
+   @Override
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       request.setCharacterEncoding("utf-8");
       response.setCharacterEncoding("utf-8");
@@ -49,6 +50,7 @@ public class Renting_list extends HttpServlet {
       response.getWriter().print(s);
    }
 
+   @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
    }

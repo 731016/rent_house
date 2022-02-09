@@ -15,6 +15,7 @@ import java.util.List;
 //通过地址查询租房信息
 @WebServlet(name = "renting_select_add",urlPatterns = "/selectadd")
 public class renting_select_add extends HttpServlet {
+   @Override
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.setCharacterEncoding("UTF-8");
       response.setContentType("text/html");
@@ -40,6 +41,7 @@ public class renting_select_add extends HttpServlet {
 
    }
 
+   @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.sendRedirect("index.jsp");
    }

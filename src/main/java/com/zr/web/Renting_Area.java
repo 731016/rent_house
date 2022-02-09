@@ -14,6 +14,7 @@ import java.util.List;
 //获取所有区域
 @WebServlet(name = "Renting_Area",urlPatterns = "/area")
 public class Renting_Area extends HttpServlet {
+   @Override
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.setCharacterEncoding("utf-8");
       response.setContentType("text/html;charset=UTF-8");
@@ -23,6 +24,7 @@ public class Renting_Area extends HttpServlet {
       response.getWriter().print(s);
    }
 
+   @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
    }

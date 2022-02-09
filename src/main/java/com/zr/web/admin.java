@@ -14,6 +14,7 @@ import java.io.IOException;
 //管理员登录
 @WebServlet(name = "admin",urlPatterns = "/adminlogin")
 public class admin extends HttpServlet {
+   @Override
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       //设置编码
       request.setCharacterEncoding("utf-8");
@@ -43,6 +44,7 @@ public class admin extends HttpServlet {
 
    }
 
+   @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
    }

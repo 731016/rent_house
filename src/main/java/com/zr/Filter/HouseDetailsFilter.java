@@ -8,9 +8,11 @@ import java.io.IOException;
 
 @WebFilter(filterName = "HouseDetailsFilter")
 public class HouseDetailsFilter implements Filter {
+    @Override
     public void destroy() {
     }
 
+    @Override
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletResponse httpResp = (HttpServletResponse) resp;
         HttpServletRequest httpReq = (HttpServletRequest) req;
@@ -23,6 +25,7 @@ public class HouseDetailsFilter implements Filter {
         chain.doFilter(req, resp);
     }
 
+    @Override
     public void init(FilterConfig config) throws ServletException {
 
     }

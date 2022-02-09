@@ -16,6 +16,7 @@ import java.io.IOException;
 //获取最新的该用户信息
 @WebServlet(name = "UserInfoSvl", urlPatterns = "/userinfo")
 public class UserInfoSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -27,6 +28,7 @@ public class UserInfoSvl extends HttpServlet {
         response.getWriter().print(s);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/index.jsp");
     }

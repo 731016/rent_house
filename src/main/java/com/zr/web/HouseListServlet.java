@@ -16,6 +16,7 @@ import java.util.List;
 //管理员获取所有的租房信息列表
 @WebServlet(name = "HouseListServlet",urlPatterns = "/houselist")
 public class HouseListServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html");
@@ -34,6 +35,7 @@ public class HouseListServlet extends HttpServlet {
         writer.print(JSON.toJSONString(result));
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

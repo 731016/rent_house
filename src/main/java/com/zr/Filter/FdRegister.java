@@ -12,9 +12,11 @@ import java.io.IOException;
 
 @WebFilter(filterName = "FdRegister")
 public class FdRegister implements Filter {
+    @Override
     public void destroy() {
     }
 
+    @Override
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest httpReq = (HttpServletRequest) req;
         HttpServletResponse httpResp = (HttpServletResponse) resp;

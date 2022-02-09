@@ -14,6 +14,7 @@ import java.util.List;
 //返回所有房屋类型
 @WebServlet(name = "Renting_Type",urlPatterns = "/type")
 public class Renting_Type extends HttpServlet {
+   @Override
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.setCharacterEncoding("utf-8");
       response.setContentType("text/html;charset=UTF-8");
@@ -23,6 +24,7 @@ public class Renting_Type extends HttpServlet {
       response.getWriter().print(s);
    }
 
+   @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.encodeRedirectURL("index.jsp");
    }

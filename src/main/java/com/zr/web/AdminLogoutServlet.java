@@ -9,10 +9,12 @@ import java.io.IOException;
 //管理员登出
 @WebServlet(name = "AdminLogoutServlet",urlPatterns = "/adminlogout")
 public class AdminLogoutServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getSession().removeAttribute("root");
         response.sendRedirect("/admin.jsp");

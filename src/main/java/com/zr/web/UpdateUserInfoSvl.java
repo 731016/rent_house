@@ -16,6 +16,7 @@ import java.util.List;
 //用户更新用户信息
 @WebServlet(name = "UpdateUserInfoSvl", urlPatterns = "/UpdateUserInfo")
 public class UpdateUserInfoSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             response.setCharacterEncoding("utf-8");
@@ -74,6 +75,7 @@ public class UpdateUserInfoSvl extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/index.jsp");
     }

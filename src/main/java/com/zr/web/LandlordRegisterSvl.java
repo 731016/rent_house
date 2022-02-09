@@ -16,6 +16,7 @@ import java.io.IOException;
 //房东注册
 @WebServlet(name = "LandlordRegisterSvl", urlPatterns = "/fdregister")
 public class LandlordRegisterSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -52,6 +53,7 @@ public class LandlordRegisterSvl extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

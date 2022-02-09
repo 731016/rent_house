@@ -13,6 +13,7 @@ import java.io.IOException;
 //判断账号是否存在
 @WebServlet(name = "RegisterJudgeSvl",urlPatterns = "/registerJudge")
 public class RegisterJudgeSvl extends HttpServlet {
+   @Override
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
       //用户注册判断账号是否存在
@@ -25,6 +26,7 @@ public class RegisterJudgeSvl extends HttpServlet {
       response.getWriter().print(s);
    }
 
+   @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
    }

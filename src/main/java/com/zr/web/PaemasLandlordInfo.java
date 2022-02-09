@@ -16,6 +16,7 @@ import java.io.IOException;
 
 @WebServlet(name = "PaemasLandlordInfo", urlPatterns = "/getLandlordInfo")
 public class PaemasLandlordInfo extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -35,6 +36,7 @@ public class PaemasLandlordInfo extends HttpServlet {
         response.getWriter().print(JSON.toJSONString(returnResult));
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

@@ -4,6 +4,7 @@ import com.jspsmart.upload.Files;
 import com.jspsmart.upload.Request;
 import com.jspsmart.upload.SmartUpload;
 import com.zr.pojo.ReturnResult;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -68,7 +69,7 @@ public class Utils {
         for (int i = 0; i < files.getCount(); i++) {
             com.jspsmart.upload.File file = files.getFile(i);
             String fileExt = file.getFileExt();
-            if(fileExt.isBlank()){
+            if(StringUtils.isBlank(fileExt)){
                 continue;
             }
             String filename = randomFileName(fileExt);

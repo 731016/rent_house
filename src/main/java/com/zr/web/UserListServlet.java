@@ -16,6 +16,7 @@ import java.util.List;
 //管理员获取所有的用户信息
 @WebServlet(name = "UserListServlet",urlPatterns = "/userlist")
 public class UserListServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html");
@@ -35,6 +36,7 @@ public class UserListServlet extends HttpServlet {
         writer.print(JSON.toJSONString(result));
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 }

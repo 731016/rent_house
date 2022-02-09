@@ -19,6 +19,7 @@ import java.util.List;
 //房屋详情
 @WebServlet(name = "housedetailsSvl",urlPatterns = "/housedetails")
 public class housedetailsSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html");
@@ -27,6 +28,7 @@ public class housedetailsSvl extends HttpServlet {
         response.getWriter().print(JSON.toJSONString(house));
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //租房页面发送一个带有id号的请求
         //通过此处代码添加房屋浏览记录

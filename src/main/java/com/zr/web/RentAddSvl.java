@@ -19,6 +19,7 @@ import java.util.List;
 //发起房屋出租
 @WebServlet(name = "RentAddSvl", urlPatterns = "/rent")
 public class RentAddSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
 
@@ -80,6 +81,7 @@ public class RentAddSvl extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/rent.jsp");
     }

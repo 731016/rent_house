@@ -14,6 +14,7 @@ import java.io.IOException;
 //获取到登录用户的房东信息
 @WebServlet(name = "LandlordInfoSvl", urlPatterns = "/landlordInfo")
 public class LandlordInfoSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -26,6 +27,7 @@ public class LandlordInfoSvl extends HttpServlet {
         response.getWriter().print(s1);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/index.jsp");
     }

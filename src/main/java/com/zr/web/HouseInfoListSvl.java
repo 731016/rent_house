@@ -14,6 +14,7 @@ import java.util.List;
 //用户获取到自己发布的租房信息
 @WebServlet(name = "HouseInfoListSvl" ,urlPatterns = "/HouseInfoList")
 public class HouseInfoListSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -25,6 +26,7 @@ public class HouseInfoListSvl extends HttpServlet {
         response.getWriter().print(s);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/index.jsp");
     }

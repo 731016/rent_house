@@ -6,6 +6,7 @@ import com.zr.pojo.UserInfo;
 import com.zr.service.UserInfoService;
 import com.zr.utils.JDBCUtils;
 import com.zr.utils.Utils;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,11 +19,12 @@ import java.io.IOException;
 //登录请求，同时也是首页判断是否登录过的
 @WebServlet(name = "LoginSvl", urlPatterns = "/login")
 public class LoginSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String account = request.getParameter("account");
         String password = request.getParameter("password");
         //判断账号或密码是否为空
-        if (account == null || account.isBlank() || password == null || password.isBlank()) {
+        if (account == null || StringUtils.isBlank(account) || password == null || StringUtils.isBlank(password)) {
             ReturnResult result = new ReturnResult();
             result.setFlag(false);
             if (request.getSession().getAttribute("UserInfo") != null) {
@@ -73,6 +75,7 @@ public class LoginSvl extends HttpServlet {
         response.getWriter().print(s);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/login.jsp");
     }

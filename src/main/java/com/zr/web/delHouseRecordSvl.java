@@ -13,6 +13,7 @@ import java.io.IOException;
 //用户删除看房记录
 @WebServlet(name = "delHouseRecordSvl",urlPatterns = "/delHouseRecord")
 public class delHouseRecordSvl extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -27,6 +28,7 @@ public class delHouseRecordSvl extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/index.jsp");
     }
